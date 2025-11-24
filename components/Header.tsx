@@ -178,10 +178,18 @@ export default function Header() {
             </button>
           </div>
 
-          {/* Desktop Book Now Button */}
-          <Link href="/contact" className="hidden md:block btn-primary text-sm">
-            Book Now
-          </Link>
+          {/* Desktop Action Buttons */}
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="tel:03333355365"
+              className="btn-primary text-sm"
+            >
+              Call Now
+            </a>
+            <Link href="/contact" className="btn-primary text-sm">
+              Book Now
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Menu */}
