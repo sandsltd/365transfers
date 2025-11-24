@@ -11,6 +11,26 @@ export default function Header() {
 
   return (
     <nav className="bg-primary text-white">
+      {/* Mobile Action Buttons - Above Header */}
+      <div className="md:hidden bg-primary-dark py-2">
+        <div className="container mx-auto px-4">
+          <div className="flex gap-2">
+            <a
+              href="tel:03333355365"
+              className="btn-primary text-sm flex-1 text-center block"
+            >
+              Call Now
+            </a>
+            <Link
+              href="/contact"
+              className="btn-primary text-sm flex-1 text-center block"
+            >
+              Book Online
+            </Link>
+          </div>
+        </div>
+      </div>
+      
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center space-x-3">
@@ -126,10 +146,10 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu Button */}
-          <div className="md:hidden flex items-center space-x-4">
+          <div className="md:hidden">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2"
+              className="flex items-center space-x-2 p-2"
               aria-label="Toggle menu"
             >
               <svg
@@ -154,10 +174,8 @@ export default function Header() {
                   />
                 )}
               </svg>
+              <span className="font-semibold">Menu</span>
             </button>
-            <Link href="/contact" className="btn-primary text-sm">
-              Book Now
-            </Link>
           </div>
 
           {/* Desktop Book Now Button */}
