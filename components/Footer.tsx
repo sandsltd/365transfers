@@ -58,16 +58,34 @@ export default function Footer() {
                 About
               </Link>
               <Link
-                href="/airport-transfers"
-                className="text-sm hover:text-accent transition-colors"
-              >
-                Airport Transfers
-              </Link>
-              <Link
                 href="/contact"
                 className="text-sm hover:text-accent transition-colors"
               >
-                Contact
+                Book a Taxi
+              </Link>
+              <Link
+                href="/blog"
+                className="text-sm hover:text-accent transition-colors"
+              >
+                Blog
+              </Link>
+              <Link
+                href="/careers"
+                className="text-sm hover:text-accent transition-colors"
+              >
+                Careers
+              </Link>
+              <Link
+                href="/privacy-policy"
+                className="text-sm hover:text-accent transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/cookie-policy"
+                className="text-sm hover:text-accent transition-colors"
+              >
+                Cookie Policy
               </Link>
             </div>
           </div>

@@ -1,5 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Taxi Near Me | Taxi Stone | Taxi Stoke on Trent | 365 Transfers",
+  description: "Looking for a taxi near me? Professional taxi services in Stone and Stoke on Trent. Airport taxi, local taxi, and transfer services available 24/7. Book your taxi Stone or Stoke on Trent today.",
+  keywords: "taxi near me, taxi Stone, taxi Stoke on Trent, Stone taxi, Stoke on Trent taxi, airport taxi, taxi service Stone, taxi service Stoke on Trent, local taxi, 365 transfers",
+  openGraph: {
+    title: "Taxi Near Me | Taxi Stone | Taxi Stoke on Trent | 365 Transfers",
+    description: "Professional taxi services in Stone and Stoke on Trent. Airport taxi, local taxi, and transfer services available 24/7.",
+    type: "website",
+    locale: "en_GB",
+    images: [
+      {
+        url: "/logo/365logo.png",
+        width: 1200,
+        height: 630,
+        alt: "365 Transfers Logo",
+      },
+    ],
+  },
+};
 
 export default function Home() {
   return (
@@ -259,6 +280,135 @@ export default function Home() {
             </p>
             <Link href="/contact" className="btn-primary">
               Book Your Vehicle
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-20 bg-primary text-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center space-x-3 bg-accent text-primary px-6 py-3 rounded-full mb-6">
+              <div className="w-3 h-3 bg-primary rounded-full"></div>
+              <h2 className="text-2xl font-bold">YOUR ESSENTIAL TRAVEL</h2>
+            </div>
+            <h3 className="text-4xl font-bold mb-4">
+              Comprehensive Travel Services
+            </h3>
+            <p className="text-xl text-gray-200">
+              From local trips to complex journeys, we provide transport solutions for every need
+            </p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            {/* Local & National */}
+            <Link href="/local-national" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors block">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-2 text-accent">LOCAL & NATIONAL</h4>
+              <p className="text-sm text-gray-200">
+                Reliable taxi services for local journeys in Stone and Stoke on Trent, as well as long-distance national travel across the UK.
+              </p>
+            </Link>
+
+            {/* Airport Transfers */}
+            <Link href="/airport-transfers" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors block">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-2 text-accent">AIRPORT TRANSFERS</h4>
+              <p className="text-sm text-gray-200">
+                Professional airport taxi services to and from all major UK airports. Flight monitoring and meet & greet available.
+              </p>
+            </Link>
+
+            {/* Days Out */}
+            <Link href="/days-out" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors block">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-2 text-accent">DAYS OUT</h4>
+              <p className="text-sm text-gray-200">
+                Perfect for family days out, leisure trips, and weekend getaways. Comfortable transport for your special occasions.
+              </p>
+            </Link>
+
+            {/* Events and Tours */}
+            <Link href="/events-tours" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors block">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-2 text-accent">EVENTS AND TOURS</h4>
+              <p className="text-sm text-gray-200">
+                Transport for concerts, sports events, weddings, and guided tours. Group bookings welcome.
+              </p>
+            </Link>
+
+            {/* School Contracts */}
+            <Link href="/school-contracts" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors block">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-2 text-accent">SCHOOL CONTRACTS</h4>
+              <p className="text-sm text-gray-200">
+                Reliable school transport services. DBS checked drivers and safe vehicles for educational institutions.
+              </p>
+            </Link>
+
+            {/* Account Work */}
+            <Link href="/account-work" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors block">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-2 text-accent">ACCOUNT WORK</h4>
+              <p className="text-sm text-gray-200">
+                Corporate account services with monthly invoicing. Perfect for businesses requiring regular transport solutions.
+              </p>
+            </Link>
+
+            {/* Complex Journey */}
+            <Link href="/complex-journey" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors block">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-2 text-accent">COMPLEX JOURNEY</h4>
+              <p className="text-sm text-gray-200">
+                Multi-stop journeys and complex routes handled with ease. We plan and execute intricate travel requirements.
+              </p>
+            </Link>
+
+            {/* Service for Every Occasion */}
+            <Link href="/every-occasion" className="bg-white/10 backdrop-blur-sm rounded-lg p-6 hover:bg-white/20 transition-colors block">
+              <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v13m0-13V6a2 2 0 112 2h-2zm0 0V5.5A2.5 2.5 0 109.5 8H12zm-7 4h14M5 12a2 2 0 110-4h14a2 2 0 110 4M5 12v7a2 2 0 002 2h10a2 2 0 002-2v-7" />
+                </svg>
+              </div>
+              <h4 className="text-xl font-bold mb-2 text-accent">SERVICE FOR EVERY OCCASION</h4>
+              <p className="text-sm text-gray-200">
+                Weddings, parties, celebrations, and special events. We provide transport solutions for all your memorable moments.
+              </p>
+            </Link>
+          </div>
+          <div className="text-center mt-12">
+            <Link href="/contact" className="btn-primary text-lg">
+              Book Your Service
             </Link>
           </div>
         </div>

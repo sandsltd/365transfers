@@ -1,10 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export const metadata = {
-  title: "Airport Transfers from Stone - 365 Transfers | Manchester, Birmingham & More",
-  description: "Professional airport transfer services from Stone, Staffordshire to all major UK airports including Manchester, Birmingham, East Midlands, Liverpool, and London airports.",
-  keywords: "airport transfers, Stone taxi, Manchester airport, Birmingham airport, airport taxi Stone, Stoke on Trent airport transfers",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Airport Taxi | Airport Transfers Stone & Stoke on Trent | 365 Transfers",
+  description: "Airport taxi and transfer services from Stone and Stoke on Trent to all major UK airports. Professional airport taxi to Manchester, Birmingham, East Midlands, Liverpool, and London airports.",
+  keywords: "airport taxi, airport transfers, Stone airport taxi, Stoke on Trent airport taxi, airport taxi near me, Manchester airport taxi, Birmingham airport taxi, airport transfers Stone, airport transfers Stoke on Trent",
+  openGraph: {
+    title: "Airport Taxi | Airport Transfers Stone & Stoke on Trent | 365 Transfers",
+    description: "Professional airport taxi and transfer services from Stone and Stoke on Trent to all major UK airports including Manchester, Birmingham, East Midlands, Liverpool, and London.",
+    type: "website",
+    locale: "en_GB",
+    images: [
+      {
+        url: "/logo/365logo.png",
+        width: 1200,
+        height: 630,
+        alt: "365 Transfers Logo",
+      },
+    ],
+  },
 };
 
 export default function AirportTransfers() {

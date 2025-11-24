@@ -1,9 +1,26 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export const metadata = {
-  title: "About Us - 365 Transfers | Trusted Taxi Service in the UK",
-  description: "Learn about 365 Transfers - a trusted taxi service in the United Kingdom with over 20 years of experience serving Staffordshire, Shropshire, and Cheshire.",
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - Taxi Stone & Stoke on Trent | 365 Transfers",
+  description: "Learn about 365 Transfers - trusted taxi service in Stone and Stoke on Trent with over 20 years of experience. Professional taxi near me serving Staffordshire, Shropshire, and Cheshire.",
+  keywords: "taxi Stone, taxi Stoke on Trent, taxi near me, Stone taxi service, Stoke on Trent taxi service, 365 transfers, taxi company Stone, taxi company Stoke on Trent",
+  openGraph: {
+    title: "About Us - Taxi Stone & Stoke on Trent | 365 Transfers",
+    description: "Trusted taxi service in Stone and Stoke on Trent with over 20 years of experience serving Staffordshire, Shropshire, and Cheshire.",
+    type: "website",
+    locale: "en_GB",
+    images: [
+      {
+        url: "/logo/365logo.png",
+        width: 1200,
+        height: 630,
+        alt: "365 Transfers Logo",
+      },
+    ],
+  },
 };
 
 export default function About() {
