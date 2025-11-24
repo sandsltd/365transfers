@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "About Us - Taxi Stone & Stoke on Trent | 365 Transfers",
@@ -215,9 +215,9 @@ export default function About() {
                   Try 365TransfersUK and discover why so many trust us for
                   their transportation needs.
                 </p>
-                <Link href="/contact" className="btn-primary text-lg">
+                <BookNowButton className="text-lg">
                   Book Your Journey Today
-                </Link>
+                </BookNowButton>
               </div>
             </div>
           </div>

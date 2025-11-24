@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "School Contracts Taxi Stone | School Transport Stoke on Trent | Staffordshire | 365 Transfers",
@@ -144,9 +145,9 @@ export default function SchoolContracts() {
                 Contact us to discuss school transport contracts for your educational institution in 
                 Stone, Stoke on Trent, or Staffordshire.
               </p>
-              <Link href="/contact" className="btn-primary text-lg">
+              <BookNowButton className="text-lg">
                 Contact Us About School Contracts
-              </Link>
+              </BookNowButton>
             </div>
           </div>
         </div>

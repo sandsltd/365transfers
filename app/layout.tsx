@@ -4,6 +4,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import { BookingProvider } from "@/contexts/BookingContext";
+import BookingModalWrapper from "@/components/BookingModalWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -65,10 +67,13 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={inter.className}>
-        <Header />
-        <main>{children}</main>
-        <Footer />
-        <CookieConsent />
+        <BookingProvider>
+          <Header />
+          <main>{children}</main>
+          <Footer />
+          <CookieConsent />
+          <BookingModalWrapper />
+        </BookingProvider>
       </body>
     </html>
   );

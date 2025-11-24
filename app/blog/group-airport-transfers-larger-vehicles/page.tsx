@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "Group Airport Transfers: Larger Vehicle Options | Stone & Stoke on Trent | 365 Transfers",
@@ -164,9 +165,9 @@ export default function GroupAirportTransfers() {
                   us to arrange your group airport transfer from Stone, Stoke on Trent, or 
                   anywhere in Staffordshire.
                 </p>
-                <Link href="/contact" className="btn-primary text-lg">
+                <BookNowButton className="text-lg">
                   Book Group Airport Transfer
-                </Link>
+                </BookNowButton>
               </div>
             </div>
 

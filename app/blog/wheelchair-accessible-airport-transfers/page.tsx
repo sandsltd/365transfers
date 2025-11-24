@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "Wheelchair Accessible Airport Transfers: Complete Guide | Stone & Stoke on Trent | 365 Transfers",
@@ -138,9 +139,9 @@ export default function WheelchairAccessibleAirportTransfers() {
                   Experience stress-free wheelchair accessible airport transfers from Stone and 
                   Stoke on Trent. Contact us today to book your journey.
                 </p>
-                <Link href="/contact" className="btn-primary text-lg">
+                <BookNowButton className="text-lg">
                   Book Your Accessible Airport Transfer
-                </Link>
+                </BookNowButton>
               </div>
             </div>
 

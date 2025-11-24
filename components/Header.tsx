@@ -3,11 +3,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useBooking } from "@/contexts/BookingContext";
 
 export default function Header() {
   const [servicesOpen, setServicesOpen] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const { openBookingModal } = useBooking();
 
   return (
     <nav className="bg-primary text-white">
@@ -21,12 +23,12 @@ export default function Header() {
             >
               Call Now
             </a>
-            <Link
-              href="/contact"
+            <button
+              onClick={openBookingModal}
               className="btn-primary text-sm flex-1 text-center block"
             >
               Book Online
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -186,9 +188,12 @@ export default function Header() {
             >
               Call Now
             </a>
-            <Link href="/contact" className="btn-primary text-sm">
+            <button
+              onClick={openBookingModal}
+              className="btn-primary text-sm"
+            >
               Book Now
-            </Link>
+            </button>
           </div>
         </div>
 

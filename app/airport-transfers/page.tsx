@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
-
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "Airport Taxi | Airport Transfers Stone & Stoke on Trent | 365 Transfers",
@@ -274,9 +274,9 @@ export default function AirportTransfers() {
                 365 days a year.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="btn-primary text-lg">
+                <BookNowButton className="text-lg">
                   Book Now
-                </Link>
+                </BookNowButton>
                 <Link href="/contact" className="btn-secondary text-lg bg-white/20 hover:bg-white/30">
                   Get a Quote
                 </Link>

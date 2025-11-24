@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "Taxi for Every Occasion Stone | Special Event Taxi Stoke on Trent | Staffordshire | 365 Transfers",
@@ -174,9 +175,9 @@ export default function EveryOccasion() {
                 Make your special occasion memorable with reliable, professional transport. Contact us 
                 to discuss your event transport needs in Stone, Stoke on Trent, or Staffordshire.
               </p>
-              <Link href="/contact" className="btn-primary text-lg">
+              <BookNowButton className="text-lg">
                 Book Occasion Transport
-              </Link>
+              </BookNowButton>
             </div>
           </div>
         </div>

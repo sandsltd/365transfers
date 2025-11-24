@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "Corporate Taxi Stone | Business Taxi Stoke on Trent | Account Work | 365 Transfers",
@@ -144,9 +145,9 @@ export default function AccountWork() {
                 Streamline your business transport with our corporate account service. Contact us to 
                 discuss your business taxi needs in Stone, Stoke on Trent, or Staffordshire.
               </p>
-              <Link href="/contact" className="btn-primary text-lg">
+              <BookNowButton className="text-lg">
                 Contact Us About Corporate Accounts
-              </Link>
+              </BookNowButton>
             </div>
           </div>
         </div>

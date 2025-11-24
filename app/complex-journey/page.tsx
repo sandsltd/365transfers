@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "Complex Journey Taxi Stone | Multi-Stop Taxi Stoke on Trent | Staffordshire | 365 Transfers",
@@ -143,9 +144,9 @@ export default function ComplexJourney() {
                 Don't let complex routes worry you. Our expert drivers handle multi-stop journeys 
                 and intricate routes throughout Stone, Stoke on Trent, and Staffordshire.
               </p>
-              <Link href="/contact" className="btn-primary text-lg">
+              <BookNowButton className="text-lg">
                 Book Complex Journey
-              </Link>
+              </BookNowButton>
             </div>
           </div>
         </div>

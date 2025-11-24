@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "Local & National Taxi Stone | Taxi Stoke on Trent | Staffordshire Taxi | 365 Transfers",
@@ -214,9 +215,9 @@ export default function LocalNational() {
                 we're here to help. Contact us today!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact" className="btn-primary text-lg">
+                <BookNowButton className="text-lg">
                   Book Now
-                </Link>
+                </BookNowButton>
                 <Link href="/" className="btn-secondary text-lg bg-white/20 hover:bg-white/30">
                   View All Services
                 </Link>

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
   title: "Taxi Near Me | Taxi Stone | Taxi Stoke on Trent | 365 Transfers",
@@ -39,9 +40,9 @@ export default function Home() {
               Available 24/7, every day of the year.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="btn-primary text-lg">
+              <BookNowButton className="text-lg">
                 Book Your Ride
-              </Link>
+              </BookNowButton>
               <Link href="/contact" className="btn-secondary text-lg">
                 Get a Quote
               </Link>
@@ -278,9 +279,9 @@ export default function Home() {
             <p className="text-gray-600 mb-6">
               All our vehicles are well-maintained, comfortable, and driven by professional, licensed drivers.
             </p>
-            <Link href="/contact" className="btn-primary">
+            <BookNowButton>
               Book Your Vehicle
-            </Link>
+            </BookNowButton>
           </div>
         </div>
       </section>
@@ -407,9 +408,9 @@ export default function Home() {
             </Link>
           </div>
           <div className="text-center mt-12">
-            <Link href="/contact" className="btn-primary text-lg">
+            <BookNowButton className="text-lg">
               Book Your Service
-            </Link>
+            </BookNowButton>
           </div>
         </div>
       </section>
@@ -531,9 +532,9 @@ export default function Home() {
                   We also provide transfers to London airports (Heathrow, Gatwick, Stansted, Luton) 
                   and other UK airports. Contact us for a quote.
                 </p>
-                <Link href="/contact" className="btn-primary bg-accent text-primary hover:bg-accent-dark">
+                <BookNowButton className="bg-accent text-primary hover:bg-accent-dark">
                   Book Airport Transfer
-                </Link>
+                </BookNowButton>
               </div>
             </div>
           </div>
@@ -595,9 +596,9 @@ export default function Home() {
                 Need a transfer to or from a train station? We'll get you there on time, 
                 every time. Book in advance or call for immediate service.
               </p>
-              <Link href="/contact" className="btn-primary">
+              <BookNowButton>
                 Book Train Station Transfer
-              </Link>
+              </BookNowButton>
             </div>
           </div>
         </div>
@@ -610,9 +611,9 @@ export default function Home() {
           <p className="text-xl mb-8 text-gray-200">
             Contact us today and experience reliable transportation service.
           </p>
-          <Link href="/contact" className="btn-primary text-lg">
+          <BookNowButton className="text-lg">
             Get Started
-          </Link>
+          </BookNowButton>
         </div>
       </section>
     </div>
