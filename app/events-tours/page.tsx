@@ -1,8 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
+import StructuredData from "@/components/StructuredData";
+import {
+  createServiceSchema,
+  createBreadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/events-tours",
+  },
   title: "Events & Tours Taxi Stone | Taxi Stoke on Trent | Event Transport | 365 Transfers",
   description: "Taxi for events and tours in Stone, Stoke on Trent, and Staffordshire. Transport for concerts, sports events, weddings, and guided tours. Book your event taxi Stone or Stoke on Trent.",
   keywords: "event taxi Stone, event taxi Stoke on Trent, concert taxi, wedding taxi Stone, sports event taxi, tour transport Staffordshire, event transport Stone, Stoke on Trent events, Staffordshire event taxi",
@@ -23,8 +31,24 @@ export const metadata: Metadata = {
 };
 
 export default function EventsTours() {
+  const serviceSchema = createServiceSchema(
+    "Events & Tours Taxi Service",
+    "Professional taxi service for events and tours in Stone, Stoke on Trent, and Staffordshire. Concerts, weddings, sports events, and more."
+  );
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    {
+      name: "Events & Tours",
+      url: "https://www.365transfers.co.uk/events-tours",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -167,6 +191,7 @@ export default function EventsTours() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

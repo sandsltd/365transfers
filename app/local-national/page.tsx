@@ -2,11 +2,19 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
+import StructuredData from "@/components/StructuredData";
+import {
+  createServiceSchema,
+  createBreadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Local & National Taxi Stone | Taxi Stoke on Trent | Staffordshire Taxi | 365 Transfers",
   description: "Local and national taxi services in Stone, Stoke on Trent, and Staffordshire. Professional taxi for local journeys and long-distance travel across the UK. Book your taxi Stone or Stoke on Trent today.",
   keywords: "taxi Stone, taxi Stoke on Trent, local taxi Stone, local taxi Stoke on Trent, national taxi Staffordshire, Stone taxi service, Stoke on Trent taxi service, Staffordshire taxi, taxi near me Stone, taxi near me Stoke on Trent, long distance taxi",
+  alternates: {
+    canonical: "/local-national",
+  },
   openGraph: {
     title: "Local & National Taxi Stone | Taxi Stoke on Trent | 365 Transfers",
     description: "Professional local and national taxi services in Stone, Stoke on Trent, and Staffordshire. Available 24/7 for local journeys and UK-wide travel.",
@@ -24,8 +32,24 @@ export const metadata: Metadata = {
 };
 
 export default function LocalNational() {
+  const serviceSchema = createServiceSchema(
+    "Local & National Taxi Services",
+    "Professional local and national taxi services in Stone, Stoke on Trent, and Staffordshire. Available 24/7 for local journeys and UK-wide travel."
+  );
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    {
+      name: "Local & National",
+      url: "https://www.365transfers.co.uk/local-national",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
@@ -227,6 +251,7 @@ export default function LocalNational() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

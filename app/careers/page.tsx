@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Careers - Join 365 Transfers | Taxi Driver Jobs Stone & Stoke on Trent | 365 Transfers",
   description: "Join the 365 Transfers team in Stone, Stoke on Trent, and Staffordshire. We're looking for professional taxi drivers. DBS checked, licensed drivers welcome. Apply today.",
   keywords: "taxi driver jobs Stone, taxi driver jobs Stoke on Trent, careers 365 transfers, taxi driver vacancies Staffordshire, driving jobs Stone, taxi company careers",
+  alternates: {
+    canonical: "/careers",
+  },
   openGraph: {
     title: "Careers - Join 365 Transfers | Taxi Driver Jobs",
     description: "Join the 365 Transfers team. We're looking for professional taxi drivers in Stone, Stoke on Trent, and Staffordshire.",

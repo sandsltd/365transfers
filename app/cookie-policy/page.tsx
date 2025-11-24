@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Cookie Policy - 365 Transfers | Cookie Usage & Management | Stone & Stoke on Trent",
   description: "Cookie policy for 365 Transfers. Learn about how we use cookies on our website and how to manage your cookie preferences.",
   keywords: "cookie policy, cookies, 365 transfers cookies, website cookies, cookie consent, Stone cookie policy, Stoke on Trent cookie policy",
+  alternates: {
+    canonical: "/cookie-policy",
+  },
   openGraph: {
     title: "Cookie Policy - 365 Transfers",
     description: "Learn about how we use cookies on our website and how to manage your cookie preferences.",

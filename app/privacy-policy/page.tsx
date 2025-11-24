@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Privacy Policy - 365 Transfers | Data Protection & Privacy | Stone & Stoke on Trent",
   description: "Privacy policy for 365 Transfers. Learn how we collect, use, and protect your personal data when using our taxi services in Stone, Stoke on Trent, and Staffordshire.",
   keywords: "privacy policy, data protection, 365 transfers privacy, taxi service privacy, Stone privacy policy, Stoke on Trent privacy",
+  alternates: {
+    canonical: "/privacy-policy",
+  },
   openGraph: {
     title: "Privacy Policy - 365 Transfers",
     description: "Privacy policy for 365 Transfers. Learn how we collect, use, and protect your personal data.",

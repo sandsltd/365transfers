@@ -2,11 +2,19 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
+import StructuredData from "@/components/StructuredData";
+import {
+  createServiceSchema,
+  createBreadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Airport Taxi | Airport Transfers Stone & Stoke on Trent | 365 Transfers",
   description: "Airport taxi and transfer services from Stone and Stoke on Trent to all major UK airports. Professional airport taxi to Manchester, Birmingham, East Midlands, Liverpool, and London airports.",
   keywords: "airport taxi, airport transfers, Stone airport taxi, Stoke on Trent airport taxi, airport taxi near me, Manchester airport taxi, Birmingham airport taxi, airport transfers Stone, airport transfers Stoke on Trent",
+  alternates: {
+    canonical: "/airport-transfers",
+  },
   openGraph: {
     title: "Airport Taxi | Airport Transfers Stone & Stoke on Trent | 365 Transfers",
     description: "Professional airport taxi and transfer services from Stone and Stoke on Trent to all major UK airports including Manchester, Birmingham, East Midlands, Liverpool, and London.",
@@ -24,8 +32,24 @@ export const metadata: Metadata = {
 };
 
 export default function AirportTransfers() {
+  const serviceSchema = createServiceSchema(
+    "Airport Transfers",
+    "Professional airport taxi and transfer services from Stone and Stoke on Trent to all major UK airports including Manchester, Birmingham, East Midlands, Liverpool, and London."
+  );
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    {
+      name: "Airport Transfers",
+      url: "https://www.365transfers.co.uk/airport-transfers",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
 
       {/* Hero Section */}
       <section className="bg-primary text-white py-16">
@@ -286,6 +310,7 @@ export default function AirportTransfers() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

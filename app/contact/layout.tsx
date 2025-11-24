@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/contact",
+  },
   title: "Contact Us - Taxi Stone & Stoke on Trent | Book Your Taxi | 365 Transfers",
   description: "Book your taxi in Stone or Stoke on Trent. Contact 365 Transfers for taxi near me, airport taxi, and transfer services. Available 24/7, 365 days a year.",
   keywords: "taxi Stone, taxi Stoke on Trent, taxi near me, book taxi Stone, book taxi Stoke on Trent, contact taxi service, 365 transfers contact",

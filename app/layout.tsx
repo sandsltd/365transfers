@@ -6,14 +6,23 @@ import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
 import { BookingProvider } from "@/contexts/BookingContext";
 import BookingModalWrapper from "@/components/BookingModalWrapper";
+import StructuredData from "@/components/StructuredData";
+import {
+  organizationSchema,
+  localBusinessSchema,
+} from "@/lib/schema";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.365transfers.co.uk"),
   title: "Taxi Stone | Taxi Stoke on Trent | Airport Taxi | 365 Transfers",
   description: "Taxi near me in Stone and Stoke on Trent. Professional airport taxi and transfer services available 365 days a year. Book your taxi Stone or Stoke on Trent today.",
   keywords: "taxi near me, taxi Stone, taxi Stoke on Trent, airport taxi, Stone taxi, Stoke on Trent taxi, airport transfers, taxi service Stone, taxi service Stoke on Trent, 365 transfers",
   authors: [{ name: "365 Transfers" }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Taxi Stone | Taxi Stoke on Trent | Airport Taxi | 365 Transfers",
     description: "Taxi near me in Stone and Stoke on Trent. Professional airport taxi and transfer services available 365 days a year.",
@@ -65,6 +74,8 @@ export default function RootLayout({
         <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
+        <StructuredData data={organizationSchema} />
+        <StructuredData data={localBusinessSchema} />
       </head>
       <body className={inter.className}>
         <BookingProvider>

@@ -186,7 +186,7 @@ This is a booking request. Please contact the customer to confirm availability.
             
             <div style="background: #fff3cd; border-left: 4px solid #C2FE58; padding: 15px; margin: 20px 0; border-radius: 4px;">
               <p style="color: #333; font-size: 14px; margin: 0;">
-                <strong>⚠️ Action Required:</strong> This is a booking request. Please contact the customer to confirm availability and finalize the booking.
+                <strong>⚠️ Action Required:</strong> This is a booking request. Please contact the customer to confirm availability and finalise the booking.
               </p>
             </div>
           </div>
@@ -215,7 +215,7 @@ This is a booking request. Please contact the customer to confirm availability.
       text: `
 Thank you for your booking request with 365 Transfers.
 
-We have received your booking request and will contact you within 24 hours to confirm availability and finalize your booking.
+We have received your booking request and will contact you within 24 hours to confirm availability and finalise your booking.
 
 If you require a taxi within the next 24 hours, we recommend calling us directly on 03333 355365 to ensure we can assist you promptly.
 
@@ -249,7 +249,7 @@ Best regards,
             </p>
             
             <p style="color: #333; font-size: 16px; line-height: 1.6; margin: 0 0 20px 0;">
-              Thank you for your booking request with <strong>365 Transfers</strong>. We have received your request and will contact you within <strong>24 hours</strong> to confirm availability and finalize your booking.
+              Thank you for your booking request with <strong>365 Transfers</strong>. We have received your request and will contact you within <strong>24 hours</strong> to confirm availability and finalise your booking.
             </p>
             
             <div style="background: #fff3cd; border-left: 4px solid #C2FE58; padding: 15px; margin: 20px 0; border-radius: 4px;">

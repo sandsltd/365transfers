@@ -1,8 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
+import StructuredData from "@/components/StructuredData";
+import {
+  createServiceSchema,
+  createBreadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/school-contracts",
+  },
   title: "School Contracts Taxi Stone | School Transport Stoke on Trent | Staffordshire | 365 Transfers",
   description: "School transport contracts in Stone, Stoke on Trent, and Staffordshire. Reliable school taxi service with DBS checked drivers. Professional school transport for educational institutions.",
   keywords: "school taxi Stone, school transport Stoke on Trent, school contracts Staffordshire, school taxi service, educational transport Stone, school bus Stoke on Trent, DBS checked school drivers, Staffordshire school transport",
@@ -23,8 +31,24 @@ export const metadata: Metadata = {
 };
 
 export default function SchoolContracts() {
+  const serviceSchema = createServiceSchema(
+    "School Contracts Taxi Service",
+    "Reliable school transport contracts in Stone, Stoke on Trent, and Staffordshire. DBS checked drivers and safe vehicles for educational institutions."
+  );
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    {
+      name: "School Contracts",
+      url: "https://www.365transfers.co.uk/school-contracts",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -153,6 +177,7 @@ export default function SchoolContracts() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

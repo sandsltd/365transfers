@@ -1,11 +1,19 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
+import StructuredData from "@/components/StructuredData";
+import {
+  createServiceSchema,
+  createBreadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Days Out Taxi Stone | Taxi Stoke on Trent | Family Days Out Transport | 365 Transfers",
   description: "Taxi for days out in Stone and Stoke on Trent, Staffordshire. Perfect for family days out, leisure trips, and weekend getaways. Book your days out taxi Stone or Stoke on Trent today.",
   keywords: "days out taxi Stone, days out taxi Stoke on Trent, family days out taxi, leisure taxi Stone, weekend taxi Stoke on Trent, days out transport Staffordshire, family taxi Stone, Stone days out, Stoke on Trent days out",
+  alternates: {
+    canonical: "/days-out",
+  },
   openGraph: {
     title: "Days Out Taxi Stone | Taxi Stoke on Trent | 365 Transfers",
     description: "Perfect taxi service for family days out, leisure trips, and weekend getaways in Stone, Stoke on Trent, and Staffordshire.",
@@ -23,8 +31,24 @@ export const metadata: Metadata = {
 };
 
 export default function DaysOut() {
+  const serviceSchema = createServiceSchema(
+    "Days Out Taxi Service",
+    "Perfect taxi service for family days out, leisure trips, and weekend getaways in Stone, Stoke on Trent, and Staffordshire."
+  );
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    {
+      name: "Days Out",
+      url: "https://www.365transfers.co.uk/days-out",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={serviceSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -122,6 +146,7 @@ export default function DaysOut() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

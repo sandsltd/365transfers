@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
+import StructuredData from "@/components/StructuredData";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/blog",
+  },
   title: "Blog - Taxi Stone & Stoke on Trent | 365 Transfers News & Tips",
   description: "Read our latest blog posts about taxi services in Stone, Stoke on Trent, and Staffordshire. Airport transfers, wheelchair accessible transport, and local taxi tips.",
   keywords: "taxi blog Stone, taxi blog Stoke on Trent, airport transfer tips, wheelchair accessible taxi, group transport, 365 transfers blog",
@@ -47,8 +52,18 @@ const blogPosts = [
 ];
 
 export default function Blog() {
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    {
+      name: "Blog",
+      url: "https://www.365transfers.co.uk/blog",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
@@ -114,6 +129,7 @@ export default function Blog() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

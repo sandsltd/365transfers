@@ -3,6 +3,8 @@
 import { useState, FormEvent } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import StructuredData from "@/components/StructuredData";
+import { createBreadcrumbSchema } from "@/lib/schema";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -62,8 +64,18 @@ export default function Contact() {
     }
   };
 
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    {
+      name: "Contact",
+      url: "https://www.365transfers.co.uk/contact",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
 
       {/* Contact Section */}
       <section className="py-20 bg-gray-50">
@@ -270,6 +282,7 @@ export default function Contact() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

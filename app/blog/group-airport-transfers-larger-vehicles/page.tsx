@@ -1,8 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
+import StructuredData from "@/components/StructuredData";
+import {
+  createArticleSchema,
+  createBreadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/blog/group-airport-transfers-larger-vehicles",
+  },
   title: "Group Airport Transfers: Larger Vehicle Options | Stone & Stoke on Trent | 365 Transfers",
   description: "Group airport transfers from Stone and Stoke on Trent using larger vehicles. Cost-effective transport for groups to all major UK airports. Book your group transfer today.",
   keywords: "group airport transfers, large vehicle airport taxi, group taxi Stone, group transport Stoke on Trent, minibus airport transfers, group travel Staffordshire",
@@ -23,8 +31,26 @@ export const metadata: Metadata = {
 };
 
 export default function GroupAirportTransfers() {
+  const articleSchema = createArticleSchema(
+    "Group Airport Transfers: Making the Most of Larger Vehicle Options",
+    "Planning a group trip? Discover how our larger vehicle options make group airport transfers from Stone and Stoke on Trent comfortable and cost-effective.",
+    "2025-11-10"
+  );
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Blog", url: "https://www.365transfers.co.uk/blog" },
+    {
+      name: "Group Airport Transfers",
+      url: "https://www.365transfers.co.uk/blog/group-airport-transfers-larger-vehicles",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={articleSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
       <article className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -184,6 +210,7 @@ export default function GroupAirportTransfers() {
         </div>
       </article>
     </div>
+    </>
   );
 }
 

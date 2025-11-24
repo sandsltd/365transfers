@@ -2,11 +2,16 @@ import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
+import StructuredData from "@/components/StructuredData";
+import { createBreadcrumbSchema, taxiServiceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Taxi Near Me | Taxi Stone | Taxi Stoke on Trent | 365 Transfers",
   description: "Looking for a taxi near me? Professional taxi services in Stone and Stoke on Trent. Airport taxi, local taxi, and transfer services available 24/7. Book your taxi Stone or Stoke on Trent today.",
   keywords: "taxi near me, taxi Stone, taxi Stoke on Trent, Stone taxi, Stoke on Trent taxi, airport taxi, taxi service Stone, taxi service Stoke on Trent, local taxi, 365 transfers",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Taxi Near Me | Taxi Stone | Taxi Stoke on Trent | 365 Transfers",
     description: "Professional taxi services in Stone and Stoke on Trent. Airport taxi, local taxi, and transfer services available 24/7.",
@@ -24,8 +29,15 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={taxiServiceSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
 
       {/* Hero Section */}
       <section className="bg-primary text-white py-20">
@@ -617,6 +629,7 @@ export default function Home() {
         </div>
       </section>
     </div>
+    </>
   );
 }
 

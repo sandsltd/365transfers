@@ -1,8 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
+import StructuredData from "@/components/StructuredData";
+import {
+  createArticleSchema,
+  createBreadcrumbSchema,
+} from "@/lib/schema";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/blog/taxi-near-me-stone-stoke-on-trent",
+  },
   title: "Taxi Near Me: Guide to Reliable Taxi Services in Stone & Stoke on Trent | 365 Transfers",
   description: "Looking for a taxi near me in Stone or Stoke on Trent? Complete guide to reliable local taxi services in Staffordshire. Book your taxi Stone or Stoke on Trent today.",
   keywords: "taxi near me Stone, taxi near me Stoke on Trent, Stone taxi service, Stoke on Trent taxi, local taxi Stone, local taxi Stoke on Trent, taxi Stone Staffordshire, Stoke on Trent taxi company",
@@ -23,8 +31,26 @@ export const metadata: Metadata = {
 };
 
 export default function TaxiNearMeStoneStoke() {
+  const articleSchema = createArticleSchema(
+    "Taxi Near Me: Your Guide to Reliable Taxi Services in Stone & Stoke on Trent",
+    "Looking for a taxi near me in Stone or Stoke on Trent? Learn about our comprehensive taxi services covering Staffordshire and how to book your ride.",
+    "2025-10-05"
+  );
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Blog", url: "https://www.365transfers.co.uk/blog" },
+    {
+      name: "Taxi Near Me",
+      url: "https://www.365transfers.co.uk/blog/taxi-near-me-stone-stoke-on-trent",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={articleSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
       <article className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -202,6 +228,7 @@ export default function TaxiNearMeStoneStoke() {
         </div>
       </article>
     </div>
+    </>
   );
 }
 

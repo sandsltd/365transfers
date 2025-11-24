@@ -1,8 +1,16 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import StructuredData from "@/components/StructuredData";
+import {
+  createArticleSchema,
+  createBreadcrumbSchema,
+} from "@/lib/schema";
 import BookNowButton from "@/components/BookNowButton";
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: "/blog/wheelchair-accessible-airport-transfers",
+  },
   title: "Wheelchair Accessible Airport Transfers: Complete Guide | Stone & Stoke on Trent | 365 Transfers",
   description: "Complete guide to wheelchair accessible airport transfers from Stone and Stoke on Trent. Comfortable, safe transport to all major UK airports for passengers with mobility needs.",
   keywords: "wheelchair accessible airport transfers, accessible taxi Stone, wheelchair taxi Stoke on Trent, accessible airport taxi, disabled transport Stone, mobility taxi Staffordshire",
@@ -23,8 +31,26 @@ export const metadata: Metadata = {
 };
 
 export default function WheelchairAccessibleAirportTransfers() {
+  const articleSchema = createArticleSchema(
+    "Wheelchair Accessible Airport Transfers: A Complete Guide",
+    "Everything you need to know about wheelchair accessible airport transfers from Stone and Stoke on Trent. Comfortable, safe, and reliable transport for all passengers.",
+    "2025-12-15"
+  );
+
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Blog", url: "https://www.365transfers.co.uk/blog" },
+    {
+      name: "Wheelchair Accessible Airport Transfers",
+      url: "https://www.365transfers.co.uk/blog/wheelchair-accessible-airport-transfers",
+    },
+  ]);
+
   return (
-    <div className="min-h-screen">
+    <>
+      <StructuredData data={articleSchema} />
+      <StructuredData data={breadcrumbSchema} />
+      <div className="min-h-screen">
       <article className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
@@ -158,6 +184,7 @@ export default function WheelchairAccessibleAirportTransfers() {
         </div>
       </article>
     </div>
+    </>
   );
 }
 
