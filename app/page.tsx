@@ -40,8 +40,24 @@ export default function Home() {
       <div className="min-h-screen">
 
       {/* Hero Section */}
-      <section className="bg-primary text-white py-20">
-        <div className="container mx-auto px-4">
+      <section className="relative text-white py-20 min-h-[600px] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/stokeontrentmap.png"
+            alt="Stoke on Trent area map"
+            fill
+            priority
+            quality={90}
+            className="object-cover"
+            sizes="100vw"
+          />
+          {/* Overlay for better text readability */}
+          <div className="absolute inset-0 bg-primary/60"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Taxi Services in Stone
@@ -427,6 +443,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Taxi Cab Visual Section */}
+      <section className="relative py-32 min-h-[500px] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/taxicabimage.png"
+            alt="365 Transfers taxi cab"
+            fill
+            priority
+            quality={90}
+            className="object-cover"
+            sizes="100vw"
+          />
+          {/* Green tint overlay using brand green */}
+          <div className="absolute inset-0 bg-accent/20"></div>
+          {/* Subtle dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Available 24/7, Every Day of the Year
+            </h2>
+            <p className="text-xl md:text-2xl text-gray-200">
+              Whether it's early morning, late night, or any time in between, we're here when you need us.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
@@ -554,61 +602,79 @@ export default function Home() {
       </section>
 
       {/* Train Station Transfers Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
+      <section className="relative py-32 min-h-[500px] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/trainstationimage.png"
+            alt="Train station"
+            fill
+            priority
+            quality={90}
+            className="object-cover"
+            sizes="100vw"
+          />
+          {/* Green tint overlay using brand green */}
+          <div className="absolute inset-0 bg-accent/20"></div>
+          {/* Subtle dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/20"></div>
+        </div>
+        
+        {/* Content */}
+        <div className="container mx-auto px-4 relative z-10">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-primary mb-4">
+              <h2 className="text-4xl font-bold text-white mb-4">
                 Train Station Transfers
               </h2>
-              <p className="text-xl text-gray-600">
+              <p className="text-xl text-gray-200">
                 Convenient transfers to and from train stations across the region
               </p>
             </div>
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="border-2 border-primary rounded-lg p-6 hover:bg-primary hover:text-white transition-colors">
+              <div className="bg-white/90 backdrop-blur-sm border-2 border-white rounded-lg p-6 hover:bg-white transition-colors">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Stoke on Trent Station</h3>
-                <p className="text-sm mb-4">
-                  Quick transfers to and from Stoke on Trent railway station, 
+                <h3 className="text-xl font-bold mb-2 text-primary">Stone & Stoke on Trent Stations</h3>
+                <p className="text-sm mb-4 text-gray-700">
+                  Quick and convenient transfers to and from Stone and Stoke on Trent railway stations, 
                   connecting you to the national rail network.
                 </p>
               </div>
-              <div className="border-2 border-primary rounded-lg p-6 hover:bg-primary hover:text-white transition-colors">
+              <div className="bg-white/90 backdrop-blur-sm border-2 border-white rounded-lg p-6 hover:bg-white transition-colors">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Stafford Station</h3>
-                <p className="text-sm mb-4">
+                <h3 className="text-xl font-bold mb-2 text-primary">Stafford Station</h3>
+                <p className="text-sm mb-4 text-gray-700">
                   Reliable transfers to Stafford railway station for your 
                   train connections.
                 </p>
               </div>
-              <div className="border-2 border-primary rounded-lg p-6 hover:bg-primary hover:text-white transition-colors">
+              <div className="bg-white/90 backdrop-blur-sm border-2 border-white rounded-lg p-6 hover:bg-white transition-colors">
                 <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center mb-4">
                   <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-2">Other Stations</h3>
-                <p className="text-sm mb-4">
-                  We also serve Crewe, Birmingham New Street, and other major 
-                  railway stations. Contact us for your specific station.
+                <h3 className="text-xl font-bold mb-2 text-primary">Other Stations</h3>
+                <p className="text-sm mb-4 text-gray-700">
+                  We serve Liverpool, Manchester, Sheffield, Nottingham, Leicester, Crewe, Birmingham New Street, and other major 
+                  railway stations across the region. Contact us for your specific station.
                 </p>
               </div>
             </div>
             <div className="text-center mt-8">
-              <p className="text-gray-600 mb-4">
+              <p className="text-gray-200 mb-4 text-lg">
                 Need a transfer to or from a train station? We'll get you there on time, 
                 every time. Book in advance or call for immediate service.
               </p>
-              <BookNowButton>
+              <BookNowButton className="bg-accent text-primary hover:bg-accent/90">
                 Book Train Station Transfer
               </BookNowButton>
             </div>
