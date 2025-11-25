@@ -3,7 +3,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
 import StructuredData from "@/components/StructuredData";
-import { createBreadcrumbSchema, taxiServiceSchema } from "@/lib/schema";
+import FAQ from "@/components/FAQ";
+import { createBreadcrumbSchema, createFAQSchema, taxiServiceSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Taxi Near Me | Taxi Stone | Taxi Stoke on Trent | 365 Transfers",
@@ -30,13 +31,57 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
+  ]);
+
+  const faqSchema = createFAQSchema([
+    {
+      question: "Do you provide taxi services in Stone and Stoke on Trent?",
+      answer: "Yes, we provide comprehensive taxi services throughout Stone, Stoke on Trent, and the surrounding Staffordshire area. We're based in Stone and have extensive local knowledge of the area.",
+    },
+    {
+      question: "How do I book a taxi?",
+      answer: "You can request a booking in three ways: online through our booking request form, by calling us on 01785 335563, or by using our contact form. For urgent bookings within 24 hours, we recommend calling us directly.",
+    },
+    {
+      question: "What areas do you serve?",
+      answer: "We serve Stone, Stoke on Trent, Staffordshire, and surrounding areas including Stafford, Newcastle-under-Lyme, and the wider West Midlands region. We also provide airport transfers to all major UK airports.",
+    },
+    {
+      question: "Do you provide airport transfer services?",
+      answer: "Yes, we specialise in airport transfers to all major UK airports including Manchester, Birmingham, Liverpool, East Midlands, and London airports. We offer both one-way and return transfers.",
+    },
+    {
+      question: "What types of vehicles do you have?",
+      answer: "Our fleet includes saloon cars, estate cars, executive vehicles, and larger vehicles from 4 to 16 seats. We also have wheelchair-accessible vehicles available. All vehicles are modern, comfortable, and well-maintained.",
+    },
+    {
+      question: "Are your drivers licensed and insured?",
+      answer: "Yes, all our drivers are fully licensed, DBS checked, and have completed relevant BTEC qualifications and C.S.E courses. All vehicles are fully insured and meet all safety requirements.",
+    },
+    {
+      question: "What payment methods do you accept?",
+      answer: "We accept card payments online, card payments in the taxi, and cash. For corporate clients, we can set up monthly account payments for convenience.",
+    },
+    {
+      question: "Do you operate 24/7?",
+      answer: "Yes, we operate 24 hours a day, 7 days a week, 365 days a year. Whether you need an early morning airport transfer, a late-night ride home, or any time in between, we're available.",
+    },
+    {
+      question: "Can I book in advance?",
+      answer: "Absolutely! We recommend requesting a booking in advance, especially for airport transfers, events, or important appointments. You can request a booking online or call us on 01785 335563 to secure your booking.",
+    },
+    {
+      question: "Do you provide services for events and group travel?",
+      answer: "Yes, we provide services for events, group travel, days out, school contracts, and corporate account work. We have vehicles ranging from 4 to 16 seats to accommodate groups of any size.",
+    },
   ]);
 
   return (
     <>
       <StructuredData data={taxiServiceSchema} />
       <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={faqSchema} />
       <div className="min-h-screen">
 
       {/* Hero Section */}
@@ -681,6 +726,66 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      <FAQ
+        title="Frequently Asked Questions"
+        description="Everything you need to know about our taxi services in Stone and Stoke on Trent"
+        faqs={[
+          {
+            question: "Do you provide taxi services in Stone and Stoke on Trent?",
+            answer: "Yes, we provide comprehensive taxi services throughout Stone, Stoke on Trent, and the surrounding Staffordshire area. We're based in Stone and have extensive local knowledge of the area.",
+          },
+          {
+            question: "How do I book a taxi?",
+            answer: (
+              <>
+                You can request a booking in three ways: online through our booking request form, by calling us on <a href="tel:01785335563" className="text-primary hover:underline font-semibold">01785 335563</a>, or by using our contact form. For urgent bookings within 24 hours, we recommend calling us directly.
+              </>
+            ),
+          },
+          {
+            question: "What areas do you serve?",
+            answer: "We serve Stone, Stoke on Trent, Staffordshire, and surrounding areas including Stafford, Newcastle-under-Lyme, and the wider West Midlands region. We also provide airport transfers to all major UK airports.",
+          },
+          {
+            question: "Do you provide airport transfer services?",
+            answer: (
+              <>
+                Yes, we specialise in airport transfers to all major UK airports including Manchester, Birmingham, Liverpool, East Midlands, and London airports. We offer both one-way and return transfers. <Link href="/airport-transfers" className="text-primary hover:underline font-semibold">Learn more about our airport transfer services</Link>.
+              </>
+            ),
+          },
+          {
+            question: "What types of vehicles do you have?",
+            answer: "Our fleet includes saloon cars, estate cars, executive vehicles, and larger vehicles from 4 to 16 seats. We also have wheelchair-accessible vehicles available. All vehicles are modern, comfortable, and well-maintained.",
+          },
+          {
+            question: "Are your drivers licensed and insured?",
+            answer: "Yes, all our drivers are fully licensed, DBS checked, and have completed relevant BTEC qualifications and C.S.E courses. All vehicles are fully insured and meet all safety requirements.",
+          },
+          {
+            question: "What payment methods do you accept?",
+            answer: "We accept card payments online, card payments in the taxi, and cash. For corporate clients, we can set up monthly account payments for convenience.",
+          },
+          {
+            question: "Do you operate 24/7?",
+            answer: "Yes, we operate 24 hours a day, 7 days a week, 365 days a year. Whether you need an early morning airport transfer, a late-night ride home, or any time in between, we're available.",
+          },
+          {
+            question: "Can I book in advance?",
+            answer: (
+              <>
+                Absolutely! We recommend requesting a booking in advance, especially for airport transfers, events, or important appointments. You can request a booking online or call us on <a href="tel:01785335563" className="text-primary hover:underline font-semibold">01785 335563</a> to secure your booking.
+              </>
+            ),
+          },
+          {
+            question: "Do you provide services for events and group travel?",
+            answer: "Yes, we provide services for events, group travel, days out, school contracts, and corporate account work. We have vehicles ranging from 4 to 16 seats to accommodate groups of any size.",
+          },
+        ]}
+      />
 
       {/* CTA Section */}
       <section className="bg-primary text-white py-16">

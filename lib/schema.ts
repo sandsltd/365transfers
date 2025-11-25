@@ -4,8 +4,8 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "365 Transfers",
-  url: "http://taxisstone.co.uk",
-  logo: "http://taxisstone.co.uk/logo/365logo.png",
+  url: "https://taxisstone.co.uk",
+  logo: "https://taxisstone.co.uk/logo/365logo.png",
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+44-1785-335563",
@@ -21,9 +21,9 @@ export const organizationSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "http://taxisstone.co.uk/#organization",
+  "@id": "https://taxisstone.co.uk/#organization",
   name: "365 Transfers",
-  image: "http://taxisstone.co.uk/logo/365logo.png",
+  image: "https://taxisstone.co.uk/logo/365logo.png",
   telephone: "01785335563",
   priceRange: "$$",
   address: {
@@ -37,7 +37,7 @@ export const localBusinessSchema = {
     latitude: "52.9069",
     longitude: "-2.1394",
   },
-  url: "http://taxisstone.co.uk",
+  url: "https://taxisstone.co.uk",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -82,7 +82,7 @@ export const taxiServiceSchema = {
   "@type": "TaxiService",
   name: "365 Transfers",
   provider: {
-    "@id": "http://taxisstone.co.uk/#organization",
+    "@id": "https://taxisstone.co.uk/#organization",
   },
   areaServed: [
     {
@@ -108,7 +108,7 @@ export function createServiceSchema(serviceName: string, description: string) {
     "@type": "Service",
     name: serviceName,
     provider: {
-      "@id": "http://taxisstone.co.uk/#organization",
+      "@id": "https://taxisstone.co.uk/#organization",
     },
     description: description,
     areaServed: [
@@ -160,8 +160,23 @@ export function createArticleSchema(
       name: "365 Transfers",
     },
     publisher: {
-      "@id": "http://taxisstone.co.uk/#organization",
+      "@id": "https://taxisstone.co.uk/#organization",
     },
+  };
+}
+
+export function createFAQSchema(faqs: { question: string; answer: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
   };
 }
 

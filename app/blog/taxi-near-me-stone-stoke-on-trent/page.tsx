@@ -38,11 +38,11 @@ export default function TaxiNearMeStoneStoke() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
-    { name: "Blog", url: "http://taxisstone.co.uk/blog" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
+    { name: "Blog", url: "https://taxisstone.co.uk/blog" },
     {
       name: "Taxi Near Me",
-      url: "http://taxisstone.co.uk/blog/taxi-near-me-stone-stoke-on-trent",
+      url: "https://taxisstone.co.uk/blog/taxi-near-me-stone-stoke-on-trent",
     },
   ]);
 

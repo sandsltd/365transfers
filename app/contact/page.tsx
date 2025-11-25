@@ -65,10 +65,10 @@ export default function Contact() {
   };
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
     {
       name: "Contact",
-      url: "http://taxisstone.co.uk/contact",
+      url: "https://taxisstone.co.uk/contact",
     },
   ]);
 

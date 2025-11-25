@@ -3,9 +3,11 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
 import StructuredData from "@/components/StructuredData";
+import FAQ from "@/components/FAQ";
 import {
   createServiceSchema,
   createBreadcrumbSchema,
+  createFAQSchema,
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -38,10 +40,41 @@ export default function LocalNational() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
     {
       name: "Local & National",
-      url: "http://taxisstone.co.uk/local-national",
+      url: "https://taxisstone.co.uk/local-national",
+    },
+  ]);
+
+  const faqSchema = createFAQSchema([
+    {
+      question: "What areas do you cover for local taxi services?",
+      answer: "We provide local taxi services throughout Stone, Stoke on Trent, Staffordshire, and surrounding areas including Stafford, Newcastle-under-Lyme, and the wider West Midlands region.",
+    },
+    {
+      question: "Do you provide long-distance taxi services across the UK?",
+      answer: "Yes, we provide national taxi services for long-distance journeys across the UK. Whether you need to travel to London, Manchester, Birmingham, or anywhere else in the country, we can get you there safely and comfortably.",
+    },
+    {
+      question: "How do I request a local or national taxi?",
+      answer: "You can request a booking online through our booking form or call us on 01785 335563. For urgent local journeys within 24 hours, we recommend calling us directly.",
+    },
+    {
+      question: "What vehicle types are available for local and national journeys?",
+      answer: "We have a full range of vehicles from saloon cars to 16-seater minibuses, including executive vehicles and wheelchair-accessible options. Choose the vehicle that best suits your journey requirements.",
+    },
+    {
+      question: "How much does a local taxi cost?",
+      answer: "Local taxi prices vary depending on distance and vehicle type. Contact us for a quote - we offer competitive rates for Stone and Stoke on Trent taxi services. You can get a quote online or call 01785 335563.",
+    },
+    {
+      question: "How much does a long-distance national taxi cost?",
+      answer: "Long-distance taxi prices depend on the destination, distance, and vehicle type. Contact us for a competitive quote for your national journey. We offer transparent pricing with no hidden fees.",
+    },
+    {
+      question: "Can I book a return journey?",
+      answer: "Yes, we offer both one-way and return journeys for both local and national travel. Requesting a return journey ensures you have reliable transport for your round trip.",
     },
   ]);
 
@@ -49,6 +82,7 @@ export default function LocalNational() {
     <>
       <StructuredData data={serviceSchema} />
       <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={faqSchema} />
       <div className="min-h-screen">
       {/* Hero Section */}
       <section className="bg-primary text-white py-16">
@@ -230,6 +264,42 @@ export default function LocalNational() {
                 </div>
               </div>
             </div>
+
+            {/* FAQ Section */}
+            <FAQ
+              title="Local & National Taxi FAQs"
+              description="Common questions about our local and national taxi services in Stone and Stoke on Trent"
+              faqs={[
+                {
+                  question: "What areas do you cover for local taxi services?",
+                  answer: "We provide local taxi services throughout Stone, Stoke on Trent, Staffordshire, and surrounding areas including Stafford, Newcastle-under-Lyme, and the wider West Midlands region.",
+                },
+                {
+                  question: "Do you provide long-distance taxi services across the UK?",
+                  answer: "Yes, we provide national taxi services for long-distance journeys across the UK. Whether you need to travel to London, Manchester, Birmingham, or anywhere else in the country, we can get you there safely and comfortably.",
+                },
+                {
+                  question: "How do I request a local or national taxi?",
+                  answer: "You can request a booking online through our booking form or call us on 01785 335563. For urgent local journeys within 24 hours, we recommend calling us directly.",
+                },
+                {
+                  question: "What vehicle types are available for local and national journeys?",
+                  answer: "We have a full range of vehicles from saloon cars to 16-seater minibuses, including executive vehicles and wheelchair-accessible options. Choose the vehicle that best suits your journey requirements.",
+                },
+                {
+                  question: "How much does a local taxi cost?",
+                  answer: "Local taxi prices vary depending on distance and vehicle type. Contact us for a quote - we offer competitive rates for Stone and Stoke on Trent taxi services. You can get a quote online or call 01785 335563.",
+                },
+                {
+                  question: "How much does a long-distance national taxi cost?",
+                  answer: "Long-distance taxi prices depend on the destination, distance, and vehicle type. Contact us for a competitive quote for your national journey. We offer transparent pricing with no hidden fees.",
+                },
+                {
+                  question: "Can I book a return journey?",
+                  answer: "Yes, we offer both one-way and return journeys for both local and national travel. Requesting a return journey ensures you have reliable transport for your round trip.",
+                },
+              ]}
+            />
 
             {/* CTA Section */}
             <div className="bg-primary text-white rounded-lg p-12 text-center">

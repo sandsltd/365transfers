@@ -3,9 +3,11 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
 import StructuredData from "@/components/StructuredData";
+import FAQ from "@/components/FAQ";
 import {
   createServiceSchema,
   createBreadcrumbSchema,
+  createFAQSchema,
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -38,10 +40,41 @@ export default function AirportTransfers() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
     {
       name: "Airport Transfers",
-      url: "http://taxisstone.co.uk/airport-transfers",
+      url: "https://taxisstone.co.uk/airport-transfers",
+    },
+  ]);
+
+  const faqSchema = createFAQSchema([
+    {
+      question: "Which airports do you serve?",
+      answer: "We provide airport transfers to all major UK airports including Manchester, Birmingham, Liverpool, East Midlands, London Heathrow, London Gatwick, London Stansted, and London Luton airports.",
+    },
+    {
+      question: "How far in advance should I request an airport transfer?",
+      answer: "We recommend requesting a booking at least 24-48 hours in advance, especially during peak travel seasons. However, we can often accommodate last-minute requests - call us on 01785 335563 for urgent transfers.",
+    },
+    {
+      question: "Do you track flight arrivals?",
+      answer: "Yes, we monitor flight arrivals to ensure we're ready when you land. Please provide your flight number when requesting a booking so we can track any delays and adjust pickup times accordingly.",
+    },
+    {
+      question: "What happens if my flight is delayed?",
+      answer: "Don't worry - we monitor flight arrivals and will adjust your pickup time automatically. There's no extra charge for reasonable delays. For significant delays, please call us on 01785 335563 to confirm your new arrival time.",
+    },
+    {
+      question: "Do you provide return airport transfers?",
+      answer: "Yes, we offer both one-way and return airport transfers. Requesting a return transfer ensures you have reliable transport waiting when you return from your trip.",
+    },
+    {
+      question: "How much does an airport transfer cost?",
+      answer: "Prices vary depending on the airport, distance, and vehicle type. Contact us for a quote - we offer competitive rates for Stone and Stoke on Trent airport transfers. You can get a quote online or call 01785 335563.",
+    },
+    {
+      question: "What vehicle types are available for airport transfers?",
+      answer: "We have a range of vehicles from saloon cars to 16-seater minibuses, including executive vehicles and wheelchair-accessible options. Choose the vehicle that best suits your group size and luggage requirements.",
     },
   ]);
 
@@ -49,6 +82,7 @@ export default function AirportTransfers() {
     <>
       <StructuredData data={serviceSchema} />
       <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={faqSchema} />
       <div className="min-h-screen">
 
       {/* Hero Section */}
@@ -268,7 +302,7 @@ export default function AirportTransfers() {
                     <h3 className="text-xl font-bold text-primary mb-2">Competitive Rates</h3>
                     <p className="text-gray-700">
                       Fair, competitive pricing for airport transfers. 
-                      Book online or contact us for a quote.
+                      Request a booking online or contact us for a quote.
                     </p>
                   </div>
                 </div>
@@ -290,11 +324,47 @@ export default function AirportTransfers() {
               </div>
             </div>
 
+            {/* FAQ Section */}
+            <FAQ
+              title="Airport Transfer FAQs"
+              description="Common questions about our airport taxi services from Stone and Stoke on Trent"
+              faqs={[
+                {
+                  question: "Which airports do you serve?",
+                  answer: "We provide airport transfers to all major UK airports including Manchester, Birmingham, Liverpool, East Midlands, London Heathrow, London Gatwick, London Stansted, and London Luton airports.",
+                },
+                {
+                  question: "How far in advance should I request an airport transfer?",
+                  answer: "We recommend requesting a booking at least 24-48 hours in advance, especially during peak travel seasons. However, we can often accommodate last-minute requests - call us on 01785 335563 for urgent transfers.",
+                },
+                {
+                  question: "Do you track flight arrivals?",
+                  answer: "Yes, we monitor flight arrivals to ensure we're ready when you land. Please provide your flight number when requesting a booking so we can track any delays and adjust pickup times accordingly.",
+                },
+                {
+                  question: "What happens if my flight is delayed?",
+                  answer: "Don't worry - we monitor flight arrivals and will adjust your pickup time automatically. There's no extra charge for reasonable delays. For significant delays, please call us on 01785 335563 to confirm your new arrival time.",
+                },
+                {
+                  question: "Do you provide return airport transfers?",
+                  answer: "Yes, we offer both one-way and return airport transfers. Requesting a return transfer ensures you have reliable transport waiting when you return from your trip.",
+                },
+                {
+                  question: "How much does an airport transfer cost?",
+                  answer: "Prices vary depending on the airport, distance, and vehicle type. Contact us for a quote - we offer competitive rates for Stone and Stoke on Trent airport transfers. You can get a quote online or call 01785 335563.",
+                },
+                {
+                  question: "What vehicle types are available for airport transfers?",
+                  answer: "We have a range of vehicles from saloon cars to 16-seater minibuses, including executive vehicles and wheelchair-accessible options. Choose the vehicle that best suits your group size and luggage requirements.",
+                },
+              ]}
+            />
+
             {/* CTA Section */}
             <div className="bg-primary text-white rounded-lg p-12 text-center">
               <h2 className="text-4xl font-bold mb-4">Ready to Book Your Airport Transfer?</h2>
               <p className="text-xl mb-8 text-gray-200">
-                Contact us today for a quote or book online. We're available 24/7, 
+                Contact us today for a quote or request a booking online. We're available 24/7, 
                 365 days a year.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -2,9 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
 import StructuredData from "@/components/StructuredData";
+import FAQ from "@/components/FAQ";
 import {
   createServiceSchema,
   createBreadcrumbSchema,
+  createFAQSchema,
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -37,10 +39,37 @@ export default function AccountWork() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
     {
       name: "Account Work",
-      url: "http://taxisstone.co.uk/account-work",
+      url: "https://taxisstone.co.uk/account-work",
+    },
+  ]);
+
+  const faqSchema = createFAQSchema([
+    {
+      question: "What is corporate account work?",
+      answer: "Corporate account work allows businesses to set up a monthly account for their taxi and transport needs. All journeys are invoiced monthly, making it convenient for businesses with regular transport requirements.",
+    },
+    {
+      question: "How do I set up a corporate account?",
+      answer: "Contact us on 01785 335563 or request a booking online to discuss your business transport needs. We'll work with you to set up a corporate account with monthly invoicing.",
+    },
+    {
+      question: "What payment terms are available for account work?",
+      answer: "We offer monthly invoicing for corporate accounts, making it easy to manage business transport expenses. Payment terms can be discussed when setting up your account.",
+    },
+    {
+      question: "What types of business transport do you provide?",
+      answer: "We provide all types of business transport including airport transfers, client meetings, corporate events, employee transport, and regular business journeys.",
+    },
+    {
+      question: "Do you provide executive vehicles for corporate clients?",
+      answer: "Yes, we have executive vehicles available for corporate clients who require premium transport. All vehicles are modern, comfortable, and professionally maintained.",
+    },
+    {
+      question: "Can I track my business transport expenses?",
+      answer: "Yes, with monthly invoicing, you'll receive detailed invoices showing all journeys, making it easy to track and manage your business transport expenses.",
     },
   ]);
 
@@ -48,6 +77,7 @@ export default function AccountWork() {
     <>
       <StructuredData data={serviceSchema} />
       <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={faqSchema} />
       <div className="min-h-screen">
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
@@ -162,6 +192,38 @@ export default function AccountWork() {
                 </div>
               </div>
             </div>
+
+            {/* FAQ Section */}
+            <FAQ
+              title="Corporate Account Work FAQs"
+              description="Common questions about our corporate taxi and account work services in Stone and Stoke on Trent"
+              faqs={[
+                {
+                  question: "What is corporate account work?",
+                  answer: "Corporate account work allows businesses to set up a monthly account for their taxi and transport needs. All journeys are invoiced monthly, making it convenient for businesses with regular transport requirements.",
+                },
+                {
+                  question: "How do I set up a corporate account?",
+                  answer: "Contact us on 01785 335563 or request a booking online to discuss your business transport needs. We'll work with you to set up a corporate account with monthly invoicing.",
+                },
+                {
+                  question: "What payment terms are available for account work?",
+                  answer: "We offer monthly invoicing for corporate accounts, making it easy to manage business transport expenses. Payment terms can be discussed when setting up your account.",
+                },
+                {
+                  question: "What types of business transport do you provide?",
+                  answer: "We provide all types of business transport including airport transfers, client meetings, corporate events, employee transport, and regular business journeys.",
+                },
+                {
+                  question: "Do you provide executive vehicles for corporate clients?",
+                  answer: "Yes, we have executive vehicles available for corporate clients who require premium transport. All vehicles are modern, comfortable, and professionally maintained.",
+                },
+                {
+                  question: "Can I track my business transport expenses?",
+                  answer: "Yes, with monthly invoicing, you'll receive detailed invoices showing all journeys, making it easy to track and manage your business transport expenses.",
+                },
+              ]}
+            />
 
             <div className="bg-primary text-white rounded-lg p-12 text-center">
               <h2 className="text-4xl font-bold mb-4">Set Up Your Corporate Account Today</h2>

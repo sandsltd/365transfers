@@ -2,9 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
 import StructuredData from "@/components/StructuredData";
+import FAQ from "@/components/FAQ";
 import {
   createServiceSchema,
   createBreadcrumbSchema,
+  createFAQSchema,
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -37,10 +39,37 @@ export default function EveryOccasion() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
     {
       name: "Service for Every Occasion",
-      url: "http://taxisstone.co.uk/every-occasion",
+      url: "https://taxisstone.co.uk/every-occasion",
+    },
+  ]);
+
+  const faqSchema = createFAQSchema([
+    {
+      question: "What occasions do you provide transport for?",
+      answer: "We provide transport for all special occasions including weddings, parties, celebrations, birthdays, anniversaries, graduations, proms, and any other memorable events.",
+    },
+    {
+      question: "Do you provide wedding transport?",
+      answer: "Yes, we specialise in wedding transport services. We can transport the bride and groom, wedding party, or guests. Our executive vehicles are perfect for making your special day even more memorable.",
+    },
+    {
+      question: "What vehicle types are available for special occasions?",
+      answer: "We have a range of vehicles perfect for special occasions, from elegant saloon cars to spacious 16-seater minibuses. Executive vehicles are available for premium occasions like weddings.",
+    },
+    {
+      question: "How far in advance should I request transport for a special occasion?",
+      answer: "We recommend requesting transport at least 1-2 weeks in advance, especially for weddings and popular dates. However, we can often accommodate last-minute requests - call us on 01785 335563.",
+    },
+    {
+      question: "Can you accommodate large groups for special occasions?",
+      answer: "Yes, we have vehicles ranging from saloon cars to 16-seater minibuses, perfect for groups of all sizes. We can also coordinate multiple vehicles for very large celebrations.",
+    },
+    {
+      question: "How much does transport for special occasions cost?",
+      answer: "Prices vary depending on the occasion type, distance, vehicle type, and duration. Contact us for a competitive quote for your special occasion transport. We offer transparent pricing with no hidden fees.",
     },
   ]);
 
@@ -48,6 +77,7 @@ export default function EveryOccasion() {
     <>
       <StructuredData data={serviceSchema} />
       <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={faqSchema} />
       <div className="min-h-screen">
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
@@ -192,6 +222,38 @@ export default function EveryOccasion() {
                 </div>
               </div>
             </div>
+
+            {/* FAQ Section */}
+            <FAQ
+              title="Special Occasion Taxi FAQs"
+              description="Common questions about our taxi services for special occasions in Stone and Stoke on Trent"
+              faqs={[
+                {
+                  question: "What occasions do you provide transport for?",
+                  answer: "We provide transport for all special occasions including weddings, parties, celebrations, birthdays, anniversaries, graduations, proms, and any other memorable events.",
+                },
+                {
+                  question: "Do you provide wedding transport?",
+                  answer: "Yes, we specialise in wedding transport services. We can transport the bride and groom, wedding party, or guests. Our executive vehicles are perfect for making your special day even more memorable.",
+                },
+                {
+                  question: "What vehicle types are available for special occasions?",
+                  answer: "We have a range of vehicles perfect for special occasions, from elegant saloon cars to spacious 16-seater minibuses. Executive vehicles are available for premium occasions like weddings.",
+                },
+                {
+                  question: "How far in advance should I request transport for a special occasion?",
+                  answer: "We recommend requesting transport at least 1-2 weeks in advance, especially for weddings and popular dates. However, we can often accommodate last-minute requests - call us on 01785 335563.",
+                },
+                {
+                  question: "Can you accommodate large groups for special occasions?",
+                  answer: "Yes, we have vehicles ranging from saloon cars to 16-seater minibuses, perfect for groups of all sizes. We can also coordinate multiple vehicles for very large celebrations.",
+                },
+                {
+                  question: "How much does transport for special occasions cost?",
+                  answer: "Prices vary depending on the occasion type, distance, vehicle type, and duration. Contact us for a competitive quote for your special occasion transport. We offer transparent pricing with no hidden fees.",
+                },
+              ]}
+            />
 
             <div className="bg-primary text-white rounded-lg p-12 text-center">
               <h2 className="text-4xl font-bold mb-4">Book Transport for Your Special Occasion</h2>

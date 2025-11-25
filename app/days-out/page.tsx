@@ -2,9 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
 import StructuredData from "@/components/StructuredData";
+import FAQ from "@/components/FAQ";
 import {
   createServiceSchema,
   createBreadcrumbSchema,
+  createFAQSchema,
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -37,10 +39,37 @@ export default function DaysOut() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
     {
       name: "Days Out",
-      url: "http://taxisstone.co.uk/days-out",
+      url: "https://taxisstone.co.uk/days-out",
+    },
+  ]);
+
+  const faqSchema = createFAQSchema([
+    {
+      question: "What types of days out do you provide transport for?",
+      answer: "We provide transport for all types of days out including family trips, leisure activities, weekend getaways, theme parks, coastal visits, city breaks, shopping trips, and more.",
+    },
+    {
+      question: "Can I request a return journey for my day out?",
+      answer: "Yes, we offer both one-way and return journeys for days out. Requesting a return journey ensures you have reliable transport home after your day out.",
+    },
+    {
+      question: "What vehicle sizes are available for family days out?",
+      answer: "We have vehicles ranging from saloon cars to 16-seater minibuses, perfect for families and groups of all sizes. All vehicles are comfortable and well-maintained.",
+    },
+    {
+      question: "How do I request a taxi for a day out?",
+      answer: "You can request a booking online through our booking form or call us on 01785 335563. We recommend requesting in advance, especially for popular destinations or weekends.",
+    },
+    {
+      question: "Do you provide transport to theme parks and attractions?",
+      answer: "Yes, we provide transport to theme parks, attractions, and leisure destinations throughout the UK. Popular destinations include Alton Towers, Drayton Manor, and many more.",
+    },
+    {
+      question: "How much does a days out taxi cost?",
+      answer: "Prices vary depending on the destination, distance, and vehicle type. Contact us for a competitive quote for your day out. We offer transparent pricing with no hidden fees.",
     },
   ]);
 
@@ -48,6 +77,7 @@ export default function DaysOut() {
     <>
       <StructuredData data={serviceSchema} />
       <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={faqSchema} />
       <div className="min-h-screen">
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
@@ -131,6 +161,38 @@ export default function DaysOut() {
                 </div>
               </div>
             </div>
+
+            {/* FAQ Section */}
+            <FAQ
+              title="Days Out Taxi FAQs"
+              description="Common questions about our days out taxi services in Stone and Stoke on Trent"
+              faqs={[
+                {
+                  question: "What types of days out do you provide transport for?",
+                  answer: "We provide transport for all types of days out including family trips, leisure activities, weekend getaways, theme parks, coastal visits, city breaks, shopping trips, and more.",
+                },
+                {
+                  question: "Can I request a return journey for my day out?",
+                  answer: "Yes, we offer both one-way and return journeys for days out. Requesting a return journey ensures you have reliable transport home after your day out.",
+                },
+                {
+                  question: "What vehicle sizes are available for family days out?",
+                  answer: "We have vehicles ranging from saloon cars to 16-seater minibuses, perfect for families and groups of all sizes. All vehicles are comfortable and well-maintained.",
+                },
+                {
+                  question: "How do I request a taxi for a day out?",
+                  answer: "You can request a booking online through our booking form or call us on 01785 335563. We recommend requesting in advance, especially for popular destinations or weekends.",
+                },
+                {
+                  question: "Do you provide transport to theme parks and attractions?",
+                  answer: "Yes, we provide transport to theme parks, attractions, and leisure destinations throughout the UK. Popular destinations include Alton Towers, Drayton Manor, and many more.",
+                },
+                {
+                  question: "How much does a days out taxi cost?",
+                  answer: "Prices vary depending on the destination, distance, and vehicle type. Contact us for a competitive quote for your day out. We offer transparent pricing with no hidden fees.",
+                },
+              ]}
+            />
 
             <div className="bg-primary text-white rounded-lg p-12 text-center">
               <h2 className="text-4xl font-bold mb-4">Book Your Days Out Taxi Today</h2>

@@ -2,9 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
 import StructuredData from "@/components/StructuredData";
+import FAQ from "@/components/FAQ";
 import {
   createServiceSchema,
   createBreadcrumbSchema,
+  createFAQSchema,
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -37,10 +39,37 @@ export default function ComplexJourney() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
     {
       name: "Complex Journey",
-      url: "http://taxisstone.co.uk/complex-journey",
+      url: "https://taxisstone.co.uk/complex-journey",
+    },
+  ]);
+
+  const faqSchema = createFAQSchema([
+    {
+      question: "What is a complex journey?",
+      answer: "A complex journey involves multiple stops, intricate routes, or special requirements that need careful planning. This includes multi-stop trips, routes with multiple destinations, or journeys requiring specific timing.",
+    },
+    {
+      question: "How do you handle multi-stop journeys?",
+      answer: "Our experienced drivers are skilled at handling multi-stop journeys efficiently. We plan the optimal route and ensure all stops are made on time. Just provide us with all your destinations when requesting a booking.",
+    },
+    {
+      question: "Can you handle journeys with specific timing requirements?",
+      answer: "Yes, we can accommodate journeys with specific timing requirements. Whether you need to arrive at multiple locations at set times, we'll plan the route accordingly. Discuss your timing needs when requesting a booking.",
+    },
+    {
+      question: "How do I request a complex journey?",
+      answer: "You can request a complex journey online through our booking form or call us on 01785 335563. Please provide details of all stops, destinations, and any special requirements. We recommend requesting in advance for complex routes.",
+    },
+    {
+      question: "How much does a complex journey cost?",
+      answer: "Prices for complex journeys depend on the number of stops, total distance, duration, and vehicle type. Contact us for a competitive quote - we offer transparent pricing with no hidden fees.",
+    },
+    {
+      question: "Do you provide vehicles for large groups on complex journeys?",
+      answer: "Yes, we have vehicles ranging from saloon cars to 16-seater minibuses, perfect for complex journeys with groups of various sizes. We can coordinate multiple vehicles if needed.",
     },
   ]);
 
@@ -48,6 +77,7 @@ export default function ComplexJourney() {
     <>
       <StructuredData data={serviceSchema} />
       <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={faqSchema} />
       <div className="min-h-screen">
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
@@ -161,6 +191,38 @@ export default function ComplexJourney() {
                 </div>
               </div>
             </div>
+
+            {/* FAQ Section */}
+            <FAQ
+              title="Complex Journey FAQs"
+              description="Common questions about our complex journey and multi-stop taxi services in Stone and Stoke on Trent"
+              faqs={[
+                {
+                  question: "What is a complex journey?",
+                  answer: "A complex journey involves multiple stops, intricate routes, or special requirements that need careful planning. This includes multi-stop trips, routes with multiple destinations, or journeys requiring specific timing.",
+                },
+                {
+                  question: "How do you handle multi-stop journeys?",
+                  answer: "Our experienced drivers are skilled at handling multi-stop journeys efficiently. We plan the optimal route and ensure all stops are made on time. Just provide us with all your destinations when requesting a booking.",
+                },
+                {
+                  question: "Can you handle journeys with specific timing requirements?",
+                  answer: "Yes, we can accommodate journeys with specific timing requirements. Whether you need to arrive at multiple locations at set times, we'll plan the route accordingly. Discuss your timing needs when requesting a booking.",
+                },
+                {
+                  question: "How do I request a complex journey?",
+                  answer: "You can request a complex journey online through our booking form or call us on 01785 335563. Please provide details of all stops, destinations, and any special requirements. We recommend requesting in advance for complex routes.",
+                },
+                {
+                  question: "How much does a complex journey cost?",
+                  answer: "Prices for complex journeys depend on the number of stops, total distance, duration, and vehicle type. Contact us for a competitive quote - we offer transparent pricing with no hidden fees.",
+                },
+                {
+                  question: "Do you provide vehicles for large groups on complex journeys?",
+                  answer: "Yes, we have vehicles ranging from saloon cars to 16-seater minibuses, perfect for complex journeys with groups of various sizes. We can coordinate multiple vehicles if needed.",
+                },
+              ]}
+            />
 
             <div className="bg-primary text-white rounded-lg p-12 text-center">
               <h2 className="text-4xl font-bold mb-4">Book Your Complex Journey Today</h2>

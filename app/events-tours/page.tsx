@@ -2,9 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
 import StructuredData from "@/components/StructuredData";
+import FAQ from "@/components/FAQ";
 import {
   createServiceSchema,
   createBreadcrumbSchema,
+  createFAQSchema,
 } from "@/lib/schema";
 
 export const metadata: Metadata = {
@@ -37,10 +39,37 @@ export default function EventsTours() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
     {
       name: "Events & Tours",
-      url: "http://taxisstone.co.uk/events-tours",
+      url: "https://taxisstone.co.uk/events-tours",
+    },
+  ]);
+
+  const faqSchema = createFAQSchema([
+    {
+      question: "What types of events do you provide transport for?",
+      answer: "We provide transport for all types of events including concerts, sports events, weddings, corporate events, festivals, theatre shows, and more.",
+    },
+    {
+      question: "Do you provide transport for wedding parties?",
+      answer: "Yes, we provide professional wedding transport services. We can transport the wedding party, guests, or both. Our executive vehicles are perfect for making your special day even more memorable.",
+    },
+    {
+      question: "Can you accommodate large groups for events?",
+      answer: "Yes, we have vehicles ranging from saloon cars to 16-seater minibuses, perfect for groups of all sizes. We can also coordinate multiple vehicles for very large groups.",
+    },
+    {
+      question: "How far in advance should I request transport for an event?",
+      answer: "We recommend requesting transport at least 1-2 weeks in advance, especially for popular events, weddings, or during peak seasons. However, we can often accommodate last-minute requests - call us on 01785 335563.",
+    },
+    {
+      question: "Do you provide guided tour transport?",
+      answer: "Yes, we provide transport for guided tours and can work with tour operators to provide reliable transport for tour groups throughout Stone, Stoke on Trent, and Staffordshire.",
+    },
+    {
+      question: "How much does event transport cost?",
+      answer: "Prices vary depending on the event type, distance, vehicle type, and duration. Contact us for a competitive quote for your event transport. We offer transparent pricing with no hidden fees.",
     },
   ]);
 
@@ -48,6 +77,7 @@ export default function EventsTours() {
     <>
       <StructuredData data={serviceSchema} />
       <StructuredData data={breadcrumbSchema} />
+      <StructuredData data={faqSchema} />
       <div className="min-h-screen">
       <section className="bg-primary text-white py-16">
         <div className="container mx-auto px-4">
@@ -176,6 +206,38 @@ export default function EventsTours() {
                 </div>
               </div>
             </div>
+
+            {/* FAQ Section */}
+            <FAQ
+              title="Events & Tours Taxi FAQs"
+              description="Common questions about our event and tour transport services in Stone and Stoke on Trent"
+              faqs={[
+                {
+                  question: "What types of events do you provide transport for?",
+                  answer: "We provide transport for all types of events including concerts, sports events, weddings, corporate events, festivals, theatre shows, and more.",
+                },
+                {
+                  question: "Do you provide transport for wedding parties?",
+                  answer: "Yes, we provide professional wedding transport services. We can transport the wedding party, guests, or both. Our executive vehicles are perfect for making your special day even more memorable.",
+                },
+                {
+                  question: "Can you accommodate large groups for events?",
+                  answer: "Yes, we have vehicles ranging from saloon cars to 16-seater minibuses, perfect for groups of all sizes. We can also coordinate multiple vehicles for very large groups.",
+                },
+                {
+                  question: "How far in advance should I request transport for an event?",
+                  answer: "We recommend requesting transport at least 1-2 weeks in advance, especially for popular events, weddings, or during peak seasons. However, we can often accommodate last-minute requests - call us on 01785 335563.",
+                },
+                {
+                  question: "Do you provide guided tour transport?",
+                  answer: "Yes, we provide transport for guided tours and can work with tour operators to provide reliable transport for tour groups throughout Stone, Stoke on Trent, and Staffordshire.",
+                },
+                {
+                  question: "How much does event transport cost?",
+                  answer: "Prices vary depending on the event type, distance, vehicle type, and duration. Contact us for a competitive quote for your event transport. We offer transparent pricing with no hidden fees.",
+                },
+              ]}
+            />
 
             <div className="bg-primary text-white rounded-lg p-12 text-center">
               <h2 className="text-4xl font-bold mb-4">Book Your Event Transport Today</h2>

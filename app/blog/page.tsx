@@ -53,10 +53,10 @@ const blogPosts = [
 
 export default function Blog() {
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Home", url: "https://taxisstone.co.uk" },
     {
       name: "Blog",
-      url: "http://taxisstone.co.uk/blog",
+      url: "https://taxisstone.co.uk/blog",
     },
   ]);
 
