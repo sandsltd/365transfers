@@ -217,7 +217,7 @@ Thank you for your booking request with 365 Transfers.
 
 We have received your booking request and will contact you within 24 hours to confirm availability and finalise your booking.
 
-If you require a taxi within the next 24 hours, we recommend calling us directly on 03333 355365 to ensure we can assist you promptly.
+If you require a taxi within the next 24 hours, we recommend calling us directly on 01785 335563 to ensure we can assist you promptly.
 
 Your booking request details:
 Name: ${name}
@@ -234,7 +234,7 @@ ${vehicleType ? `Vehicle: ${vehicleType}` : ""}
 
 Best regards,
 365 Transfers
-03333 355365
+01785 335563
       `.trim(),
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff;">
@@ -255,7 +255,7 @@ Best regards,
             <div style="background: #fff3cd; border-left: 4px solid #C2FE58; padding: 15px; margin: 20px 0; border-radius: 4px;">
               <p style="color: #333; font-size: 15px; line-height: 1.6; margin: 0;">
                 <strong>⚠️ Urgent Booking?</strong><br>
-                If you require a taxi within the next <strong>24 hours</strong>, we recommend calling us directly on <strong><a href="tel:03333355365" style="color: #001E73; text-decoration: none;">03333 355365</a></strong> to ensure we can assist you promptly.
+                If you require a taxi within the next <strong>24 hours</strong>, we recommend calling us directly on <strong><a href="tel:01785335563" style="color: #001E73; text-decoration: none;">01785 335563</a></strong> to ensure we can assist you promptly.
               </p>
             </div>
             
@@ -294,7 +294,7 @@ Best regards,
             <p style="margin: 0 0 10px 0; font-size: 16px;"><strong>365 Transfers</strong></p>
             <p style="margin: 0 0 10px 0; font-size: 14px;">Professional Taxi & Transfer Services</p>
             <p style="margin: 0; font-size: 14px;">
-              Phone: <a href="tel:03333355365" style="color: #C2FE58; text-decoration: none; font-weight: bold;">03333 355365</a>
+              Phone: <a href="tel:01785335563" style="color: #C2FE58; text-decoration: none; font-weight: bold;">01785 335563</a>
             </p>
             <p style="margin: 15px 0 0 0; font-size: 12px; color: #C2FE58;">
               Available 24/7, 365 days a year

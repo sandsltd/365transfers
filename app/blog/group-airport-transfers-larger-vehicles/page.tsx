@@ -38,11 +38,11 @@ export default function GroupAirportTransfers() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
-    { name: "Blog", url: "https://www.365transfers.co.uk/blog" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Blog", url: "http://taxisstone.co.uk/blog" },
     {
       name: "Group Airport Transfers",
-      url: "https://www.365transfers.co.uk/blog/group-airport-transfers-larger-vehicles",
+      url: "http://taxisstone.co.uk/blog/group-airport-transfers-larger-vehicles",
     },
   ]);
 

@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
   ]);
 
   return (

@@ -37,10 +37,10 @@ export default function EventsTours() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
     {
       name: "Events & Tours",
-      url: "https://www.365transfers.co.uk/events-tours",
+      url: "http://taxisstone.co.uk/events-tours",
     },
   ]);
 

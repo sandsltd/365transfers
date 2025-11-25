@@ -18,7 +18,7 @@ export default function Header() {
         <div className="container mx-auto px-4">
           <div className="flex gap-2">
             <a
-              href="tel:03333355365"
+              href="tel:01785335563"
               className="btn-primary text-sm flex-1 text-center block"
             >
               Call Now
@@ -183,7 +183,7 @@ export default function Header() {
           {/* Desktop Action Buttons */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:03333355365"
+              href="tel:01785335563"
               className="btn-primary text-sm"
             >
               Call Now

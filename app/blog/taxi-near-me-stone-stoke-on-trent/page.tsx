@@ -38,11 +38,11 @@ export default function TaxiNearMeStoneStoke() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
-    { name: "Blog", url: "https://www.365transfers.co.uk/blog" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Blog", url: "http://taxisstone.co.uk/blog" },
     {
       name: "Taxi Near Me",
-      url: "https://www.365transfers.co.uk/blog/taxi-near-me-stone-stoke-on-trent",
+      url: "http://taxisstone.co.uk/blog/taxi-near-me-stone-stoke-on-trent",
     },
   ]);
 
@@ -179,7 +179,7 @@ export default function TaxiNearMeStoneStoke() {
                   convenient for Stone and Stoke on Trent taxi bookings.
                 </li>
                 <li>
-                  <strong>Phone Booking:</strong> Call us on <a href="tel:03333355365" className="text-primary hover:underline">03333 355365</a> 
+                  <strong>Phone Booking:</strong> Call us on <a href="tel:01785335563" className="text-primary hover:underline">01785 335563</a> 
                   for immediate bookings or to speak with our team.
                 </li>
                 <li>

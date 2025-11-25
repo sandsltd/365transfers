@@ -37,10 +37,10 @@ export default function SchoolContracts() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
     {
       name: "School Contracts",
-      url: "https://www.365transfers.co.uk/school-contracts",
+      url: "http://taxisstone.co.uk/school-contracts",
     },
   ]);
 

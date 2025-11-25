@@ -37,10 +37,10 @@ export default function DaysOut() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
     {
       name: "Days Out",
-      url: "https://www.365transfers.co.uk/days-out",
+      url: "http://taxisstone.co.uk/days-out",
     },
   ]);
 

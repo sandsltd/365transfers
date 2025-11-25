@@ -37,10 +37,10 @@ export default function EveryOccasion() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
     {
       name: "Service for Every Occasion",
-      url: "https://www.365transfers.co.uk/every-occasion",
+      url: "http://taxisstone.co.uk/every-occasion",
     },
   ]);
 

@@ -4,11 +4,11 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "365 Transfers",
-  url: "https://www.365transfers.co.uk",
-  logo: "https://www.365transfers.co.uk/logo/365logo.png",
+  url: "http://taxisstone.co.uk",
+  logo: "http://taxisstone.co.uk/logo/365logo.png",
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+44-3333-355365",
+    telephone: "+44-1785-335563",
     contactType: "Customer Service",
     areaServed: ["GB"],
     availableLanguage: ["English"],
@@ -21,10 +21,10 @@ export const organizationSchema = {
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://www.365transfers.co.uk/#organization",
+  "@id": "http://taxisstone.co.uk/#organization",
   name: "365 Transfers",
-  image: "https://www.365transfers.co.uk/logo/365logo.png",
-  telephone: "03333355365",
+  image: "http://taxisstone.co.uk/logo/365logo.png",
+  telephone: "01785335563",
   priceRange: "$$",
   address: {
     "@type": "PostalAddress",
@@ -37,7 +37,7 @@ export const localBusinessSchema = {
     latitude: "52.9069",
     longitude: "-2.1394",
   },
-  url: "https://www.365transfers.co.uk",
+  url: "http://taxisstone.co.uk",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -82,7 +82,7 @@ export const taxiServiceSchema = {
   "@type": "TaxiService",
   name: "365 Transfers",
   provider: {
-    "@id": "https://www.365transfers.co.uk/#organization",
+    "@id": "http://taxisstone.co.uk/#organization",
   },
   areaServed: [
     {
@@ -108,7 +108,7 @@ export function createServiceSchema(serviceName: string, description: string) {
     "@type": "Service",
     name: serviceName,
     provider: {
-      "@id": "https://www.365transfers.co.uk/#organization",
+      "@id": "http://taxisstone.co.uk/#organization",
     },
     description: description,
     areaServed: [
@@ -160,7 +160,7 @@ export function createArticleSchema(
       name: "365 Transfers",
     },
     publisher: {
-      "@id": "https://www.365transfers.co.uk/#organization",
+      "@id": "http://taxisstone.co.uk/#organization",
     },
   };
 }

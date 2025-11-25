@@ -199,7 +199,7 @@ export default function CookiePolicy() {
                     <strong>365 Transfers</strong>
                   </p>
                   <p className="text-gray-700 mb-2">
-                    Phone: <a href="tel:03333355365" className="text-primary hover:underline">03333 355365</a>
+                    Phone: <a href="tel:01785335563" className="text-primary hover:underline">01785 335563</a>
                   </p>
                   <p className="text-gray-700">
                     Email: <Link href="/contact" className="text-primary hover:underline">Contact Form</Link>

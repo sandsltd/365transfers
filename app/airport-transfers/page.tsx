@@ -38,10 +38,10 @@ export default function AirportTransfers() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
     {
       name: "Airport Transfers",
-      url: "https://www.365transfers.co.uk/airport-transfers",
+      url: "http://taxisstone.co.uk/airport-transfers",
     },
   ]);
 

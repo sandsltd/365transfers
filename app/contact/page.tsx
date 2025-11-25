@@ -65,10 +65,10 @@ export default function Contact() {
   };
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
     {
       name: "Contact",
-      url: "https://www.365transfers.co.uk/contact",
+      url: "http://taxisstone.co.uk/contact",
     },
   ]);
 

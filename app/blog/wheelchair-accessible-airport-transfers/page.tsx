@@ -38,11 +38,11 @@ export default function WheelchairAccessibleAirportTransfers() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
-    { name: "Blog", url: "https://www.365transfers.co.uk/blog" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
+    { name: "Blog", url: "http://taxisstone.co.uk/blog" },
     {
       name: "Wheelchair Accessible Airport Transfers",
-      url: "https://www.365transfers.co.uk/blog/wheelchair-accessible-airport-transfers",
+      url: "http://taxisstone.co.uk/blog/wheelchair-accessible-airport-transfers",
     },
   ]);
 

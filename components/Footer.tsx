@@ -10,7 +10,7 @@ export default function Footer() {
             <h3 className="font-bold mb-3 text-accent">Contact Us</h3>
             <div className="space-y-2">
               <a
-                href="tel:03333355365"
+                href="tel:01785335563"
                 className="flex items-center space-x-2 text-sm hover:text-accent transition-colors"
               >
                 <svg
@@ -26,7 +26,7 @@ export default function Footer() {
                     d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
                   />
                 </svg>
-                <span>03333 355365</span>
+                <span>01785 335563</span>
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=61576144679794"

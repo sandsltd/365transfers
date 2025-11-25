@@ -1,7 +1,7 @@
 import { MetadataRoute } from "next";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://www.365transfers.co.uk";
+  const baseUrl = "http://taxisstone.co.uk";
 
   // Define all static routes
   const routes = [

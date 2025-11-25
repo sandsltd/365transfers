@@ -176,10 +176,10 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
                     <p className="text-sm">
                       <strong>⚠️ Urgent Booking?</strong> If you need a taxi within the next <strong>24 hours</strong>, please call us directly on{" "}
                       <a
-                        href="tel:03333355365"
+                        href="tel:01785335563"
                         className="text-primary font-semibold hover:underline"
                       >
-                        03333 355365
+                        01785 335563
                       </a>{" "}
                       to ensure we can assist you promptly.
                     </p>
@@ -456,10 +456,10 @@ export default function BookingModal({ isOpen, onClose }: BookingModalProps) {
               availability and finalise your booking. For urgent bookings
               within 24 hours, please call us directly on{" "}
               <a
-                href="tel:03333355365"
+                href="tel:01785335563"
                 className="text-primary font-semibold hover:underline"
               >
-                03333 355365
+                01785 335563
               </a>
               .
             </p>

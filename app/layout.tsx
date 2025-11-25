@@ -15,7 +15,7 @@ import {
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.365transfers.co.uk"),
+  metadataBase: new URL("http://taxisstone.co.uk"),
   title: "Taxi Stone | Taxi Stoke on Trent | Airport Taxi | 365 Transfers",
   description: "Taxi near me in Stone and Stoke on Trent. Professional airport taxi and transfer services available 365 days a year. Book your taxi Stone or Stoke on Trent today.",
   keywords: "taxi near me, taxi Stone, taxi Stoke on Trent, airport taxi, Stone taxi, Stoke on Trent taxi, airport transfers, taxi service Stone, taxi service Stoke on Trent, 365 transfers",

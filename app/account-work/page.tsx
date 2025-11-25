@@ -37,10 +37,10 @@ export default function AccountWork() {
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
-    { name: "Home", url: "https://www.365transfers.co.uk" },
+    { name: "Home", url: "http://taxisstone.co.uk" },
     {
       name: "Account Work",
-      url: "https://www.365transfers.co.uk/account-work",
+      url: "http://taxisstone.co.uk/account-work",
     },
   ]);
 
