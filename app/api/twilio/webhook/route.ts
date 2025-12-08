@@ -82,8 +82,8 @@ async function handleTwilioCall(params: URLSearchParams) {
   const FORWARD_TO_NUMBER = '+447432205615';
   
   // Enhanced TwiML response with audio message to caller and whisper to agent
-  const whisperUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.365transfers.co.uk'}/api/twilio/whisper`;
-  const audioUrl = `${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.365transfers.co.uk'}/audio/365transfers_greeting.mp3`;
+  const whisperUrl = `https://taxisstone.co.uk/api/twilio/whisper`;
+  const audioUrl = `https://taxisstone.co.uk/audio/365transfers_greeting.mp3`;
   
   const twiml = `<?xml version="1.0" encoding="UTF-8"?>
 <Response>
