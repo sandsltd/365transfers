@@ -503,8 +503,8 @@ export default function Home() {
           />
           {/* Green tint overlay using brand green */}
           <div className="absolute inset-0 bg-accent/20"></div>
-          {/* Subtle dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/20"></div>
+          {/* Darker overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
         {/* Content */}
@@ -609,8 +609,8 @@ export default function Home() {
                     <span>Fixed prices, no hidden charges</span>
                   </li>
                 </ul>
-                <Link href="/airport-transfers" className="btn-primary">
-                  Learn More About Airport Transfers
+                <Link href="/airport-transfers" className="btn-primary inline-block">
+                  Learn More
                 </Link>
               </div>
               <div className="bg-primary text-white rounded-lg p-8">
