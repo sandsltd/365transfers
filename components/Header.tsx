@@ -21,7 +21,7 @@ export default function Header() {
               href="tel:01785335563"
               className="btn-primary text-sm flex-1 text-center block"
             >
-              Call Now
+              Call Now: 01785 335563
             </a>
             <button
               onClick={openBookingModal}
@@ -186,13 +186,13 @@ export default function Header() {
               href="tel:01785335563"
               className="btn-primary text-sm"
             >
-              Call Now
+              Call Now: 01785 335563
             </a>
             <button
               onClick={openBookingModal}
               className="btn-primary text-sm"
             >
-              Book Now
+              Book Online
             </button>
           </div>
         </div>

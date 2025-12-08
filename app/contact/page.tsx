@@ -237,6 +237,9 @@ export default function Contact() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-primary mb-1">Phone</h3>
+                        <a href="tel:01785335563" className="text-accent hover:text-accent-dark font-bold text-lg">
+                          01785 335563
+                        </a>
                         <p className="text-gray-600">Available 24/7</p>
                       </div>
                     </div>
@@ -272,9 +275,14 @@ export default function Contact() {
                     For urgent bookings or immediate service, please call us directly.
                     Our team is available around the clock to assist you.
                   </p>
-                  <Link href="/" className="btn-primary inline-block">
-                    View Services
-                  </Link>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <a href="tel:01785335563" className="btn-primary inline-block text-center">
+                      Call: 01785 335563
+                    </a>
+                    <Link href="/" className="btn-secondary bg-white text-primary hover:bg-gray-100 inline-block text-center">
+                      View Services
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>

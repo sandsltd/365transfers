@@ -113,10 +113,10 @@ export default function Home() {
               Available 24/7, every day of the year.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <BookNowButton className="text-lg">
+              <BookNowButton className="text-xl px-10 py-5">
                 Book Your Ride
               </BookNowButton>
-              <Link href="/contact" className="btn-secondary text-lg">
+              <Link href="/contact" className="btn-secondary text-xl px-10 py-5">
                 Get a Quote
               </Link>
             </div>
@@ -352,7 +352,7 @@ export default function Home() {
             <p className="text-gray-600 mb-6">
               All our vehicles are well-maintained, comfortable, and driven by professional, licensed drivers.
             </p>
-            <BookNowButton>
+            <BookNowButton className="text-xl px-10 py-5">
               Book Your Vehicle
             </BookNowButton>
           </div>
@@ -481,7 +481,7 @@ export default function Home() {
             </Link>
           </div>
           <div className="text-center mt-12">
-            <BookNowButton className="text-lg">
+            <BookNowButton className="text-xl px-10 py-5">
               Book Your Service
             </BookNowButton>
           </div>
@@ -637,7 +637,7 @@ export default function Home() {
                   We also provide transfers to London airports (Heathrow, Gatwick, Stansted, Luton) 
                   and other UK airports. Contact us for a quote.
                 </p>
-                <BookNowButton className="bg-accent text-primary hover:bg-accent-dark">
+                <BookNowButton className="bg-accent text-primary hover:bg-accent-dark text-xl px-10 py-5">
                   Book Airport Transfer
                 </BookNowButton>
               </div>
@@ -719,7 +719,7 @@ export default function Home() {
                 Need a transfer to or from a train station? We'll get you there on time, 
                 every time. Book in advance or call for immediate service.
               </p>
-              <BookNowButton className="bg-accent text-primary hover:bg-accent/90">
+              <BookNowButton className="bg-accent text-primary hover:bg-accent/90 text-xl px-10 py-5">
                 Book Train Station Transfer
               </BookNowButton>
             </div>
@@ -794,7 +794,7 @@ export default function Home() {
           <p className="text-xl mb-8 text-gray-200">
             Contact us today and experience reliable transportation service.
           </p>
-          <BookNowButton className="text-lg">
+          <BookNowButton className="text-xl px-10 py-5">
             Get Started
           </BookNowButton>
         </div>
