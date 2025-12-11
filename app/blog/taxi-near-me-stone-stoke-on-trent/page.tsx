@@ -34,7 +34,7 @@ export default function TaxiNearMeStoneStoke() {
   const articleSchema = createArticleSchema(
     "Taxi Near Me: Your Guide to Reliable Taxi Services in Stone & Stoke on Trent",
     "Looking for a taxi near me in Stone or Stoke on Trent? Learn about our comprehensive taxi services covering Staffordshire and how to book your ride.",
-    "2025-10-05"
+    "2025-12-09"
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
@@ -66,7 +66,7 @@ export default function TaxiNearMeStoneStoke() {
               </h1>
               <p className="text-gray-600">
                 Published on{" "}
-                {new Date("2025-10-05").toLocaleDateString("en-GB", {
+                {new Date("2025-12-09").toLocaleDateString("en-GB", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",

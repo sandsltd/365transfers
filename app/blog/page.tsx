@@ -29,24 +29,31 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "christmas-new-year-taxi-stone-stoke-on-trent",
+    title: "Christmas & New Year Taxi Services in Stone & Stoke on Trent",
+    excerpt: "Book your Christmas and New Year taxi in Stone and Stoke on Trent. Airport transfers, party transport, and festive season rides available 24/7. Book early for the holidays!",
+    date: "2025-12-11",
+    category: "Seasonal Services",
+  },
+  {
     slug: "wheelchair-accessible-airport-transfers",
     title: "Wheelchair Accessible Airport Transfers: A Complete Guide",
     excerpt: "Everything you need to know about wheelchair accessible airport transfers from Stone and Stoke on Trent. Comfortable, safe, and reliable transport for all passengers.",
-    date: "2025-12-15",
+    date: "2025-12-09",
     category: "Airport Transfers",
   },
   {
     slug: "group-airport-transfers-larger-vehicles",
     title: "Group Airport Transfers: Making the Most of Larger Vehicle Options",
     excerpt: "Planning a group trip? Discover how our larger vehicle options make group airport transfers from Stone and Stoke on Trent comfortable and cost-effective.",
-    date: "2025-11-10",
+    date: "2025-12-09",
     category: "Airport Transfers",
   },
   {
     slug: "taxi-near-me-stone-stoke-on-trent",
     title: "Taxi Near Me: Your Guide to Reliable Taxi Services in Stone & Stoke on Trent",
     excerpt: "Looking for a taxi near me in Stone or Stoke on Trent? Learn about our comprehensive taxi services covering Staffordshire and how to book your ride.",
-    date: "2025-10-05",
+    date: "2025-12-09",
     category: "Local Services",
   },
 ];

@@ -34,7 +34,7 @@ export default function WheelchairAccessibleAirportTransfers() {
   const articleSchema = createArticleSchema(
     "Wheelchair Accessible Airport Transfers: A Complete Guide",
     "Everything you need to know about wheelchair accessible airport transfers from Stone and Stoke on Trent. Comfortable, safe, and reliable transport for all passengers.",
-    "2025-12-15"
+    "2025-12-09"
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
@@ -66,7 +66,7 @@ export default function WheelchairAccessibleAirportTransfers() {
               </h1>
               <p className="text-gray-600">
                 Published on{" "}
-                {new Date("2025-12-15").toLocaleDateString("en-GB", {
+                {new Date("2025-12-09").toLocaleDateString("en-GB", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",

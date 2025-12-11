@@ -34,7 +34,7 @@ export default function GroupAirportTransfers() {
   const articleSchema = createArticleSchema(
     "Group Airport Transfers: Making the Most of Larger Vehicle Options",
     "Planning a group trip? Discover how our larger vehicle options make group airport transfers from Stone and Stoke on Trent comfortable and cost-effective.",
-    "2025-11-10"
+    "2025-12-09"
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
@@ -66,7 +66,7 @@ export default function GroupAirportTransfers() {
               </h1>
               <p className="text-gray-600">
                 Published on{" "}
-                {new Date("2025-11-10").toLocaleDateString("en-GB", {
+                {new Date("2025-12-09").toLocaleDateString("en-GB", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
