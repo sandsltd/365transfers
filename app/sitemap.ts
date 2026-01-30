@@ -96,6 +96,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${baseUrl}/blog/local-taxi-service-stone-staffordshire`,
+      lastModified: new Date("2026-01-30"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/blog/events-nights-out-taxi-stone`,
+      lastModified: new Date("2026-01-30"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/blog/christmas-new-year-taxi-stone-stoke-on-trent`,
       lastModified: new Date("2025-12-11"),
       changeFrequency: "monthly" as const,

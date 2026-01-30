@@ -29,6 +29,20 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "local-taxi-service-stone-staffordshire",
+    title: "Local Taxi Service in Stone, Staffordshire",
+    excerpt: "Looking for a reliable local taxi in Stone, Staffordshire? 365 Transfers provides 24/7 taxi services across Stone, Stoke on Trent, and surrounding areas. Call today.",
+    date: "2026-01-30",
+    category: "Local Services",
+  },
+  {
+    slug: "events-nights-out-taxi-stone",
+    title: "Events & Nights Out Taxi in Stone & Stoke on Trent",
+    excerpt: "Need a taxi for a night out, concert, party or event in Stone or Stoke on Trent? 365 Transfers provides reliable event transport across Staffordshire. Book today.",
+    date: "2026-01-30",
+    category: "Local Services",
+  },
+  {
     slug: "christmas-new-year-taxi-stone-stoke-on-trent",
     title: "Christmas & New Year Taxi Services in Stone & Stoke on Trent",
     excerpt: "Book your Christmas and New Year taxi in Stone and Stoke on Trent. Airport transfers, party transport, and festive season rides available 24/7. Book early for the holidays!",
