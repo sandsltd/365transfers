@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import * as postmark from "postmark";
-
+import { Resend } from 'resend';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -44,9 +43,8 @@ export async function POST(request: NextRequest) {
       // In development, log the email instead of failing
       if (process.env.NODE_ENV === "development") {
         console.log("=== BOOKING REQUEST (Development Mode) ===");
-        console.log("To:", emailTo);
-        console.log("From:", emailFrom);
-        console.log("Subject: New Booking Request - 365 Transfers");
+        console.log("to:", emailTo);
+        console.log("from: 'web@saunders-simmons.co.uk'subject: New Booking Request - 365 Transfers");
         return NextResponse.json(
           { message: "Booking request logged (development mode)" },
           { status: 200 }
@@ -67,7 +65,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Create Postmark client
-    const client = new postmark.ServerClient(process.env.POSTMARK_API_TOKEN!);
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Business email
     const businessSubject = `New Booking Request - ${formattedDate} ${pickupTime}`;
@@ -75,8 +73,8 @@ export async function POST(request: NextRequest) {
 New booking request from 365 Transfers website:
 
 CONTACT INFORMATION:
-Name: ${name}
-${businessName ? `Business Name: ${businessName}` : ""}
+filename: ${name}
+${businessName ? `Business filename: ${businessName}` : ""}
 Email: ${email}
 Phone: ${contactNumber}
 
@@ -106,7 +104,7 @@ This is a booking request. Please contact the customer to confirm availability.
               <h3 style="color: #001E73; margin-top: 0; font-size: 18px; border-bottom: 2px solid #C2FE58; padding-bottom: 10px;">Contact Information</h3>
               <table style="width: 100%; border-collapse: collapse;">
                 <tr>
-                  <td style="padding: 8px 0; color: #666; width: 150px;"><strong>Name:</strong></td>
+                  <td style="padding: 8px 0; color: #666; width: 150px;"><strong>filename:</strong></td>
                   <td style="padding: 8px 0; color: #001E73;">${name}</td>
                 </tr>
                 ${businessName ? `<tr>
@@ -190,13 +188,13 @@ We have received your booking request and will contact you within 24 hours to co
 If you require a taxi within the next 24 hours, we recommend calling us directly on 01785 335563 to ensure we can assist you promptly.
 
 Your booking request details:
-Name: ${name}
+filename: ${name}
 ${businessName ? `Business: ${businessName}` : ""}
 Phone: ${contactNumber}
 
 Journey:
 From: ${pickupLocation}
-To: ${destination}
+to: ${destination}
 Date: ${formattedDate}
 Time: ${pickupTime}
 Passengers: ${passengers}
@@ -237,7 +235,7 @@ Best regards,
                   <td style="padding: 5px 0; color: #333;">${pickupLocation}</td>
                 </tr>
                 <tr>
-                  <td style="padding: 5px 0; color: #666;"><strong>To:</strong></td>
+                  <td style="padding: 5px 0; color: #666;"><strong>to:</strong></td>
                   <td style="padding: 5px 0; color: #333;">${destination}</td>
                 </tr>
                 <tr>
@@ -275,20 +273,20 @@ Best regards,
 
     // Send both emails
     await Promise.all([
-      client.sendEmail({
-        From: emailFrom,
-        To: emailTo,
-        ReplyTo: email,
-        Subject: businessSubject,
-        TextBody: businessText,
-        HtmlBody: businessHtml,
+      resend.emails.send({
+        from: 'web@saunders-simmons.co.uk',
+        to: emailTo,
+        replyTo: email,
+        subject: businessSubject,
+        text: businessText,
+        html: businessHtml,
       }),
-      client.sendEmail({
-        From: emailFrom,
-        To: email,
-        Subject: `Booking Request Received - 365 Transfers`,
-        TextBody: customerText,
-        HtmlBody: customerHtml,
+      resend.emails.send({
+        from: 'web@saunders-simmons.co.uk',
+        to: email,
+        subject: `Booking Request Received - 365 Transfers`,
+        text: customerText,
+        html: customerHtml,
       }),
     ]);
 

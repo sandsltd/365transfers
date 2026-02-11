@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import * as postmark from "postmark";
-
+import { Resend } from 'resend';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
@@ -23,12 +22,11 @@ export async function POST(request: NextRequest) {
       // In development, log the email instead of failing
       if (process.env.NODE_ENV === "development") {
         console.log("=== BUSINESS EMAIL (Development Mode) ===");
-        console.log("To:", emailTo);
-        console.log("From:", emailFrom);
-        console.log("Subject: New Enquiry - 365 Transfers Website");
+        console.log("to:", emailTo);
+        console.log("from: 'web@saunders-simmons.co.uk'subject: New Enquiry - 365 Transfers Website");
         console.log("\n=== CUSTOMER EMAIL (Development Mode) ===");
-        console.log("To:", email);
-        console.log("Subject: Thank you for your enquiry - 365 Transfers");
+        console.log("to:", email);
+        console.log("subject: Thank you for your enquiry - 365 Transfers");
         return NextResponse.json(
           { message: "Emails logged (development mode)" },
           { status: 200 }
@@ -45,7 +43,7 @@ export async function POST(request: NextRequest) {
         const emailBody = `
 New contact form submission from 365 Transfers website:
 
-Name: ${name}
+filename: ${name}
 Email: ${email}
 Phone: ${phone || "Not provided"}
 
@@ -57,7 +55,7 @@ This message was sent from the 365 Transfers contact form.
         `.trim();
 
     // Create Postmark client
-    const client = new postmark.ServerClient(process.env.POSTMARK_API_TOKEN!);
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
         // Prepare business email HTML
         const businessEmailHtml = `
@@ -72,7 +70,7 @@ This message was sent from the 365 Transfers contact form.
                   <h3 style="color: #001E73; margin-top: 0; font-size: 18px; border-bottom: 2px solid #C2FE58; padding-bottom: 10px;">Contact Details</h3>
                   <table style="width: 100%; border-collapse: collapse;">
                     <tr>
-                      <td style="padding: 8px 0; color: #666; width: 120px;"><strong>Name:</strong></td>
+                      <td style="padding: 8px 0; color: #666; width: 120px;"><strong>filename:</strong></td>
                       <td style="padding: 8px 0; color: #001E73;">${name}</td>
                     </tr>
                     <tr>
@@ -109,7 +107,7 @@ We have received your enquiry and will get back to you as soon as possible.
 If you require a taxi within the next 24 hours, we recommend calling us directly on 01785 335563 to ensure we can assist you promptly.
 
 Your enquiry details:
-Name: ${name}
+filename: ${name}
 Phone: ${phone || "Not provided"}
 
 Message:
@@ -145,7 +143,7 @@ Best regards,
 
                 <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-top: 20px;">
                   <h3 style="color: #001E73; margin-top: 0; font-size: 16px;">Your Enquiry Details</h3>
-                  <p style="color: #666; font-size: 14px; margin: 5px 0;"><strong>Name:</strong> ${name}</p>
+                  <p style="color: #666; font-size: 14px; margin: 5px 0;"><strong>filename:</strong> ${name}</p>
                   <p style="color: #666; font-size: 14px; margin: 5px 0;"><strong>Phone:</strong> ${phone || "Not provided"}</p>
                   <p style="color: #666; font-size: 14px; margin: 5px 0 0 0;"><strong>Message:</strong></p>
                   <p style="white-space: pre-wrap; color: #333; font-size: 14px; margin: 10px 0 0 0; padding: 10px; background: #ffffff; border-radius: 4px;">${message}</p>
@@ -167,20 +165,20 @@ Best regards,
 
         // Send both emails
         await Promise.all([
-          client.sendEmail({
-            From: emailFrom,
-            To: emailTo,
-            ReplyTo: email,
-            Subject: emailSubject,
-            TextBody: emailBody,
-            HtmlBody: businessEmailHtml,
+          resend.emails.send({
+            from: 'web@saunders-simmons.co.uk',
+            to: emailTo,
+            replyTo: email,
+            subject: emailSubject,
+            text: emailBody,
+            html: businessEmailHtml,
           }),
-          client.sendEmail({
-            From: emailFrom,
-            To: email,
-            Subject: `Thank you for your enquiry - 365 Transfers`,
-            TextBody: customerText,
-            HtmlBody: customerEmailHtml,
+          resend.emails.send({
+            from: 'web@saunders-simmons.co.uk',
+            to: email,
+            subject: `Thank you for your enquiry - 365 Transfers`,
+            text: customerText,
+            html: customerEmailHtml,
           }),
         ]);
 
