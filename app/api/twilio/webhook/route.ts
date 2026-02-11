@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import * as postmark from 'postmark';
 
 // Handle GET method (Twilio sometimes uses GET for webhooks)
 export async function GET(request: Request) {
@@ -114,16 +114,8 @@ async function sendCallNotification(callData: {
   timestamp: string;
 }) {
   try {
-    // Create email transporter
-    const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: Number(process.env.EMAIL_PORT),
-      secure: true, // true for port 465
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+    // Create Postmark client
+    const client = new postmark.ServerClient(process.env.POSTMARK_API_TOKEN!);
 
     // Format the notification message
     const message = `
@@ -150,11 +142,12 @@ This is an automated notification from your 365 Transfers call forwarding system
     `;
 
     // Send email - using TWILIO_EMAIL_TO for Twilio notifications
-    await transporter.sendMail({
-      from: process.env.EMAIL_FROM,
-      to: process.env.TWILIO_EMAIL_TO || process.env.EMAIL_TO, // Use TWILIO_EMAIL_TO if set, fallback to EMAIL_TO
-      subject: `365 Transfers - Incoming Call from ${callData.from}`,
-      text: message,
+    await client.sendEmail({
+      From: process.env.EMAIL_FROM!,
+      To: process.env.TWILIO_EMAIL_TO || process.env.EMAIL_TO || '',
+      Subject: `365 Transfers - Incoming Call from ${callData.from}`,
+      TextBody: message,
+      HtmlBody: '',
     });
 
     console.log('Call notification email sent successfully');

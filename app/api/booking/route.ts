@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import nodemailer from "nodemailer";
+import * as postmark from "postmark";
 
 export async function POST(request: NextRequest) {
   try {
@@ -36,22 +36,16 @@ export async function POST(request: NextRequest) {
     }
 
     // Get email configuration from environment variables
-    const emailHost = process.env.EMAIL_HOST;
-    const emailPort = process.env.EMAIL_PORT;
-    const emailUser = process.env.EMAIL_USER;
-    const emailPass = process.env.EMAIL_PASS;
     const emailTo = process.env.EMAIL_TO;
-    const emailFrom = process.env.EMAIL_FROM || emailUser;
-    const emailBcc = process.env.EMAIL_BCC;
+    const emailFrom = process.env.EMAIL_FROM;
 
-    if (!emailHost || !emailPort || !emailUser || !emailPass || !emailTo) {
+    if (!process.env.POSTMARK_API_TOKEN || !emailTo || !emailFrom) {
       console.error("Email configuration missing");
       // In development, log the email instead of failing
       if (process.env.NODE_ENV === "development") {
         console.log("=== BOOKING REQUEST (Development Mode) ===");
         console.log("To:", emailTo);
         console.log("From:", emailFrom);
-        console.log("BCC:", emailBcc || "None");
         console.log("Subject: New Booking Request - 365 Transfers");
         return NextResponse.json(
           { message: "Booking request logged (development mode)" },
@@ -72,25 +66,12 @@ export async function POST(request: NextRequest) {
       day: "numeric",
     });
 
-    // Create transporter
-    const transporter = nodemailer.createTransport({
-      host: emailHost,
-      port: parseInt(emailPort),
-      secure: emailPort === "465",
-      auth: {
-        user: emailUser,
-        pass: emailPass,
-      },
-    });
+    // Create Postmark client
+    const client = new postmark.ServerClient(process.env.POSTMARK_API_TOKEN!);
 
     // Business email
     const businessSubject = `New Booking Request - ${formattedDate} ${pickupTime}`;
-    const businessMailOptions: any = {
-      from: `365 Transfers <${emailFrom}>`,
-      to: emailTo,
-      replyTo: email,
-      subject: businessSubject,
-      text: `
+    const businessText = `
 New booking request from 365 Transfers website:
 
 CONTACT INFORMATION:
@@ -112,8 +93,8 @@ ${specialRequirements ? `Special Requirements: ${specialRequirements}` : ""}
 
 ---
 This is a booking request. Please contact the customer to confirm availability.
-      `.trim(),
-      html: `
+      `.trim();
+    const businessHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff;">
           <div style="background: #001E73; padding: 30px; text-align: center;">
             <h1 style="color: #ffffff; margin: 0; font-size: 28px;">New Booking Request</h1>
@@ -198,21 +179,10 @@ This is a booking request. Please contact the customer to confirm availability.
             </p>
           </div>
         </div>
-      `,
-    };
-
-    // Add BCC if configured
-    if (emailBcc) {
-      businessMailOptions.bcc = emailBcc;
-    }
+      `;
 
     // Customer confirmation email
-    const customerSubject = `Booking Request Received - 365 Transfers`;
-    const customerMailOptions: any = {
-      from: `365 Transfers <${emailFrom}>`,
-      to: email,
-      subject: customerSubject,
-      text: `
+    const customerText = `
 Thank you for your booking request with 365 Transfers.
 
 We have received your booking request and will contact you within 24 hours to confirm availability and finalise your booking.
@@ -235,8 +205,8 @@ ${vehicleType ? `Vehicle: ${vehicleType}` : ""}
 Best regards,
 365 Transfers
 01785 335563
-      `.trim(),
-      html: `
+    `.trim();
+    const customerHtml = `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; background: #ffffff;">
           <div style="background: #001E73; padding: 30px; text-align: center;">
             <h1 style="color: #ffffff; margin: 0; font-size: 28px;">Booking Request Received</h1>
@@ -301,13 +271,25 @@ Best regards,
             </p>
           </div>
         </div>
-      `,
-    };
+      `;
 
     // Send both emails
     await Promise.all([
-      transporter.sendMail(businessMailOptions),
-      transporter.sendMail(customerMailOptions),
+      client.sendEmail({
+        From: emailFrom,
+        To: emailTo,
+        ReplyTo: email,
+        Subject: businessSubject,
+        TextBody: businessText,
+        HtmlBody: businessHtml,
+      }),
+      client.sendEmail({
+        From: emailFrom,
+        To: email,
+        Subject: `Booking Request Received - 365 Transfers`,
+        TextBody: customerText,
+        HtmlBody: customerHtml,
+      }),
     ]);
 
     return NextResponse.json(
