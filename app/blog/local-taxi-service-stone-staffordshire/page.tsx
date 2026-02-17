@@ -183,7 +183,7 @@ export default function LocalTaxiStone() {
               </ul>
               <p className="text-gray-700 mb-8">
                 Whether it's a five-minute trip across Stone or a longer journey to another
-                town, the same professional service applies.
+                town, the same professional service applies. We also provide <Link href="/airport-transfers">airport transfers</Link> to all major UK airports.
               </p>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">

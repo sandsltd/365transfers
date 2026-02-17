@@ -201,7 +201,7 @@ export default function EventsNightsOutTaxi() {
                 We're available <strong>24 hours a day, 365 days a year</strong>. It doesn't
                 matter if your event finishes at 11pm or 3am — we'll be there. No extra charge
                 for late night pickups, no "sorry, we stop at midnight" nonsense. When you
-                book with us, we're there when you need us.
+                book with us, we're there when you need us. Whether it's a <Link href="/blog/christmas-new-year-taxi-stone-stoke-on-trent">festive celebration</Link> or a regular night out, you can count on our round-the-clock service.
               </p>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">

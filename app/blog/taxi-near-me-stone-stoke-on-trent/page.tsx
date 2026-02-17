@@ -199,7 +199,7 @@ export default function TaxiNearMeStoneStoke() {
                 <li>Saloons and estate cars for up to 4 passengers</li>
                 <li>Executive vehicles for premium comfort</li>
                 <li>6, 7, and 8 seater vehicles for families and small groups</li>
-                <li>12 and 16 seater minibuses for larger groups</li>
+                <li>12 and 16 seater minibuses for <Link href="/days-out">larger groups and days out</Link></li>
                 <li><Link href="/wheelchair-accessible-taxi">Wheelchair accessible vehicles</Link> for passengers with mobility needs</li>
               </ul>
 
