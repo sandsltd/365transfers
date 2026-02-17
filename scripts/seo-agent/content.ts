@@ -513,8 +513,8 @@ export async function generateBlogPost(
   const today = new Date().toISOString().split("T")[0];
 
   // Pick a contextually relevant hero image
-  const categoryMatch = topic.context.match(/category/i);
-  const heroImage = pickHeroImage(topic.keyword, categoryMatch ? "Airport Transfers" : "Local Services");
+  const topicCategoryMatch = topic.context.match(/category/i);
+  const heroImage = pickHeroImage(topic.keyword, topicCategoryMatch ? "Airport Transfers" : "Local Services");
   console.log(`Selected hero image: ${heroImage.src}`);
 
   const prompt = buildTSXPrompt(topic, strategyContent, today, heroImage);
