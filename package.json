@@ -6,13 +6,18 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "seo-agent": "tsx scripts/seo-agent/index.ts"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.39.0",
+    "@supabase/supabase-js": "^2.49.1",
+    "googleapis": "^144.0.0",
     "next": "^14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "resend": "^4.0.1"
+    "resend": "^4.0.1",
+    "tsx": "^4.19.2"
   },
   "devDependencies": {
     "@types/node": "^20.14.10",
