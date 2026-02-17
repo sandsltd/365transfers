@@ -2,6 +2,7 @@ import Anthropic from "@anthropic-ai/sdk";
 import fs from "fs";
 import path from "path";
 import { CONFIG } from "./config";
+import { pickHeroImage } from "./images";
 
 interface RankingData {
   keyword: string;
@@ -259,6 +260,7 @@ function buildTSXPrompt(
   topic: { keyword: string; context: string },
   strategyContent: string,
   today: string,
+  heroImage: { src: string; alt: string },
   isRefresh: boolean = false,
   existingContent?: string,
   refreshReason?: string
@@ -370,13 +372,11 @@ export default function ComponentName() {
 
             {/* Hero Image */}
             <div className="mb-8 rounded-lg overflow-hidden">
-              <div className="w-full h-64 md:h-96 bg-primary flex items-center justify-center">
-                <img
-                  src="/logo/365logo.png"
-                  alt="ALT TEXT"
-                  className="opacity-20 h-48"
-                />
-              </div>
+              <img
+                src="${heroImage.src}"
+                alt="${heroImage.alt}"
+                className="w-full h-64 md:h-96 object-cover"
+              />
             </div>
 
             {/* Content */}
@@ -512,7 +512,12 @@ export async function generateBlogPost(
   const anthropic = new Anthropic();
   const today = new Date().toISOString().split("T")[0];
 
-  const prompt = buildTSXPrompt(topic, strategyContent, today);
+  // Pick a contextually relevant hero image
+  const categoryMatch = topic.context.match(/category/i);
+  const heroImage = pickHeroImage(topic.keyword, categoryMatch ? "Airport Transfers" : "Local Services");
+  console.log(`Selected hero image: ${heroImage.src}`);
+
+  const prompt = buildTSXPrompt(topic, strategyContent, today, heroImage);
 
   const response = await anthropic.messages.create({
     model: CONFIG.contentModel,
@@ -586,10 +591,14 @@ async function refreshPost(
   const existingContent = fs.readFileSync(filePath, "utf-8");
   const today = new Date().toISOString().split("T")[0];
 
+  const heroImage = pickHeroImage(post.targetKeyword, post.category);
+  console.log(`Selected hero image for refresh: ${heroImage.src}`);
+
   const prompt = buildTSXPrompt(
     { keyword: post.targetKeyword, context: `Refreshing: ${post.title}` },
     strategyContent,
     today,
+    heroImage,
     true,
     existingContent,
     reason
