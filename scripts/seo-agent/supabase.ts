@@ -2,7 +2,7 @@ import { createClient } from "@supabase/supabase-js";
 import Anthropic from "@anthropic-ai/sdk";
 import { CONFIG } from "./config";
 
-const TABLE_NAME = "transfers365_runs";
+const TABLE_NAME = "365_Stone";
 
 export interface RunData {
   trigger_type: "scheduled" | "manual";
