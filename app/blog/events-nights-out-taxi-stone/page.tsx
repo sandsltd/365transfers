@@ -160,7 +160,7 @@ export default function EventsNightsOutTaxi() {
                 Events We Cover
               </h2>
               <p className="text-gray-700 mb-4">
-                Our <strong>event taxi service</strong> covers all kinds of occasions across
+                Our <Link href="/events-tours">event taxi service</Link> covers all kinds of occasions across
                 Stone, Stoke on Trent, and Staffordshire:
               </p>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -181,7 +181,7 @@ export default function EventsNightsOutTaxi() {
                 <div className="bg-white border-2 border-primary rounded-lg p-6">
                   <h3 className="text-xl font-bold text-primary mb-3">Work Events</h3>
                   <p className="text-gray-700">
-                    Team nights out, corporate events, conferences, and award ceremonies.
+                    Team nights out, <Link href="/account-work">corporate events</Link>, conferences, and award ceremonies.
                     Professional transport for professional occasions.
                   </p>
                 </div>
@@ -212,9 +212,9 @@ export default function EventsNightsOutTaxi() {
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
                 <li>Stone</li>
-                <li>Stoke on Trent (Hanley, Burslem, Longton, Tunstall, Fenton, Stoke)</li>
+                <li><Link href="/taxi-stoke-on-trent">Stoke on Trent</Link> (Hanley, Burslem, Longton, Tunstall, Fenton, Stoke)</li>
                 <li>Newcastle-under-Lyme</li>
-                <li>Stafford</li>
+                <li><Link href="/taxi-stafford">Stafford</Link></li>
                 <li>Eccleshall</li>
                 <li>Barlaston</li>
                 <li>Trentham</li>

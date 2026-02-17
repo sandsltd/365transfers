@@ -89,7 +89,7 @@ export default function WheelchairAccessibleAirportTransfers() {
                 Why Choose Wheelchair Accessible Airport Transfers?
               </h2>
               <p className="text-gray-700 mb-4">
-                Our wheelchair accessible vehicles are specifically designed to provide comfortable, 
+                Our <Link href="/wheelchair-accessible-taxi">wheelchair accessible vehicles</Link> are specifically designed to provide comfortable, 
                 safe transport for passengers with mobility needs. Whether you're travelling from 
                 <strong>Stone, Staffordshire</strong> or <strong>Stoke on Trent</strong>, we ensure 
                 your journey to the airport is smooth and stress-free.
@@ -137,11 +137,11 @@ export default function WheelchairAccessibleAirportTransfers() {
                 we provide wheelchair accessible transfers to all major UK airports:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-                <li><strong>Manchester Airport</strong> - Approximately 45 minutes from Stone</li>
-                <li><strong>Birmingham Airport</strong> - Approximately 1 hour from Stone</li>
-                <li><strong>East Midlands Airport</strong> - Approximately 1 hour from Stone</li>
-                <li><strong>Liverpool John Lennon Airport</strong> - Approximately 1 hour from Stone</li>
-                <li><strong>London Airports</strong> - Heathrow, Gatwick, Stansted, and Luton</li>
+                <li><Link href="/manchester-airport-taxi"><strong>Manchester Airport</strong></Link> - Approximately 45 minutes from Stone</li>
+                <li><Link href="/birmingham-airport-taxi"><strong>Birmingham Airport</strong></Link> - Approximately 1 hour from Stone</li>
+                <li><Link href="/east-midlands-airport-taxi"><strong>East Midlands Airport</strong></Link> - Approximately 1 hour from Stone</li>
+                <li><Link href="/liverpool-airport-taxi"><strong>Liverpool John Lennon Airport</strong></Link> - Approximately 1 hour from Stone</li>
+                <li><Link href="/london-airport-transfers"><strong>London Airports</strong></Link> - Heathrow, Gatwick, Stansted, and Luton</li>
               </ul>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
@@ -187,4 +187,3 @@ export default function WheelchairAccessibleAirportTransfers() {
     </>
   );
 }
-

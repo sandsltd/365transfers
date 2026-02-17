@@ -132,6 +132,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/how-much-is-a-taxi-from-stoke-to-manchester-airport`,
+      lastModified: new Date("2026-02-17"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/careers`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,

@@ -29,6 +29,13 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "how-much-is-a-taxi-from-stoke-to-manchester-airport",
+    title: "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide",
+    excerpt: "Complete 2026 pricing guide for taxis from Stoke-on-Trent, Stone and Stafford to Manchester Airport. Compare costs, hidden fees, and transport alternatives.",
+    date: "2026-02-17",
+    category: "Airport Transfers",
+  },
+  {
     slug: "local-taxi-service-stone-staffordshire",
     title: "Local Taxi Service in Stone, Staffordshire",
     excerpt: "Looking for a reliable local taxi in Stone, Staffordshire? 365 Transfers provides 24/7 taxi services across Stone, Stoke on Trent, and surrounding areas. Call today.",

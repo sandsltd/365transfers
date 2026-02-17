@@ -151,7 +151,7 @@ export default function LocalTaxiStone() {
                 <div className="bg-white border-2 border-primary rounded-lg p-6">
                   <h3 className="text-xl font-bold text-primary mb-3">School Runs</h3>
                   <p className="text-gray-700">
-                    Regular school transport with DBS-checked drivers. Safe, punctual, and
+                    Regular <Link href="/school-contracts">school transport</Link> with DBS-checked drivers. Safe, punctual, and
                     trusted by parents across Stone.
                   </p>
                 </div>
@@ -172,8 +172,8 @@ export default function LocalTaxiStone() {
                 boundary. We regularly take passengers to and from:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-                <li>Stoke on Trent (all six towns)</li>
-                <li>Stafford</li>
+                <li><Link href="/taxi-stoke-on-trent">Stoke on Trent</Link> (all six towns)</li>
+                <li><Link href="/taxi-stafford">Stafford</Link></li>
                 <li>Newcastle-under-Lyme</li>
                 <li>Eccleshall</li>
                 <li>Barlaston</li>
@@ -198,7 +198,7 @@ export default function LocalTaxiStone() {
                 <li><strong>Estate cars</strong> — extra boot space for luggage or shopping</li>
                 <li><strong>6, 7, and 8 seaters</strong> — ideal for families or small groups</li>
                 <li><strong>12 and 16 seater minibuses</strong> — for larger groups and events</li>
-                <li><strong>Wheelchair accessible vehicles</strong> — comfortable transport for passengers with mobility needs</li>
+                <li><strong><Link href="/wheelchair-accessible-taxi">Wheelchair accessible vehicles</Link></strong> — comfortable transport for passengers with mobility needs</li>
               </ul>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">

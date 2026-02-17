@@ -78,8 +78,8 @@ export default function GroupAirportTransfers() {
             <div className="prose prose-lg max-w-none">
               <div className="bg-gray-50 rounded-lg p-8 mb-8">
                 <p className="text-xl text-gray-700 leading-relaxed">
-                  Travelling as a group to the airport? Our larger vehicle options make group 
-                  airport transfers from <strong>Stone</strong> and <strong>Stoke on Trent</strong> 
+                  Travelling as a group to the airport? Our larger vehicle options make <Link href="/airport-transfers">group 
+                  airport transfers</Link> from <strong>Stone</strong> and <strong>Stoke on Trent</strong> 
                   both comfortable and cost-effective. Whether you're a family, sports team, or 
                   corporate group, we have the perfect vehicle for your needs.
                 </p>
@@ -163,7 +163,7 @@ export default function GroupAirportTransfers() {
                   <h3 className="text-xl font-bold text-primary mb-2">Corporate Groups</h3>
                   <p className="text-gray-700">
                     Business travel made easy. Transport your team to conferences, meetings, 
-                    or corporate events from Stone or Stoke on Trent.
+                    or corporate events from Stone or Stoke on Trent. <Link href="/account-work">Corporate accounts</Link> are available for regular bookings.
                   </p>
                 </div>
               </div>
@@ -183,6 +183,10 @@ export default function GroupAirportTransfers() {
                 <li>Flight details for timing</li>
                 <li>Any special requirements</li>
               </ul>
+
+              <p className="text-gray-700 mb-8">
+                We serve all major airports including <Link href="/manchester-airport-taxi">Manchester Airport</Link>, <Link href="/birmingham-airport-taxi">Birmingham Airport</Link>, and <Link href="/east-midlands-airport-taxi">East Midlands Airport</Link>. Check our <Link href="/airport-transfer-prices">airport transfer prices</Link> for transparent pricing information.
+              </p>
 
               <div className="bg-primary text-white rounded-lg p-8 mt-12">
                 <h2 className="text-3xl font-bold mb-4">Book Your Group Transfer Today</h2>
@@ -213,4 +217,3 @@ export default function GroupAirportTransfers() {
     </>
   );
 }
-

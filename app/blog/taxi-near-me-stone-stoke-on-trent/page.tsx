@@ -126,7 +126,7 @@ export default function TaxiNearMeStoneStoke() {
                   <h3 className="text-xl font-bold text-primary mb-3">Local Trips</h3>
                   <p className="text-gray-700">
                     Quick journeys around Stone, to the shops, appointments, or local destinations. 
-                    Fast, reliable Stone taxi service.
+                    Fast, reliable <Link href="/local-national">Stone taxi service</Link>.
                   </p>
                 </div>
                 <div className="bg-white border-2 border-primary rounded-lg p-6">
@@ -146,7 +146,7 @@ export default function TaxiNearMeStoneStoke() {
                 <div className="bg-white border-2 border-primary rounded-lg p-6">
                   <h3 className="text-xl font-bold text-primary mb-3">Airport & Stations</h3>
                   <p className="text-gray-700">
-                    Airport transfers and train station pickups. Professional service from Stone 
+                    <Link href="/airport-transfers">Airport transfers</Link> and train station pickups. Professional service from Stone 
                     to all major transport hubs.
                   </p>
                 </div>
@@ -156,7 +156,7 @@ export default function TaxiNearMeStoneStoke() {
                 Taxi Services in Stoke on Trent
               </h2>
               <p className="text-gray-700 mb-4">
-                Our <strong>Stoke on Trent taxi</strong> service covers the entire city and 
+                Our <Link href="/taxi-stoke-on-trent"><strong>Stoke on Trent taxi</strong></Link> service covers the entire city and 
                 surrounding areas. We provide:
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
@@ -200,7 +200,7 @@ export default function TaxiNearMeStoneStoke() {
                 <li>Executive vehicles for premium comfort</li>
                 <li>6, 7, and 8 seater vehicles for families and small groups</li>
                 <li>12 and 16 seater minibuses for larger groups</li>
-                <li>Wheelchair accessible vehicles for passengers with mobility needs</li>
+                <li><Link href="/wheelchair-accessible-taxi">Wheelchair accessible vehicles</Link> for passengers with mobility needs</li>
               </ul>
 
               <div className="bg-primary text-white rounded-lg p-8 mt-12">
@@ -231,4 +231,3 @@ export default function TaxiNearMeStoneStoke() {
     </>
   );
 }
-

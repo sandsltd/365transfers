@@ -120,8 +120,7 @@ export default function ChristmasNewYearTaxi() {
                 Christmas Airport Transfers
               </h2>
               <p className="text-gray-700 mb-4">
-                Flying home for Christmas or jetting off for a winter break? Our airport transfer
-                service from <strong>Stone</strong> and <strong>Stoke on Trent</strong> covers all
+                Flying home for Christmas or jetting off for a winter break? Our <Link href="/airport-transfers">airport transfer service</Link> from <strong>Stone</strong> and <strong>Stoke on Trent</strong> covers all
                 major airports:
               </p>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -149,7 +148,7 @@ export default function ChristmasNewYearTaxi() {
                 <div className="bg-white border-2 border-primary rounded-lg p-6">
                   <h3 className="text-xl font-bold text-primary mb-3">London Airports</h3>
                   <p className="text-gray-700">
-                    Heathrow, Gatwick, Stansted, and Luton. Long-distance transfers available for
+                    Heathrow, Gatwick, Stansted, and Luton. <Link href="/london-airport-transfers">Long-distance transfers available</Link> for
                     those catching international flights.
                   </p>
                 </div>
@@ -188,8 +187,8 @@ export default function ChristmasNewYearTaxi() {
               </p>
               <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
                 <li>Individual pickups and drop-offs across Stone and Stoke on Trent</li>
-                <li>Group minibus hire for office parties (up to 16 passengers)</li>
-                <li>Corporate account options for businesses booking multiple journeys</li>
+                <li><Link href="/blog/group-airport-transfers-larger-vehicles">Group minibus hire</Link> for office parties (up to 16 passengers)</li>
+                <li><Link href="/account-work">Corporate account options</Link> for businesses booking multiple journeys</li>
                 <li>Restaurant and venue transfers throughout Staffordshire</li>
               </ul>
 
@@ -264,8 +263,8 @@ export default function ChristmasNewYearTaxi() {
               <div className="bg-primary text-white rounded-lg p-8 mt-12">
                 <h2 className="text-3xl font-bold mb-4">Book Your Christmas & New Year Taxi</h2>
                 <p className="text-xl mb-6 text-gray-200">
-                  Don't leave your festive transport to chance. Book your taxi in Stone or Stoke
-                  on Trent today and enjoy peace of mind this holiday season.
+                  Don't leave your festive transport to chance. Book your <Link href="/taxi-stoke-on-trent" className="text-white underline hover:text-gray-200">taxi in Stone or Stoke
+                  on Trent</Link> today and enjoy peace of mind this holiday season.
                 </p>
                 <BookNowButton className="text-lg">
                   Book Your Festive Taxi Now
