@@ -175,7 +175,7 @@ async function generateNewTopic(
     messages: [
       {
         role: "user",
-        content: `You are an SEO strategist for 365 Transfers (taxisstone.co.uk), a professional taxi and transfer service based in Stone, Staffordshire, serving the wider Staffordshire, Shropshire, and South Cheshire area.
+        content: `You are an SEO strategist for 365 Transfers (taxisstone.co.uk), a professional taxi and transfer service based in Stone, Staffordshire. Stone is the PRIMARY target area — all content should be anchored to Stone first, then expand to nearby areas (Stoke-on-Trent, Stafford, etc.) as secondary targets.
 
 ## SEO Strategy
 ${strategyContent}
@@ -185,10 +185,11 @@ ${titles.length > 0 ? titles.map((t) => `- ${t}`).join("\n") : "None yet."}
 
 ## Your Task
 Suggest ONE new blog post topic that would be valuable for SEO. Consider:
-- Long-tail keywords Staffordshire residents might search for about taxis, transfers, and local transport
-- Airport transfer topics (Manchester, Birmingham, East Midlands, Liverpool, London airports)
-- Local attraction transport (Alton Towers, Trentham Estate, bet365 Stadium)
-- Location-specific content targeting towns (Stone, Stoke-on-Trent, Stafford, Newcastle-under-Lyme, Uttoxeter)
+- Long-tail keywords Stone residents might search for about taxis, transfers, and local transport
+- "Stone taxi" and "Stone Staffordshire" keyword variations (primary focus)
+- Airport transfer topics from Stone specifically (Manchester, Birmingham, East Midlands airports)
+- Local attraction transport from Stone (Alton Towers, Trentham Estate, bet365 Stadium)
+- Nearby areas as secondary targets: Stoke-on-Trent, Stafford, Newcastle-under-Lyme, Uttoxeter
 - Topics that complement existing posts without duplicating them
 - Service-specific deep dives (wheelchair accessible, school transport, corporate accounts, events)
 
@@ -262,7 +263,7 @@ function buildTSXPrompt(
   existingContent?: string,
   refreshReason?: string
 ): string {
-  const baseContext = `You are writing a blog post for 365 Transfers (taxisstone.co.uk), a professional taxi and transfer service based in Stone, Staffordshire. They provide airport transfers, local taxi services, school transport, corporate accounts, events & tours, days out, and wheelchair-accessible transport across Staffordshire, Shropshire, and South Cheshire. They have 20+ years experience, DBS-checked drivers, and operate 24/7/365.
+  const baseContext = `You are writing a blog post for 365 Transfers (taxisstone.co.uk), a professional taxi and transfer service based in Stone, Staffordshire. Stone is the PRIMARY target location — always lead with Stone, then mention nearby areas (Stoke-on-Trent, Stafford, etc.) as secondary. They provide airport transfers, local taxi services, school transport, corporate accounts, events & tours, days out, and wheelchair-accessible transport. They have 20+ years experience, DBS-checked drivers, and operate 24/7/365.
 
 ## SEO Strategy Context
 ${strategyContent}`;
@@ -440,8 +441,8 @@ export default function ComponentName() {
 - Include internal links to relevant service pages where natural:
 ${servicePages}
 - ${CONFIG.minBlogWordCount}-${CONFIG.maxBlogWordCount} words of actual content
-- Tone: Professional but friendly. Write for Staffordshire residents, not industry professionals.
-- Reference local geography where relevant (Stone, Stoke-on-Trent, Stafford, the Potteries, M6 motorway, etc.)
+- Tone: Professional but friendly. Write for Stone residents and people in the surrounding area, not industry professionals.
+- Always anchor content to Stone first — mention Stone in the intro, headings, and CTA. Then expand to nearby areas (Stoke-on-Trent, Stafford, the Potteries, M6 motorway, etc.)
 - Determine the correct category: "Airport Transfers", "Local Services", "Specialist Services", or "Seasonal Services"
 - Return ONLY the TSX code. No explanation, no markdown code fences. Start with \`import\` and end with the closing \`}\``;
 

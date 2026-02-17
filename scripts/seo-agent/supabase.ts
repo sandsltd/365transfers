@@ -95,7 +95,7 @@ export async function generateNoteToSelf(context: {
       messages: [
         {
           role: "user",
-          content: `You are an SEO agent for 365 Transfers (taxisstone.co.uk), a UK taxi and transfer service based in Stone, Staffordshire. You run twice weekly and log a strategic note to yourself for the next run.
+          content: `You are an SEO agent for 365 Transfers (taxisstone.co.uk), a UK taxi and transfer service based in Stone, Staffordshire. Stone is your primary target — all SEO work should prioritise Stone keywords and local visibility first, expanding to surrounding areas second. You run twice weekly and log a strategic note to yourself for the next run.
 
 Write a concise note (2-4 sentences) for your future self focusing on:
 - What to prioritise next run

@@ -69,7 +69,7 @@ export async function generateRecommendations(
     messages: [
       {
         role: "user",
-        content: `You are a technical SEO consultant analysing the current state of taxisstone.co.uk, a professional taxi and transfer service based in Stone, Staffordshire, serving the wider Staffordshire, Shropshire, and South Cheshire area. They offer airport transfers (Manchester, Birmingham, East Midlands, Liverpool, London), local taxi services, school transport, corporate accounts, events & tours, days out, wheelchair-accessible transport, and special occasions.
+        content: `You are a technical SEO consultant analysing the current state of taxisstone.co.uk, a professional taxi and transfer service based in Stone, Staffordshire. Stone is the PRIMARY target area — SEO recommendations should prioritise "Stone" keywords and local Stone visibility first, then expand to nearby areas (Stoke-on-Trent, Stafford, etc.) as secondary targets. They offer airport transfers (Manchester, Birmingham, East Midlands, Liverpool, London), local taxi services, school transport, corporate accounts, events & tours, days out, wheelchair-accessible transport, and special occasions.
 
 ## Current SEO Strategy
 ${strategyContent}
@@ -86,7 +86,7 @@ ${sitePages.map((p) => `- ${p}`).join("\n")}
 ## Your Task
 Analyse the current SEO state and provide 3-5 actionable recommendations. Think about:
 
-1. **New pages to create** — Are there keywords that need dedicated service pages, location pages, or comparison content? (e.g. specific town pages like /taxi-newcastle-under-lyme, attraction pages like /trentham-estate-taxi)
+1. **New pages to create** — Are there keywords that need dedicated service pages, location pages, or comparison content? Prioritise Stone-focused pages first (e.g. /taxi-stone, /airport-taxi-stone), then expansion pages (/taxi-newcastle-under-lyme, /trentham-estate-taxi)
 2. **Technical SEO improvements** — Missing structured data, meta tag improvements, internal linking gaps, schema markup opportunities
 3. **Content gaps** — Topics or angles not covered by existing blog posts that would build local authority
 4. **Quick wins** — Low-effort changes that could improve rankings for specific keywords (e.g. a keyword at position 8-15 that needs a content tweak to reach page 1)
@@ -95,7 +95,7 @@ Analyse the current SEO state and provide 3-5 actionable recommendations. Think 
 Important:
 - Be specific and actionable — "Add FAQ schema to the airport transfers page" is better than "Improve on-page SEO"
 - Reference specific keywords and their current rankings
-- Consider Staffordshire's competitive landscape (local taxi firms, Uber presence, school transport contracts)
+- Consider Stone's competitive landscape first (very low competition, 2-3 local operators), then broader Staffordshire (Uber presence, school transport contracts)
 - Prioritise by impact — what will move the needle most?
 - These recommendations are for the site owner to action, so they need enough detail to be useful
 - Use UK English
