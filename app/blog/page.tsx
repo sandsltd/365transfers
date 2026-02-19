@@ -29,6 +29,13 @@ export const metadata: Metadata = {
 
 const blogPosts = [
   {
+    slug: "how-much-taxi-stoke-manchester-airport-2026",
+    title: "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide",
+    excerpt: "Complete 2026 price guide for taxi transfers from Stoke-on-Trent, Stone & Stafford to Manchester Airport. Compare costs, learn about hidden fees & find the best value.",
+    date: "2026-02-19",
+    category: "Airport Transfers",
+  },
+  {
     slug: "taxi-stoke-to-manchester-airport-price-guide-2026",
     title: "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide",
     excerpt: "Complete 2026 price guide for taxis from Stoke-on-Trent to Manchester Airport. Compare costs, hidden fees, and why a pre-booked taxi beats parking and trains.",
