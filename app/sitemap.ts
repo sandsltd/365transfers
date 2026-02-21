@@ -150,6 +150,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/taxi-stoke-on-trent-to-manchester-airport-price-guide-2026`,
+      lastModified: new Date("2026-02-21"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/careers`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
