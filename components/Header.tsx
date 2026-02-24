@@ -139,6 +139,20 @@ export default function Header() {
                   >
                     Service for Every Occasion
                   </Link>
+                  <Link
+                    href="/alton-towers-taxi"
+                    className="block px-4 py-3 text-primary hover:bg-accent hover:text-primary transition-colors border-b border-gray-100 last:border-b-0"
+                    onClick={() => setServicesOpen(false)}
+                  >
+                    Alton Towers Taxi
+                  </Link>
+                  <Link
+                    href="/wheelchair-accessible-taxi"
+                    className="block px-4 py-3 text-primary hover:bg-accent hover:text-primary transition-colors border-b border-gray-100 last:border-b-0"
+                    onClick={() => setServicesOpen(false)}
+                  >
+                    Wheelchair Accessible
+                  </Link>
                   </div>
                 </div>
               )}
@@ -318,6 +332,26 @@ export default function Header() {
                       }}
                     >
                       Service for Every Occasion
+                    </Link>
+                    <Link
+                      href="/alton-towers-taxi"
+                      className="block py-2 px-2 text-sm sm:text-base hover:text-accent transition-colors border-b border-white/10 last:border-b-0 rounded hover:bg-white/5"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setMobileServicesOpen(false);
+                      }}
+                    >
+                      Alton Towers Taxi
+                    </Link>
+                    <Link
+                      href="/wheelchair-accessible-taxi"
+                      className="block py-2 px-2 text-sm sm:text-base hover:text-accent transition-colors border-b border-white/10 last:border-b-0 rounded hover:bg-white/5"
+                      onClick={() => {
+                        setMobileMenuOpen(false);
+                        setMobileServicesOpen(false);
+                      }}
+                    >
+                      Wheelchair Accessible
                     </Link>
                   </div>
                 )}

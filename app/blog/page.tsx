@@ -64,6 +64,20 @@ const blogPosts = [
     category: "Airport Transfers",
   },
   {
+    slug: "how-much-taxi-stoke-manchester-airport",
+    title: "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide",
+    excerpt: "Find out how much a taxi from Stoke-on-Trent to Manchester Airport costs in 2026. Compare prices, learn what affects cost, and discover why a fixed-price transfer saves money.",
+    date: "2026-02-17",
+    category: "Airport Transfers",
+  },
+  {
+    slug: "airport-taxi-vs-parking-staffordshire",
+    title: "Airport Taxi vs Airport Parking: Which Saves You More from Staffordshire?",
+    excerpt: "Compare the real cost of airport taxi transfers vs driving and parking at Manchester, Birmingham, and East Midlands airports from Staffordshire. See which option saves you money.",
+    date: "2026-02-17",
+    category: "Airport Transfers",
+  },
+  {
     slug: "local-taxi-service-stone-staffordshire",
     title: "Local Taxi Service in Stone, Staffordshire",
     excerpt: "Looking for a reliable local taxi in Stone, Staffordshire? 365 Transfers provides 24/7 taxi services across Stone, Stoke on Trent, and surrounding areas. Call today.",
