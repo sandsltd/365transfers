@@ -284,46 +284,46 @@
 
 | # | Keyword | Position | Last Checked | Target Page |
 |---|---------|----------|--------------|-------------|
-| 1 | taxi Stone | Not indexed yet | 25 May 2026 | Homepage |
-| 2 | taxi Stone Staffordshire | Not indexed yet | 25 May 2026 | Homepage |
-| 3 | taxi Stoke on Trent | Not indexed yet | 25 May 2026 | Homepage |
-| 4 | taxi near me (Stone) | Not indexed yet | 25 May 2026 | GBP + Homepage |
-| 5 | private hire Stone | Not indexed yet | 25 May 2026 | Homepage |
-| 6 | airport taxi Stone | Not indexed yet | 25 May 2026 | /airport-transfers |
-| 7 | airport transfer Stoke on Trent | Not indexed yet | 25 May 2026 | /airport-transfers |
-| 8 | Manchester airport taxi Stoke | Not indexed yet | 25 May 2026 | /manchester-airport-taxi |
-| 9 | Birmingham airport taxi Staffordshire | Not indexed yet | 25 May 2026 | /birmingham-airport-taxi |
-| 10 | East Midlands airport taxi Stoke | Not indexed yet | 25 May 2026 | /east-midlands-airport-taxi |
+| 1 | taxi Stone | Not indexed yet | 30 May 2026 | Homepage |
+| 2 | taxi Stone Staffordshire | Not indexed yet | 30 May 2026 | Homepage |
+| 3 | taxi Stoke on Trent | Not indexed yet | 30 May 2026 | Homepage |
+| 4 | taxi near me (Stone) | Not indexed yet | 30 May 2026 | GBP + Homepage |
+| 5 | private hire Stone | Not indexed yet | 30 May 2026 | Homepage |
+| 6 | airport taxi Stone | Not indexed yet | 30 May 2026 | /airport-transfers |
+| 7 | airport transfer Stoke on Trent | Not indexed yet | 30 May 2026 | /airport-transfers |
+| 8 | Manchester airport taxi Stoke | Not indexed yet | 30 May 2026 | /manchester-airport-taxi |
+| 9 | Birmingham airport taxi Staffordshire | Not indexed yet | 30 May 2026 | /birmingham-airport-taxi |
+| 10 | East Midlands airport taxi Stoke | Not indexed yet | 30 May 2026 | /east-midlands-airport-taxi |
 
 ### Tier 2 — Service & Location Expansion
 
 | # | Keyword | Position | Last Checked | Target Page |
 |---|---------|----------|--------------|-------------|
-| 11 | wheelchair taxi Stone | Not indexed yet | 25 May 2026 | New page needed |
-| 12 | wheelchair accessible taxi Stoke on Trent | Not indexed yet | 25 May 2026 | New page needed |
-| 13 | school transport Staffordshire | Not indexed yet | 25 May 2026 | /school-contracts |
-| 14 | corporate taxi Stoke on Trent | Not indexed yet | 25 May 2026 | /account-work |
-| 15 | Alton Towers taxi | Not indexed yet | 25 May 2026 | New page needed |
-| 16 | Alton Towers taxi Stone | Not indexed yet | 25 May 2026 | New page needed |
-| 17 | wedding taxi Staffordshire | Not indexed yet | 25 May 2026 | /every-occasion |
-| 18 | late night taxi Stone | Not indexed yet | 25 May 2026 | Homepage or blog |
-| 19 | train station taxi Stone | Not indexed yet | 25 May 2026 | New section needed |
-| 20 | Keele University taxi | Not indexed yet | 25 May 2026 | Blog post |
+| 11 | wheelchair taxi Stone | Not indexed yet | 30 May 2026 | New page needed |
+| 12 | wheelchair accessible taxi Stoke on Trent | Not indexed yet | 30 May 2026 | New page needed |
+| 13 | school transport Staffordshire | Not indexed yet | 30 May 2026 | /school-contracts |
+| 14 | corporate taxi Stoke on Trent | Not indexed yet | 30 May 2026 | /account-work |
+| 15 | Alton Towers taxi | Not indexed yet | 30 May 2026 | New page needed |
+| 16 | Alton Towers taxi Stone | Not indexed yet | 30 May 2026 | New page needed |
+| 17 | wedding taxi Staffordshire | Not indexed yet | 30 May 2026 | /every-occasion |
+| 18 | late night taxi Stone | Not indexed yet | 30 May 2026 | Homepage or blog |
+| 19 | train station taxi Stone | Not indexed yet | 30 May 2026 | New section needed |
+| 20 | Keele University taxi | Not indexed yet | 30 May 2026 | Blog post |
 
 ### Tier 3 — Long-Tail Blog Targets
 
 | # | Keyword | Position | Last Checked | Target Page |
 |---|---------|----------|--------------|-------------|
-| 21 | how much is a taxi from Stoke to Manchester airport | Not indexed yet | 25 May 2026 | Blog |
-| 22 | cheapest way to Manchester airport from Stoke | Not indexed yet | 25 May 2026 | Blog |
-| 23 | taxi prices Stoke on Trent | Not indexed yet | 25 May 2026 | Blog |
-| 24 | airport parking vs taxi cost | Not indexed yet | 25 May 2026 | Blog |
-| 25 | best taxi company Stoke on Trent | Not indexed yet | 25 May 2026 | Blog |
-| 26 | things to do near Stone Staffordshire | Not indexed yet | 25 May 2026 | Blog |
-| 27 | how much is a taxi to Birmingham airport | Not indexed yet | 25 May 2026 | Blog |
-| 28 | Stoke on Trent to Manchester airport price | Not indexed yet | 25 May 2026 | Blog |
-| 29 | taxi to Alton Towers from Stoke | Not indexed yet | 25 May 2026 | Blog |
-| 30 | school transport contracts Staffordshire | Not indexed yet | 25 May 2026 | Blog |
+| 21 | how much is a taxi from Stoke to Manchester airport | Not indexed yet | 30 May 2026 | Blog |
+| 22 | cheapest way to Manchester airport from Stoke | Not indexed yet | 30 May 2026 | Blog |
+| 23 | taxi prices Stoke on Trent | Not indexed yet | 30 May 2026 | Blog |
+| 24 | airport parking vs taxi cost | Not indexed yet | 30 May 2026 | Blog |
+| 25 | best taxi company Stoke on Trent | Not indexed yet | 30 May 2026 | Blog |
+| 26 | things to do near Stone Staffordshire | Not indexed yet | 30 May 2026 | Blog |
+| 27 | how much is a taxi to Birmingham airport | Not indexed yet | 30 May 2026 | Blog |
+| 28 | Stoke on Trent to Manchester airport price | Not indexed yet | 30 May 2026 | Blog |
+| 29 | taxi to Alton Towers from Stoke | Not indexed yet | 30 May 2026 | Blog |
+| 30 | school transport contracts Staffordshire | Not indexed yet | 30 May 2026 | Blog |
 
 ---
 
@@ -706,47 +706,47 @@ All directory listings, social profiles, website footers, and citations must use
 
 | # | Action | Impact | Effort |
 |---|--------|--------|--------|
-| 1 | Domain consolidation — 301 redirect secondary domains to taxisstone.co.uk | Not indexed yet | 25 May 2026 |
+| 1 | Domain consolidation — 301 redirect secondary domains to taxisstone.co.uk | Not indexed yet | 30 May 2026 |
 | 2 | Google Business Profile audit and full optimization | CRITICAL | Low |
-| 3 | Implement Google Analytics 4 + Search Console | Not indexed yet | 25 May 2026 |
+| 3 | Implement Google Analytics 4 + Search Console | Not indexed yet | 30 May 2026 |
 | 4 | Publish fixed airport transfer pricing on website | HIGH | Low |
-| 5 | Create /alton-towers-taxi page (300-500 monthly searches) | Not indexed yet | 25 May 2026 |
+| 5 | Create /alton-towers-taxi page (300-500 monthly searches) | Not indexed yet | 30 May 2026 |
 | 6 | Create /taxi-stoke-on-trent location page (1,000-2,400 monthly searches) | HIGH | Medium |
-| 7 | Create /taxi-stafford location page (500-1,000 monthly searches) | Not indexed yet | 25 May 2026 |
+| 7 | Create /taxi-stafford location page (500-1,000 monthly searches) | Not indexed yet | 30 May 2026 |
 | 8 | Start systematic review collection (target 5+ reviews/week) | HIGH | Low |
-| 9 | Submit to top 10 citation directories with consistent NAP | Not indexed yet | 25 May 2026 |
+| 9 | Submit to top 10 citation directories with consistent NAP | Not indexed yet | 30 May 2026 |
 
 ### Phase 2: Content & Expansion (Weeks 5-8)
 
 | # | Action | Impact | Effort |
 |---|--------|--------|--------|
-| 10 | Publish 4 blog posts (pricing guides + Alton Towers + airport comparison) | Not indexed yet | 25 May 2026 |
+| 10 | Publish 4 blog posts (pricing guides + Alton Towers + airport comparison) | Not indexed yet | 30 May 2026 |
 | 11 | Create /wheelchair-accessible-taxi page | HIGH | Medium |
-| 12 | Create remaining location pages (Newcastle-under-Lyme, Eccleshall, Uttoxeter) | Not indexed yet | 25 May 2026 |
+| 12 | Create remaining location pages (Newcastle-under-Lyme, Eccleshall, Uttoxeter) | Not indexed yet | 30 May 2026 |
 | 13 | Submit to taxi-specific directories and travel platforms | MEDIUM | Low |
-| 14 | Create /liverpool-airport-taxi and /london-airport-transfers pages | Not indexed yet | 25 May 2026 |
+| 14 | Create /liverpool-airport-taxi and /london-airport-transfers pages | Not indexed yet | 30 May 2026 |
 | 15 | Begin local link building (tourism boards, hotels, universities) | HIGH | High |
 
 ### Phase 3: Authority Building (Weeks 9-12)
 
 | # | Action | Impact | Effort |
 |---|--------|--------|--------|
-| 16 | Publish 4 more blog posts (school transport, corporate, wedding, university) | Not indexed yet | 25 May 2026 |
+| 16 | Publish 4 more blog posts (school transport, corporate, wedding, university) | Not indexed yet | 30 May 2026 |
 | 17 | Register as Staffordshire County Council school transport provider | HIGH | Medium |
-| 18 | Apply for Alton Towers recommended transport partner | Not indexed yet | 25 May 2026 |
+| 18 | Apply for Alton Towers recommended transport partner | Not indexed yet | 30 May 2026 |
 | 19 | Build partnerships with local hotels and wedding venues | MEDIUM | Medium |
-| 20 | Create /university-transport and /stoke-city-matchday-taxi pages | Not indexed yet | 25 May 2026 |
+| 20 | Create /university-transport and /stoke-city-matchday-taxi pages | Not indexed yet | 30 May 2026 |
 | 21 | Implement internal linking strategy across all pages | MEDIUM | Low |
 
 ### Phase 4: Ongoing Optimization (Month 4+)
 
 | # | Action | Impact | Effort |
 |---|--------|--------|--------|
-| 22 | Monthly blog posts (minimum 2/month) | Not indexed yet | 25 May 2026 |
+| 22 | Monthly blog posts (minimum 2/month) | Not indexed yet | 30 May 2026 |
 | 23 | Weekly Google Business posts | MEDIUM | Low |
-| 24 | Monitor and respond to all reviews | Not indexed yet | 25 May 2026 |
+| 24 | Monitor and respond to all reviews | Not indexed yet | 30 May 2026 |
 | 25 | Track keyword rankings and adjust strategy | HIGH | Low |
-| 26 | Seasonal content (Christmas, summer holidays, half terms) | Not indexed yet | 25 May 2026 |
+| 26 | Seasonal content (Christmas, summer holidays, half terms) | Not indexed yet | 30 May 2026 |
 | 27 | Consider fleet EV transition for marketing advantage ahead of 2031 mandate | LONG-TERM | High |
 
 ---
@@ -838,6 +838,10 @@ All directory listings, social profiles, website footers, and citations must use
 ## Session Log
 
 > **Instructions for future sessions:** Append new entries below this line. Each entry should summarise what the agent did, in chronological order.
+
+### 30 May 2026 — Automated SEO Agent Run
+- **What was done:** Checked rankings for 44 keywords (0 indexed). Generated blog post: "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide" targeting "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide". Generated 5 SEO recommendations.
+- **Run type:** Automated (GitHub Actions)
 
 ### 25 May 2026 — Automated SEO Agent Run
 - **What was done:** Checked rankings for 44 keywords (0 indexed). Generated blog post: "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide" targeting "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide". Generated 5 SEO recommendations.
