@@ -1,3 +1,4 @@
+typescript
 import Link from "next/link";
 import type { Metadata } from "next";
 import BookNowButton from "@/components/BookNowButton";
@@ -12,11 +13,11 @@ export const metadata: Metadata = {
     canonical: "/blog/taxi-stoke-on-trent-manchester-airport-price-guide-2026",
   },
   title: "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide | 365 Transfers",
-  description: "Complete 2026 price guide for taxis from Stoke-on-Trent, Stone and Stafford to Manchester Airport. Compare costs, booking options and hidden fees.",
-  keywords: "taxi Stoke-on-Trent to Manchester Airport, Manchester Airport taxi price, airport transfer cost, Stone to Manchester Airport, Stafford airport taxi, how much taxi Manchester Airport",
+  description: "Complete 2026 price guide for taxis from Stoke-on-Trent and Stone to Manchester Airport. Compare costs, booking options, and hidden expenses. Fixed prices from £90.",
+  keywords: "taxi Stoke-on-Trent to Manchester Airport, Manchester Airport taxi price, Stoke to Manchester Airport cost, airport taxi Stoke, taxi Stone to Manchester Airport, airport transfer prices",
   openGraph: {
     title: "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide",
-    description: "Complete 2026 price guide for taxis from Stoke-on-Trent, Stone and Stafford to Manchester Airport. Compare costs and save money.",
+    description: "Complete 2026 price guide for taxis from Stoke-on-Trent and Stone to Manchester Airport. Compare costs and booking options.",
     type: "article",
     locale: "en_GB",
     images: [
@@ -30,11 +31,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default function StokeManchesterAirportPriceGuide() {
+export default function StokeManchester2026PriceGuide() {
   const articleSchema = createArticleSchema(
     "How Much Is a Taxi from Stoke-on-Trent to Manchester Airport? 2026 Price Guide",
-    "Complete 2026 price guide for taxis from Stoke-on-Trent, Stone and Stafford to Manchester Airport. Compare costs, booking options and hidden fees to make the best choice for your journey.",
-    "2026-06-01"
+    "Complete 2026 price guide for taxis from Stoke-on-Trent and Stone to Manchester Airport. Compare costs, booking options, and hidden expenses.",
+    "2026-06-08"
   );
 
   const breadcrumbSchema = createBreadcrumbSchema([
@@ -66,7 +67,7 @@ export default function StokeManchesterAirportPriceGuide() {
               </h1>
               <p className="text-gray-600">
                 Published on{" "}
-                {new Date("2026-06-01").toLocaleDateString("en-GB", {
+                {new Date("2026-06-08").toLocaleDateString("en-GB", {
                   year: "numeric",
                   month: "long",
                   day: "numeric",
@@ -77,8 +78,8 @@ export default function StokeManchesterAirportPriceGuide() {
             {/* Hero Image */}
             <div className="mb-8 rounded-lg overflow-hidden">
               <img
-                src="/images/blog/23-woman-strolling-luggage.webp"
-                alt="Traveller with luggage heading to Manchester Airport taxi transfer"
+                src="/images/blog/01-taxi-drivers-talking-cars.webp"
+                alt="Professional taxi drivers discussing airport transfers with their vehicles"
                 className="w-full h-64 md:h-96 object-cover"
               />
             </div>
@@ -88,421 +89,417 @@ export default function StokeManchesterAirportPriceGuide() {
               {/* INTRO CALLOUT BOX */}
               <div className="bg-gray-50 rounded-lg p-8 mb-8">
                 <p className="text-xl text-gray-700 leading-relaxed">
-                  Planning a journey from Stone, Stoke-on-Trent or Stafford to Manchester Airport? Understanding taxi costs in 2026 helps you budget accurately and avoid surprises. With Manchester Airport just 39-46 miles from Stone and approximately 50-60 minutes by road, a pre-booked taxi offers door-to-door convenience without the stress of parking fees, train delays or lugging bags through stations. This comprehensive price guide breaks down everything you need to know about taxi costs from the Staffordshire area to Manchester Airport.
+                  If you're travelling from Stone, Stoke-on-Trent, or the surrounding Staffordshire area to Manchester Airport in 2026, understanding taxi prices helps you budget accurately and avoid surprises. With Manchester Airport just 40-50 miles away, a pre-booked taxi from Stone or Stoke-on-Trent typically costs between £90-£98 for a saloon vehicle, whilst budget operators may charge as low as £70-£80. This comprehensive guide breaks down what you'll actually pay, compares different booking options, and reveals the hidden costs of seemingly cheaper alternatives.
                 </p>
               </div>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
-                Average Taxi Prices to Manchester Airport in 2026
+                Quick Answer: Standard Taxi Prices to Manchester Airport in 2026
               </h2>
               
               <p className="text-gray-700 mb-4">
-                The cost of a taxi from Stoke-on-Trent to Manchester Airport varies depending on your exact starting location, vehicle type, time of day, and which operator you choose. Here's what you can expect to pay from key locations across Staffordshire:
+                From Stone and the immediate Stoke-on-Trent area, here's what you can expect to pay for a taxi to Manchester Airport in 2026:
               </p>
 
-              <div className="bg-white border border-gray-200 rounded-lg overflow-hidden mb-8">
-                <table className="w-full">
+              <div className="overflow-x-auto mb-8">
+                <table className="min-w-full bg-white border border-gray-200">
                   <thead className="bg-primary text-white">
                     <tr>
-                      <th className="px-6 py-4 text-left font-semibold">Starting Location</th>
-                      <th className="px-6 py-4 text-left font-semibold">Budget Range</th>
-                      <th className="px-6 py-4 text-left font-semibold">Mid-Range</th>
-                      <th className="px-6 py-4 text-left font-semibold">Minibus (5-8 seater)</th>
+                      <th className="px-6 py-3 text-left font-semibold">From</th>
+                      <th className="px-6 py-3 text-left font-semibold">Budget Range</th>
+                      <th className="px-6 py-3 text-left font-semibold">Mid-Range</th>
+                      <th className="px-6 py-3 text-left font-semibold">Minibus (6-8 seats)</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr className="border-b border-gray-200">
-                      <td className="px-6 py-4 font-medium">Stone</td>
-                      <td className="px-6 py-4">£90-98</td>
-                      <td className="px-6 py-4">£98-110</td>
-                      <td className="px-6 py-4">£110-140</td>
-                    </tr>
-                    <tr className="border-b border-gray-200 bg-gray-50">
-                      <td className="px-6 py-4 font-medium">Stoke-on-Trent</td>
-                      <td className="px-6 py-4">£70-90</td>
-                      <td className="px-6 py-4">£90-98</td>
-                      <td className="px-6 py-4">£110-140</td>
+                      <td className="px-6 py-4 font-semibold text-gray-900">Stone</td>
+                      <td className="px-6 py-4 text-gray-700">£90-£96</td>
+                      <td className="px-6 py-4 text-gray-700">£96-£110</td>
+                      <td className="px-6 py-4 text-gray-700">£130-£140</td>
                     </tr>
                     <tr className="border-b border-gray-200">
-                      <td className="px-6 py-4 font-medium">Stafford</td>
-                      <td className="px-6 py-4">£95-105</td>
-                      <td className="px-6 py-4">£105-115</td>
-                      <td className="px-6 py-4">£120-150</td>
+                      <td className="px-6 py-4 font-semibold text-gray-900">Stoke-on-Trent</td>
+                      <td className="px-6 py-4 text-gray-700">£70-£80</td>
+                      <td className="px-6 py-4 text-gray-700">£90-£98</td>
+                      <td className="px-6 py-4 text-gray-700">£110-£140</td>
                     </tr>
-                    <tr className="bg-gray-50">
-                      <td className="px-6 py-4 font-medium">Newcastle-under-Lyme</td>
-                      <td className="px-6 py-4">£75-85</td>
-                      <td className="px-6 py-4">£85-95</td>
-                      <td className="px-6 py-4">£105-135</td>
+                    <tr className="border-b border-gray-200">
+                      <td className="px-6 py-4 font-semibold text-gray-900">Stafford</td>
+                      <td className="px-6 py-4 text-gray-700">£90-£100</td>
+                      <td className="px-6 py-4 text-gray-700">£100-£115</td>
+                      <td className="px-6 py-4 text-gray-700">£135-£150</td>
+                    </tr>
+                    <tr>
+                      <td className="px-6 py-4 font-semibold text-gray-900">Newcastle-under-Lyme</td>
+                      <td className="px-6 py-4 text-gray-700">£75-£85</td>
+                      <td className="px-6 py-4 text-gray-700">£95-£105</td>
+                      <td className="px-6 py-4 text-gray-700">£120-£145</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
 
               <p className="text-gray-700 mb-4">
-                These prices reflect fixed-rate quotes for pre-booked journeys in 2026. Budget operators typically offer basic saloon cars with minimal extras, whilst mid-range services include features like flight monitoring, meet and greet, and executive vehicles. At <Link href="/manchester-airport-taxi" className="text-primary hover:underline font-semibold">365 Transfers</Link>, our Manchester Airport service from Stone and the surrounding area includes all essential features at competitive mid-range pricing.
+                These are fixed prices for pre-booked airport transfers. Metered taxis and ride-hailing apps will vary depending on time of day, traffic conditions, and surge pricing.
               </p>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
-                What's Included in Your Taxi Fare?
+                Why Taxi Prices Vary: Understanding the Price Differences
               </h2>
 
               <p className="text-gray-700 mb-4">
-                Not all taxi prices are created equal. Understanding what's included in your quoted price helps you compare services accurately and avoid unexpected charges. Here's what reputable operators should include:
+                You'll notice a significant range in taxi prices from Stone and Stoke-on-Trent to Manchester Airport. Here's what creates these differences:
               </p>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Standard Inclusions
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                1. Vehicle Type and Quality
               </h3>
-
-              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-                <li><strong>Door-to-door service</strong> — Pick-up from your home, hotel or business in Stone, Stoke-on-Trent or Stafford, with drop-off at your specific Manchester Airport terminal</li>
-                <li><strong>All motorway tolls</strong> — No additional charges for using the M6 or airport approach roads</li>
-                <li><strong>Waiting time allowance</strong> — Reasonable waiting time if your flight is delayed or you need extra time getting ready</li>
-                <li><strong>Luggage assistance</strong> — Help loading and unloading bags, especially important for families or elderly passengers</li>
-                <li><strong>Meet and greet</strong> — For airport pickups, your driver tracks your flight and meets you in arrivals</li>
-              </ul>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Premium Features Worth Paying For
-              </h3>
-
-              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-                <li><strong>Flight monitoring</strong> — Your driver automatically adjusts pickup time if your flight is early or delayed, so you never pay extra waiting charges</li>
-                <li><strong>24/7 availability</strong> — Essential for early morning departures or late-night arrivals at Manchester Airport</li>
-                <li><strong>Fixed prices</strong> — No surge pricing during peak times or unexpected meter charges</li>
-                <li><strong>Vehicle choice</strong> — Executive saloons, estate cars for extra luggage, or minibuses for groups</li>
-                <li><strong>DBS-checked drivers</strong> — Particularly important for school holiday family travel or corporate accounts</li>
-              </ul>
 
               <p className="text-gray-700 mb-4">
-                At 365 Transfers, all these premium features come as standard with our <Link href="/airport-transfers" className="text-primary hover:underline font-semibold">airport transfer service</Link>. We've been providing reliable transport from Stone to Manchester Airport for over 20 years, and our drivers know the quickest routes from every corner of Staffordshire.
+                Budget operators often use older, standard vehicles, whilst mid-range and premium services provide newer, well-maintained executive cars or estates. At 365 Transfers, our Stone-based fleet includes modern saloon, estate, and executive vehicles, ensuring comfort for the 50-60 minute journey to Manchester Airport.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                2. Service Inclusions
+              </h3>
+
+              <p className="text-gray-700 mb-4">
+                The cheapest quote might not include flight monitoring, meet and greet service, or waiting time. Professional airport transfer services from Stone typically include:
+              </p>
+
+              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li>Real-time flight tracking (so your driver adjusts pickup if your flight's delayed)</li>
+                <li>Meet and greet at arrivals with name board</li>
+                <li>60 minutes free waiting time for international flights, 45 minutes for domestic</li>
+                <li>Help with luggage</li>
+                <li>No hidden charges for early morning or late night pickups</li>
+                <li>Baby seats and booster seats (usually free with notice)</li>
+              </ul>
+
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                3. Driver Experience and Licensing
+              </h3>
+
+              <p className="text-gray-700 mb-4">
+                All our drivers at 365 Transfers are DBS-checked, fully licensed, and have extensive knowledge of the best routes from Stone to Manchester Airport. We know when to take the M6, when to avoid it, and how to navigate Manchester Airport's complex terminal layout. This experience is factored into our pricing but saves you stress and potential delays.
               </p>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
-                Comparing Your Transport Options: The Real Cost
+                Uber vs Pre-Booked Taxi: The Real Cost Comparison
               </h2>
 
               <p className="text-gray-700 mb-4">
-                Many travellers from Stone and Stoke-on-Trent consider alternatives to taxis for Manchester Airport journeys. Let's compare the true costs, including hidden expenses and time investment:
+                Uber operates in Stoke-on-Trent and may seem like the cheapest option at first glance. Here's the reality:
               </p>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Airport Parking
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                Driving and parking at Manchester Airport might seem economical at first glance, but the costs add up quickly:
-              </p>
-
-              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-                <li><strong>Parking fees:</strong> £80-150 for a week (official car parks), or £60-90 (off-site meet and greet services)</li>
-                <li><strong>Fuel costs:</strong> Approximately £12-15 return journey from Stone</li>
-                <li><strong>Motorway tolls:</strong> Potential charges depending on route</li>
-                <li><strong>Wear and tear:</strong> 80-100 miles added to your vehicle</li>
-                <li><strong>Stress factors:</strong> Finding parking spaces, shuttle bus transfers, security queues for car parks</li>
-              </ul>
-
-              <p className="text-gray-700 mb-4">
-                <strong>Total cost for one week:</strong> £92-165, plus the time and stress of driving, parking and transferring.
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Train Journey
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                Stone has a railway station with direct services to Manchester, but the airport connection involves multiple changes:
-              </p>
-
-              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-                <li><strong>Stone to Manchester Piccadilly:</strong> £15-25 per person (advance tickets)</li>
-                <li><strong>Piccadilly to Airport:</strong> Additional £5-8 per person</li>
-                <li><strong>Local taxi to Stone station:</strong> £8-12 each way</li>
-                <li><strong>Journey time:</strong> Minimum 90-120 minutes with connections</li>
-                <li><strong>Luggage hassle:</strong> Carrying bags through stations, up stairs, on and off trains</li>
-                <li><strong>Delays and cancellations:</strong> No guaranteed arrival time</li>
-              </ul>
-
-              <p className="text-gray-700 mb-4">
-                <strong>Total cost for a family of four:</strong> £128-180, with significantly more physical effort and stress.
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Ride-Hailing Apps (Uber, Bolt)
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                Whilst ride-hailing apps operate in Stoke-on-Trent, they come with significant drawbacks for airport journeys:
-              </p>
-
-              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-                <li><strong>Variable pricing:</strong> Surge pricing can push costs from £56 up to £90+ during peak times</li>
-                <li><strong>No flight monitoring:</strong> If your plane is delayed, you'll pay waiting charges or need to rebook</li>
-                <li><strong>Vehicle uncertainty:</strong> You don't know what size vehicle will arrive or if it suits your luggage</li>
-                <li><strong>Availability issues:</strong> Limited drivers willing to do airport runs, especially early morning</li>
-                <li><strong>No guaranteed pickup:</strong> Drivers can cancel, leaving you stranded</li>
-              </ul>
-
-              <p className="text-gray-700 mb-4">
-                <strong>Average cost:</strong> £56-90+, but with significant reliability concerns for important flights.
-              </p>
-
-              <div className="bg-accent/10 border-l-4 border-accent p-6 my-8">
-                <h4 className="text-xl font-bold text-primary mb-3">The Pre-Booked Taxi Advantage</h4>
-                <p className="text-gray-700 mb-3">
-                  A pre-booked taxi from Stone to Manchester Airport with 365 Transfers costs £90-110 for a standard vehicle. For this fixed price, you receive:
-                </p>
-                <ul className="list-disc pl-6 text-gray-700 space-y-1">
-                  <li>Guaranteed pickup and arrival time</li>
-                  <li>Door-to-door service with no connections or transfers</li>
-                  <li>Flight monitoring and flexible waiting time</li>
-                  <li>Professional, DBS-checked driver</li>
-                  <li>Suitable vehicle confirmed in advance</li>
-                  <li>No surge pricing or hidden fees</li>
-                  <li>24/7 customer support</li>
-                </ul>
-                <p className="text-gray-700 mt-3">
-                  For families, groups or business travellers, a pre-booked taxi offers the best value when you factor in reliability, convenience and peace of mind.
-                </p>
+              <div className="bg-yellow-50 border-l-4 border-yellow-400 p-6 mb-6">
+                <p className="text-gray-800 font-semibold mb-2">Average Uber Fare from Stoke to Manchester Airport: £50-£60</p>
+                <p className="text-gray-700">Sounds great, right? But consider:</p>
               </div>
 
-              <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
-                Factors That Affect Your Taxi Price
-              </h2>
-
-              <p className="text-gray-700 mb-4">
-                Several factors influence the final cost of your taxi from Stoke-on-Trent to Manchester Airport. Understanding these helps you get the best price and service:
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Your Exact Starting Location
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                Distance and accessibility matter. Stone is approximately 39 miles from Manchester Airport via the M6, whilst Stoke-on-Trent city centre is slightly closer at 35-40 miles. Rural locations around Stone, such as Eccleshall or Barlaston, may incur small supplements, whilst properties right in Stone town centre benefit from optimal pricing. Our <Link href="/taxi-stone" className="text-primary hover:underline font-semibold">Stone taxi service</Link> covers all surrounding villages with transparent pricing.
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Time and Day of Travel
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                Most reputable operators offer fixed pricing regardless of departure time, but some budget services charge premiums for:
-              </p>
-
               <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-                <li>Early morning departures (before 6am)</li>
-                <li>Late night pickups (after 11pm)</li>
-                <li>Bank holidays and Christmas period</li>
-                <li>Major event days when traffic is heavier</li>
+                <li><strong>Surge pricing:</strong> Early morning airport runs (4am-6am) frequently trigger 1.5x-2x surge pricing, pushing the cost to £75-£120</li>
+                <li><strong>No flight monitoring:</strong> If your return flight is delayed, your Uber driver won't wait</li>
+                <li><strong>Vehicle uncertainty:</strong> You don't know the vehicle size until it arrives—problematic with luggage for a family of four</li>
+                <li><strong>Limited Stone coverage:</strong> Uber coverage in Stone itself is patchy; you may wait 20+ minutes for a driver to arrive from Stoke</li>
+                <li><strong>Cancellation risk:</strong> Drivers can cancel if the journey seems unprofitable</li>
               </ul>
 
               <p className="text-gray-700 mb-4">
-                At 365 Transfers, we operate 24/7/365 with no time-based surcharges. Your quote is your final price, whether you're catching a 5am flight or arriving back at midnight.
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Vehicle Type and Size
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                The vehicle you need significantly affects the price:
-              </p>
-
-              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-                <li><strong>Standard saloon (4 passengers, 2 large bags):</strong> Base price £90-98</li>
-                <li><strong>Estate car (4 passengers, 4 large bags):</strong> £95-105 — ideal for families with extra luggage</li>
-                <li><strong>Executive saloon (premium comfort, 4 passengers):</strong> £100-115</li>
-                <li><strong>6-seater minibus:</strong> £110-130</li>
-                <li><strong>8-seater minibus:</strong> £130-140</li>
-                <li><strong>Wheelchair-accessible vehicle:</strong> Same price as equivalent standard vehicle</li>
-              </ul>
-
-              <p className="text-gray-700 mb-4">
-                Our <Link href="/wheelchair-accessible-taxi" className="text-primary hover:underline font-semibold">wheelchair-accessible taxi service</Link> provides the same fixed pricing as standard vehicles, ensuring no discrimination based on accessibility needs.
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Booking Method
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                How you book affects your price and service quality:
-              </p>
-
-              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-                <li><strong>Online pre-booking (3+ days in advance):</strong> Best prices and guaranteed availability</li>
-                <li><strong>Phone booking (24-72 hours notice):</strong> Standard rates, good availability</li>
-                <li><strong>Short-notice bookings (same day):</strong> May incur premium or limited vehicle choice</li>
-                <li><strong>Hailed or immediate pickup:</strong> Metered rates, often significantly more expensive</li>
-              </ul>
-
-              <p className="text-gray-700 mb-4">
-                We recommend booking your Manchester Airport taxi at least 3-5 days in advance, especially during school holidays, Christmas, or summer peak season when demand from Stone and Staffordshire is highest.
+                A pre-booked taxi from Stone to Manchester Airport eliminates all these risks. You know exactly what you're paying, you're guaranteed pickup, and your driver will track your flight on return journeys.
               </p>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
-                Money-Saving Tips for Your Airport Taxi
+                The Hidden Costs of Driving and Parking at Manchester Airport
               </h2>
 
               <p className="text-gray-700 mb-4">
-                Getting the best price doesn't mean compromising on quality. Here's how to save money on your taxi from Stone to Manchester Airport:
+                Many Stone and Staffordshire residents consider driving to Manchester Airport to save money. Let's calculate the real cost of a week-long holiday trip:
               </p>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
+              <div className="overflow-x-auto mb-8">
+                <table className="min-w-full bg-white border border-gray-200">
+                  <thead className="bg-gray-100">
+                    <tr>
+                      <th className="px-6 py-3 text-left font-semibold text-gray-900">Expense</th>
+                      <th className="px-6 py-3 text-left font-semibold text-gray-900">Cost</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-200">
+                      <td className="px-6 py-4 text-gray-700">Fuel (Stone to Manchester Airport return, ~100 miles)</td>
+                      <td className="px-6 py-4 text-gray-700">£18-£25</td>
+                    </tr>
+                    <tr className="border-b border-gray-200">
+                      <td className="px-6 py-4 text-gray-700">Manchester Airport parking (7 days, off-site with transfer)</td>
+                      <td className="px-6 py-4 text-gray-700">£65-£85</td>
+                    </tr>
+                    <tr className="border-b border-gray-200">
+                      <td className="px-6 py-4 text-gray-700">Wear and tear on your vehicle</td>
+                      <td className="px-6 py-4 text-gray-700">£10-£15</td>
+                    </tr>
+                    <tr className="border-b border-gray-200 bg-gray-50 font-semibold">
+                      <td className="px-6 py-4 text-gray-900">Total Cost</td>
+                      <td className="px-6 py-4 text-gray-900">£93-£125</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p className="text-gray-700 mb-4">
+                That's roughly the same cost as a return taxi from Stone to Manchester Airport (£180-£196), but with significant additional hassles:
+              </p>
+
+              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li>Navigating M6 traffic and Manchester Airport's multi-storey car parks whilst stressed about catching your flight</li>
+                <li>Carrying luggage from off-site parking to the terminal shuttle bus</li>
+                <li>Security concerns about leaving your car for a week or more</li>
+                <li>Returning to a cold, potentially snow-covered car in winter</li>
+                <li>The risk of parking fines if you return later than expected</li>
+              </ul>
+
+              <p className="text-gray-700 mb-4">
+                For families travelling from Stone, a pre-booked <Link href="/manchester-airport-taxi" className="text-primary hover:underline">Manchester Airport taxi</Link> often works out cheaper than parking when you factor in convenience and stress reduction.
+              </p>
+
+              <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
+                Train and Bus Options: Are They Worth It from Stone?
+              </h2>
+
+              <p className="text-gray-700 mb-4">
+                Stone railway station offers regular services, but getting to Manchester Airport by public transport requires multiple changes:
+              </p>
+
+              <div className="bg-blue-50 border-l-4 border-blue-400 p-6 mb-6">
+                <p className="text-gray-800 font-semibold mb-2">Typical Route: Stone → Crewe → Manchester Airport</p>
+                <ul className="list-disc pl-6 text-gray-700 space-y-1">
+                  <li>Journey time: 90-120 minutes (vs 50-60 minutes by taxi)</li>
+                  <li>Cost: £25-£40 per person depending on booking time</li>
+                  <li>Frequency: Requires coordination between Stone-Crewe and Crewe-Airport trains</li>
+                </ul>
+              </div>
+
+              <p className="text-gray-700 mb-4">
+                For a family of four, that's £100-£160 each way. The train is only cost-effective if you're a solo traveller with minimal luggage and flexible timing. For families from Stone or Staffordshire travelling to Manchester Airport, a taxi is almost always more practical.
+              </p>
+
+              <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
+                What's Included in 365 Transfers' Manchester Airport Service from Stone
+              </h2>
+
+              <p className="text-gray-700 mb-4">
+                When you book with us for Manchester Airport transfers from Stone, Stoke-on-Trent, or anywhere in Staffordshire, here's exactly what you get:
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                Outbound Journey (Stone to Manchester Airport)
+              </h3>
+
+              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li>Pickup from your home, office, or hotel in Stone at your specified time</li>
+                <li>Professional driver with 20+ years of airport transfer experience</li>
+                <li>Modern, clean vehicle with plenty of boot space for luggage</li>
+                <li>Route planning to avoid M6 congestion where possible</li>
+                <li>Drop-off directly at your terminal departure door</li>
+                <li>Help with luggage</li>
+                <li>Fixed price with no hidden charges—early morning pickup at 4am costs the same as midday</li>
+              </ul>
+
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                Return Journey (Manchester Airport to Stone)
+              </h3>
+
+              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li>Flight tracking—we monitor your flight in real-time and adjust pickup if you're delayed</li>
+                <li>60 minutes free waiting time for international arrivals, 45 minutes for domestic</li>
+                <li>Meet and greet inside the terminal with a name board</li>
+                <li>Assistance with luggage trolleys and bags</li>
+                <li>Comfortable journey back to Stone, Stoke-on-Trent, or Stafford whilst you relax after your flight</li>
+              </ul>
+
+              <p className="text-gray-700 mb-4">
+                No other operator covering Stone to Manchester Airport includes this level of service as standard. This is why our pricing sits in the mid-range—you're paying for reliability and peace of mind.
+              </p>
+
+              <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
+                How to Get the Best Price for Your Manchester Airport Taxi from Stone
+              </h2>
+
+              <p className="text-gray-700 mb-4">
+                Follow these tips to ensure you get the best value:
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
                 1. Book in Advance
               </h3>
 
               <p className="text-gray-700 mb-4">
-                Pre-booking locks in your price and prevents last-minute availability issues. Operators can also plan routes more efficiently with advance bookings, which often translates to better rates. We offer online booking through our website with instant confirmation.
+                Pre-booking locks in your price and guarantees availability. Last-minute bookings, especially during peak travel periods (school holidays, Christmas, summer), may attract premiums or simply be unavailable.
               </p>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                2. Choose the Right Vehicle Size
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                2. Book Return Journeys Together
               </h3>
 
               <p className="text-gray-700 mb-4">
-                If you're a couple or solo traveller, don't pay for a minibus. Equally, if you're a family of four with ski equipment or golf bags, book an estate car or 6-seater to ensure space without cramming into a standard saloon. Accurate passenger and luggage information gets you the best-sized vehicle at the optimal price.
+                Many Stone taxi companies, including 365 Transfers, offer better rates when you book your outbound and return Manchester Airport transfer together. It's also more convenient—one booking, one payment, no need to arrange a pickup after landing.
               </p>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                3. Share with Others
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                3. Confirm What's Included
               </h3>
 
               <p className="text-gray-700 mb-4">
-                Travelling with friends, extended family or colleagues? Sharing a minibus from Stone to Manchester Airport splits the cost whilst maintaining door-to-door convenience. A £130 8-seater divided by six passengers is just £21.66 each — far cheaper than any other transport option.
+                Always ask whether the quote includes flight monitoring, meet and greet, and waiting time. The cheapest quote may exclude these essentials, leading to extra charges later.
               </p>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                4. Consider Return Bookings
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                4. Choose the Right Vehicle Size
               </h3>
 
               <p className="text-gray-700 mb-4">
-                Some operators offer discounts for booking both outbound and return journeys together. This also ensures you have guaranteed transport home after a tiring flight, rather than searching for available taxis in arrivals.
+                A saloon car comfortably fits up to 3 passengers with standard luggage. For 4+ passengers or families with multiple suitcases, an estate or minibus is more comfortable and may only cost £20-£30 extra from Stone to Manchester Airport.
               </p>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                5. Use a Local Operator
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                5. Consider Off-Peak Travel Times
               </h3>
 
               <p className="text-gray-700 mb-4">
-                Local Stone and Staffordshire taxi companies often offer better prices than national aggregator websites, which take commission. We're based right here at 3 Berkeley Court Mews in Stone, so we know the area intimately and don't add middleman fees.
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                6. Ask About Corporate or Regular Traveller Rates
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                If you travel to Manchester Airport regularly for business or frequently visit family abroad, enquire about <Link href="/account-work" className="text-primary hover:underline font-semibold">corporate account rates</Link> or loyalty programmes. We offer business accounts with monthly invoicing and preferential rates for frequent travellers from Stone and the surrounding areas.
+                Whilst 365 Transfers charges the same price regardless of pickup time, metered taxis and ride-hailing apps charge more during peak hours. If you have flexibility, mid-morning or early afternoon flights from Manchester can sometimes save money if booking with operators that vary pricing.
               </p>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
-                Manchester Airport: Terminal Guide for Staffordshire Travellers
+                Manchester Airport Terminals: Which One and Why It Matters
               </h2>
 
               <p className="text-gray-700 mb-4">
-                Manchester Airport has three terminals, and knowing which one you need ensures a smooth arrival and departure:
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Terminal 1
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                Serves: British Airways, Lufthansa, Air France, KLM, and various European carriers. Most popular for business travel from Staffordshire.
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Terminal 2
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                Serves: Ryanair, Jet2, TUI Airways, and many charter services. The busiest terminal for holiday flights from the region.
-              </p>
-
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Terminal 3
-              </h3>
-
-              <p className="text-gray-700 mb-4">
-                Serves: Virgin Atlantic, Delta, Emirates, and long-haul carriers. Best for transatlantic and worldwide connections.
-              </p>
-
-              <p className="text-gray-700 mb-4">
-                When booking your taxi from Stone, always specify your terminal. Our drivers monitor your flight regardless, but terminal information helps us drop you at the optimal location and meet you efficiently when collecting.
-              </p>
-
-              <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
-                Why Choose 365 Transfers for Manchester Airport Journeys?
-              </h2>
-
-              <p className="text-gray-700 mb-4">
-                Based in Stone with over 20 years' experience serving Staffordshire, we specialise in <Link href="/manchester-airport-taxi" className="text-primary hover:underline font-semibold">Manchester Airport transfers</Link> from Stone, Stoke-on-Trent, Stafford and throughout the region. Here's what sets us apart:
+                Manchester Airport has three terminals. When booking your taxi from Stone, you'll need to specify which terminal:
               </p>
 
               <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
-                <li><strong>Fixed pricing with no hidden fees</strong> — Your quote is your final price, confirmed in writing</li>
-                <li><strong>Flight monitoring included</strong> — We track your arrival or departure in real-time and adjust automatically</li>
-                <li><strong>24/7/365 availability</strong> — No premium charges for early mornings, late nights or bank holidays</li>
-                <li><strong>Fleet from 4-16 seaters</strong> — Including wheelchair-accessible vehicles at standard prices</li>
-                <li><strong>DBS-checked, licensed drivers</strong> — All with BTEC qualifications and C.S.E certification</li>
-                <li><strong>Local knowledge</strong> — We know every route from Stone to Manchester Airport, including traffic hotspots and alternatives</li>
-                <li><strong>Meet and greet service</strong> — Your driver meets you in arrivals with a name board, helps with luggage, and guides you to the vehicle</li>
-                <li><strong>Corporate accounts available</strong> — Monthly invoicing and preferential rates for business travellers</li>
+                <li><strong>Terminal 1:</strong> British Airways, Lufthansa, and several international carriers</li>
+                <li><strong>Terminal 2:</strong> easyJet, Jet2, TUI, and most charter flights</li>
+                <li><strong>Terminal 3:</strong> Virgin Atlantic, Emirates, American Airlines, Delta, and many long-haul flights</li>
               </ul>
 
               <p className="text-gray-700 mb-4">
-                We also provide transfers to <Link href="/birmingham-airport-taxi" className="text-primary hover:underline font-semibold">Birmingham Airport</Link>, <Link href="/east-midlands-airport-taxi" className="text-primary hover:underline font-semibold">East Midlands Airport</Link>, <Link href="/liverpool-airport-taxi" className="text-primary hover:underline font-semibold">Liverpool Airport</Link>, and <Link href="/london-airport-transfers" className="text-primary hover:underline font-semibold">all London airports</Link>, making us your one-stop solution for airport travel from Stone and Staffordshire.
+                Your driver from Stone will drop you at the correct terminal entrance, saving you from dragging luggage between terminals. On return pickups, we monitor your flight's arrival terminal and meet you at the appropriate arrivals hall.
               </p>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
-                Booking Your Manchester Airport Taxi from Stone
+                Frequently Asked Questions About Stone to Manchester Airport Taxis
               </h2>
 
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                How long does the journey take from Stone to Manchester Airport?
+              </h3>
+
               <p className="text-gray-700 mb-4">
-                Ready to book your taxi from Stone to Manchester Airport? The process is straightforward:
+                Typically 50-60 minutes via the M6 motorway, depending on traffic. We monitor traffic conditions and adjust routes when necessary. For early morning flights, you should plan to arrive at Manchester Airport 2 hours before European flights and 3 hours before long-haul flights.
               </p>
 
-              <ol className="list-decimal pl-6 mb-6 text-gray-700 space-y-2">
-                <li><strong>Get a quote online</strong> — Visit our website and enter your pickup location, destination, date and passenger details</li>
-                <li><strong>Choose your vehicle</strong> — Select from saloon, estate, executive or minibus options based on your group size</li>
-                <li><strong>Receive instant confirmation</strong> — Your booking is confirmed immediately with a reference number</li>
-                <li><strong>Add your flight details</strong> — Provide your flight number so we can monitor it automatically</li>
-                <li><strong>Relax</strong> — We'll send a reminder 24 hours before pickup, and your driver will be in touch on the day</li>
-              </ol>
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                Can I book a taxi from Stone to Manchester Airport for 4am?
+              </h3>
 
               <p className="text-gray-700 mb-4">
-                For same-day bookings or complex requirements like <Link href="/complex-journey" className="text-primary hover:underline font-semibold">multi-stop journeys</Link>, call us directly on 01785 335563. Our team is available 24/7 to help with any special arrangements, whether it's child seats, extra luggage space, or specific accessibility requirements.
+                Yes. 365 Transfers operates 24/7/365, and we don't charge extra for early morning or late night pickups. Many Stone residents have early flights, and we're experienced with these timings.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                What if my flight is delayed on the return journey?
+              </h3>
+
+              <p className="text-gray-700 mb-4">
+                We track all flights in real-time. If your Manchester Airport arrival is delayed, your driver will automatically adjust and be there when you land. You won't be charged extra waiting time for delays caused by flight issues—this is included in our service.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                Is it cheaper to get a taxi from Stoke-on-Trent instead of Stone?
+              </h3>
+
+              <p className="text-gray-700 mb-4">
+                Stone is slightly further from Manchester Airport than central Stoke-on-Trent, so taxis from Stoke may be £5-£15 cheaper. However, 365 Transfers is based in Stone and offers competitive pricing for local residents. The convenience of being picked up from your Stone doorstep usually outweighs the small price difference.
+              </p>
+
+              <h3 className="text-2xl font-bold text-gray-900 mt-8 mb-4">
+                Do you provide child seats for Manchester Airport transfers?
+              </h3>
+
+              <p className="text-gray-700 mb-4">
+                Yes, we provide baby seats, child seats, and booster seats free of charge. Just let us know the ages of your children when booking so we can ensure the correct seats are fitted before pickup from Stone.
               </p>
 
               <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
-                Frequently Asked Questions
+                Other Airport Options from Stone and Staffordshire
               </h2>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                How much is a taxi from Stone to Manchester Airport?
-              </h3>
-
               <p className="text-gray-700 mb-4">
-                A pre-booked taxi from Stone to Manchester Airport costs between £90-110 for a standard 4-seater vehicle. Larger vehicles and minibuses range from £110-140. All prices are fixed and include flight monitoring, meet and greet, and all tolls.
+                Whilst Manchester Airport is the most popular choice for Stone residents due to its range of flights and proximity, other airports are also accessible:
               </p>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                How long does the journey take from Stoke-on-Trent to Manchester Airport?
-              </h3>
+              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li><strong><Link href="/birmingham-airport-taxi" className="text-primary hover:underline">Birmingham Airport</Link>:</strong> Similar distance (36-39 miles), 47-55 minutes, £89-£95 from Stone</li>
+                <li><strong><Link href="/east-midlands-airport-taxi" className="text-primary hover:underline">East Midlands Airport</Link>:</strong> 46 miles, 49-55 minutes, £90-£103 from Stone</li>
+                <li><strong><Link href="/liverpool-airport-taxi" className="text-primary hover:underline">Liverpool Airport</Link>:</strong> 57 miles, ~1 hour 4 minutes, £130-£135 from Stone</li>
+              </ul>
 
               <p className="text-gray-700 mb-4">
-                The journey from Stone typically takes 50-60 minutes via the M6 motorway in normal traffic conditions. We recommend allowing 90 minutes for early morning departures to account for any unexpected delays and to ensure you arrive at the airport with time to spare.
+                For passengers in Stone, all three major Midlands and North West airports are similarly accessible. Your choice often depends on flight availability and airline rather than distance. We provide <Link href="/airport-transfers" className="text-primary hover:underline">fixed-price transfers to all UK airports</Link> from Stone, Stoke-on-Trent, and across Staffordshire.
               </p>
 
-              <h3 className="text-2xl font-bold text-primary mt-8 mb-4">
-                Is a pre-booked taxi cheaper than Uber to Manchester Airport?
-              </h3>
+              <h2 className="text-3xl font-bold text-primary mt-12 mb-6">
+                Why Stone Residents Choose 365 Transfers for Manchester Airport
+              </h2>
 
               <p className="text-gray-700 mb-4">
-                Whilst Uber's average price from Stoke-on-Trent to Manchester Airport is around £56, surge pricing can push this to £90 or more during peak times. Pre-booked taxis offer fixed prices, flight monitoring, guaranteed availability, and suitable vehicle choice, making them better value for airport journeys where reliability matters.
+                Based right here in Stone at 3 Berkeley Court Mews, we're your local specialists for Manchester Airport transfers. Here's why Stone, Stoke-on-Trent, and Stafford residents trust us:
               </p>
 
-              <h3 className="text-2xl font-bold text-primary
+              <ul className="list-disc pl-6 mb-6 text-gray-700 space-y-2">
+                <li><strong>Local knowledge:</strong> We know Stone, the M6 corridor, and Manchester Airport inside out</li>
+                <li><strong>Reliability:</strong> 20+ years serving the Stone community—your neighbours recommend us</li>
+                <li><strong>Transparent pricing:</strong> £96 from Stone to Manchester Airport in a saloon, £130-£140 for a minibus. No surge pricing, no hidden fees</li>
+                <li><strong>Professional drivers:</strong> All DBS-checked, licensed, and experienced with airport transfers</li>
+                <li><strong>24/7/365 availability:</strong> Early morning flights, late night arrivals, Christmas Day—we're always available</li>
+                <li><strong>Modern fleet:</strong> Clean, comfortable vehicles with plenty of luggage space</li>
+                <li><strong>Flight tracking:</strong> Your return pickup adjusts automatically if your Manchester flight is delayed</li>
+              </ul>
+
+              <div className="bg-primary text-white rounded-lg p-8 mt-12">
+                <h2 className="text-3xl font-bold mb-4">Book Your Stone to Manchester Airport Taxi Today</h2>
+                <p className="text-xl mb-6 text-gray-200">
+                  Fixed price of £96 from Stone to Manchester Airport in a saloon car. No hidden charges, no surge pricing, no stress. Call us now on 01785 335563 or get an instant quote online. Serving Stone, Stoke-on-Trent, Stafford, and all of Staffordshire for over 20 years.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <BookNowButton className="text-lg">
+                    Get Your Quote Now
+                  </BookNowButton>
+                  <a
+                    href="tel:01785335563"
+                    className="bg-white text-primary font-bold px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors text-center"
+                  >
+                    Call 01785 335563
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Navigation */}
+            <div className="mt-12 pt-8 border-t border-gray-200">
+              <Link
+                href="/blog"
+                className="text-primary hover:underline font-semibold"
+              >
+                &larr; Back to Blog
+              </Link>
+            </div>
+          </div>
+        </div>
+      </article>
+      </div>
+    </>
+  );
+}
