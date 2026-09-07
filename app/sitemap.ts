@@ -264,6 +264,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.7,
     },
     {
+      url: `${baseUrl}/blog/stoke-manchester-airport-taxi-prices-2026`,
+      lastModified: new Date("2026-09-07"),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    },
+    {
       url: `${baseUrl}/careers`,
       lastModified: new Date(),
       changeFrequency: "monthly" as const,
